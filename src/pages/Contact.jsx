@@ -5,7 +5,7 @@ const Contact = () => {
       <div className="glass" style={{ padding: '1.5rem', marginBottom: '2.5rem', textAlign: 'center', border: '1px solid var(--accent)' }}>
         <p style={{ fontWeight: '500' }}>Visit our Sydney Studio:</p>
         <p>Gladesville NSW 2111</p>
-        <p>0434 920 114 | wephoto.sydney@gmail.com</p>
+        <p>wephoto.sydney@gmail.com</p>
       </div>
       <form className="glass" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
         <input type="text" placeholder="Name" style={{ padding: '1rem', background: 'transparent', border: '1px solid var(--glass-border)', color: 'white', borderRadius: '8px', fontSize: '1rem' }} />
