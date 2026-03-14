@@ -1,14 +1,16 @@
+import './Home.css';
+
 .home {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .hero {
-  min-height: 50vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +18,7 @@
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -24,66 +26,56 @@
 .subtitle {
   font-size: 1.25rem;
   color: var(--muted);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.content-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.text-block {
+  padding: 2rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.text-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.text-block p {
+  margin-bottom: 1rem;
+}
+
+.text-block.highlight {
+  border-left: 4px solid var(--accent);
+  background: rgba(212, 175, 55, 0.05);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.text-block a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .cta-button {
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--primary);
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
-  border: 1px solid var(--accent);
   color: var(--accent);
+  cursor: pointer;
+  border: 1px solid var(--accent);
+  background: transparent;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
   background: rgba(212, 175, 55, 0.1);
-}
-
-.studio-info {
-  padding: 4rem 2rem;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.studio-info h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.studio-info p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: var(--muted);
-}
-
-.recent-work h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.gallery-preview {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.gallery-item {
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: var(--muted);
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent);
 }
