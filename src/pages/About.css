@@ -1,0 +1,123 @@
+.about {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.about-header {
+  text-align: center;
+}
+
+.about-section {
+  padding: 3rem;
+  line-height: 1.8;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.section-content p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.artist-card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.artist-card h3 {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.artist-card p {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.location-info {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  border-color: var(--accent);
+}
+
+.why-choose-us {
+  padding: 4rem;
+  text-align: center;
+}
+
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.usp-item h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.usp-item p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.about-seo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-cta {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.cta-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.cta-button.primary {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+}
+
+.cta-button.primary:hover {
+  background: white;
+  color: var(--bg);
+}
+
+@media (max-width: 768px) {
+  .artist-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-section {
+    padding: 2rem 1.5rem;
+  }
+}
