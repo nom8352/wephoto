@@ -60,7 +60,7 @@ const Home = () => {
             When it comes to making perfect photos, there are a few things you need in order to get the best results. First, choose the right camera equipment, which we already have. This includes a camera, lens, and flash. Second, set up your camera settings so that your shots will look great and we’ll take care of that for you. Third, take advantage of photo software to help with composition and shot selection which we have the best software to make your photos more beautiful.
           </p>
           <p>
-            When taking photos, it’s important to use the right camera settings. This means choosing a camera that is capable of capturing perfect images every time. To get the best results, start by checking the camera’s manual or online help to find specific settings that will work best for your shot of <a href="https://www.lookylooky.com.au/">newborn photographer sydney</a>.
+            When taking photos, it’s important to use the right camera settings. This means choosing a camera that is capable of capturing perfect images every time. To get the best results, start by checking the camera’s manual or online help to find specific settings that will work best for your shot of <a href="https://sweetlifephotography.com.au/">newborn photographer brisbane</a>.
           </p>
         </div>
 
