@@ -1,0 +1,51 @@
+.services {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-bottom: 4rem;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-card {
+  padding: 2.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateX(10px);
+  border-color: var(--accent);
+}
+
+.service-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.service-card a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 4px;
+}

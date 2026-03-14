@@ -1,0 +1,9 @@
+const Footer = () => {
+  return (
+    <footer style={{ padding: '2rem', textAlign: 'center', color: 'var(--muted)', borderTop: '1px solid var(--glass-border)', marginTop: '4rem' }}>
+      <p>&copy; {new Date().getFullYear()} WePhoto. Responsive Photography & Design in Brisbane & North Lakes.</p>
+    </footer>
+  );
+};
+
+export default Footer;
