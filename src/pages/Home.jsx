@@ -1,86 +1,211 @@
+import { Link } from 'react-router-dom';
+import { ArrowRight, Camera, Clock3, Images, Sparkles } from 'lucide-react';
 import './Home.css';
+
+const highlights = [
+  {
+    title: 'Private self-portrait room',
+    text: 'Take your time, test your angles, and shoot at your own pace with a remote in hand.',
+    icon: Camera,
+  },
+  {
+    title: 'Studio quality without the pressure',
+    text: 'Professional camera, lighting, monitor preview, and a calm setup that feels easy to use.',
+    icon: Sparkles,
+  },
+  {
+    title: 'Built for real moments',
+    text: 'Perfect for maternity, couples, families, pets, personal branding, and quiet celebrations.',
+    icon: Images,
+  },
+];
+
+const steps = [
+  {
+    number: '01',
+    title: 'Arrive and settle in',
+    text: 'Walk into a styled studio space with the lighting, camera, and monitor already prepared.',
+  },
+  {
+    number: '02',
+    title: 'Shoot with confidence',
+    text: 'Use the remote to capture as many natural moments as you want without anyone rushing you.',
+  },
+  {
+    number: '03',
+    title: 'Leave with favourites',
+    text: 'Review your images, choose the standouts, and turn a simple session into keepsakes worth framing.',
+  },
+];
+
+const sessionTypes = [
+  'Maternity portraits with room to move and breathe',
+  'Couples sessions that feel natural, not overly directed',
+  'Family photos with enough flexibility for kids and pets',
+  'Personal branding portraits with polished studio light',
+];
 
 const Home = () => {
   return (
-    <div className="home fade-in">
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Wephoto Studio – your one-stop shop for all your creative needs!</h1>
-          <p className="subtitle">If you’re looking to take your portrait photography to the next level, you need our studio!</p>
-          <button className="cta-button glass">Book a Session</button>
+    <div className="home">
+      <section className="home-hero site-shell">
+        <div className="hero-panel card" data-reveal style={{ '--delay': '0.05s' }}>
+          <div className="hero-copy">
+            <span className="eyebrow">Gladesville self-portrait studio</span>
+            <h1>Portraits that feel editorial, personal, and completely your own.</h1>
+            <p className="lead">
+              WePhoto gives you a beautifully lit studio, a remote-controlled camera, and enough
+              privacy to create photos that look refined without feeling staged.
+            </p>
+
+            <div className="hero-actions">
+              <Link to="/contact" className="button-primary">
+                Book a session
+                <ArrowRight size={18} strokeWidth={2.2} />
+              </Link>
+              <Link to="/portfolio" className="button-secondary">
+                View portfolio
+              </Link>
+            </div>
+
+            <div className="hero-stats">
+              <div>
+                <strong>Self-guided</strong>
+                <span>Remote-controlled shooting with full privacy</span>
+              </div>
+              <div>
+                <strong>Studio-ready</strong>
+                <span>Professional lights, monitor preview, and curated props</span>
+              </div>
+              <div>
+                <strong>Made for keeps</strong>
+                <span>From polished profile photos to milestone portraits</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="hero-media" data-reveal style={{ '--delay': '0.16s' }}>
+            <div className="media-stack media-stack-main">
+              <img src="/img/WephotoMain.jpg" alt="WePhoto studio hero view" />
+            </div>
+            <div className="media-stack media-stack-top">
+              <img src="/img/IMG_1648.jpg" alt="Portrait detail captured inside the studio" />
+            </div>
+            <div className="media-stack media-stack-bottom">
+              <img src="/img/IMG_3018.jpg" alt="Styled portrait session at WePhoto" />
+            </div>
+            <div className="hero-note card">
+              <Clock3 size={18} strokeWidth={2.1} />
+              <div>
+                <strong>Move at your own pace</strong>
+                <span>No photographer in the room. Just your timing, your expressions, your shot.</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="content-blocks">
-        <div className="text-block glass">
+      <section className="experience site-shell">
+        <div className="section-heading" data-reveal style={{ '--delay': '0.08s' }}>
+          <span className="eyebrow">Why people choose WePhoto</span>
+          <h2>A studio experience that feels calm, flattering, and easy to return to.</h2>
           <p>
-            We at wephoto provide everything you need to get the job done right, from props and setups to post-processing. Our studio features contactless photography with neutral backgrounds, a full-body mirror for practicing poses, and a monitor so you can easily look at yourselves before taking shots. You read that right, contactless photography… meaning, there’s no photographer! You will be the one to take photos of yourself or yourselves using a remote-controlled camera! Isn’t that cool?!
+            The old text-heavy homepage buried the best part of the service. This version brings
+            the experience forward so visitors immediately understand what makes the session feel
+            special.
           </p>
         </div>
 
-        <div className="text-block glass">
-          <p>
-            Wephoto Studio is all about minimalism, especially with our gray backdrops. You have full control of your sessions using a remote to take your photos.
-          </p>
+        <div className="experience-grid">
+          <article className="experience-feature card" data-reveal style={{ '--delay': '0.12s' }}>
+            <p className="feature-kicker">Designed for comfort</p>
+            <h3>No awkward posing under pressure.</h3>
+            <p>
+              Check your framing on the monitor, try different expressions, and capture the exact
+              moment that feels most like you.
+            </p>
+          </article>
+
+          <div className="experience-list">
+            {highlights.map(({ title, text, icon: Icon }, index) => (
+              <article
+                key={title}
+                className="experience-card card"
+                data-reveal
+                style={{ '--delay': `${0.16 + index * 0.06}s` }}
+              >
+                <span className="experience-icon">
+                  <Icon size={20} strokeWidth={2.1} />
+                </span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="process site-shell">
+        <div className="section-heading" data-reveal style={{ '--delay': '0.08s' }}>
+          <span className="eyebrow">How it works</span>
+          <h2>Simple enough to enjoy. Refined enough to look like a magazine spread.</h2>
         </div>
 
-        <div className="text-block glass">
-          <p>
-            We provide a professional camera, lights, a monitor for you to view your shots, and props for you to do your poses, timing, and cue.
-          </p>
+        <div className="process-grid">
+          {steps.map((step, index) => (
+            <article
+              key={step.number}
+              className="process-card card"
+              data-reveal
+              style={{ '--delay': `${0.12 + index * 0.06}s` }}
+            >
+              <span>{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </article>
+          ))}
         </div>
+      </section>
 
-        <div className="text-block highlight glass">
-          <p>Making picture perfect photos, <a href="https://www.lookylooky.com.au/">maternity photography</a> with our professional studio space and camera equipment.</p>
+      <section className="sessions site-shell">
+        <div className="sessions-layout card" data-reveal style={{ '--delay': '0.08s' }}>
+          <div className="sessions-copy">
+            <span className="eyebrow">Best-fit sessions</span>
+            <h2>Built for the kinds of photos people actually want to keep.</h2>
+            <p>
+              Whether you want a polished maternity session or an easy family portrait without the
+              chaos of a traditional shoot, the studio is set up to make that possible.
+            </p>
+
+            <ul className="session-list">
+              {sessionTypes.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <Link to="/services" className="button-secondary">
+              Explore services
+            </Link>
+          </div>
+
+          <div className="sessions-gallery">
+            <img src="/img/IMG_3217.jpg" alt="Couple portrait at WePhoto studio" />
+            <img src="/img/IMG_2991.jpg" alt="Warmly lit portrait session detail" />
+            <img src="/img/IMG_3070.jpg" alt="Family or branding portrait inside the studio" />
+          </div>
         </div>
+      </section>
 
-        <div className="text-block glass">
-          <p>
-            With professional photo equipment and space at your fingertips, you can make beautiful photos with ease. Whether you’re looking for a quick snapshot of an event or want to capture a longer-term shot, our studio is perfect for any photography project. We have the perfect backdrop for your Shots of the Day!
-          </p>
-        </div>
-
-        <div className="text-block glass">
-          <h2>Get the Perfect Photos Every Time.</h2>
-          <p>
-            To get the perfect photo every time, start by planning your shot. In order to create a stunning image, you will need to book with us and you’re ready to go. Our professional studio space and camera equipment will make sure that every photo is taken with precision and clarity.
-          </p>
-        </div>
-
-        <div className="text-block glass">
-          <h2>Our Professional Studio Space and Camera Equipment</h2>
-          <p>
-            Our professional studio space and camera equipment includes a variety of tools and devices that will help you take great photos every time. By using our equipment, you can improve the quality of your photos, create more realistic images, or even achieve entirely new levels of detail in your shots.
-          </p>
-        </div>
-
-        <div className="text-block glass">
-          <h2>How to Make Perfect Photos.</h2>
-          <p>
-            When it comes to making perfect photos, there are a few things you need in order to get the best results. First, choose the right camera equipment, which we already have. This includes a camera, lens, and flash. Second, set up your camera settings so that your shots will look great and we’ll take care of that for you. Third, take advantage of photo software to help with composition and shot selection which we have the best software to make your photos more beautiful.
-          </p>
-          <p>
-            When taking photos, it’s important to use the right camera settings. This means choosing a camera that is capable of capturing perfect images every time. To get the best results, start by checking the camera’s manual or online help to find specific settings that will work best for your shot of <a href="https://sweetlifephotography.com.au/">newborn photographer brisbane</a>.
-          </p>
-        </div>
-
-        <div className="text-block glass">
-          <h2>Get the Perfect Picture Every Time</h2>
-          <p>
-            In order to get the perfect picture every time, make sure you use the correct shutter speed and aperture values. These are typically located on the top left corner of your photo screen, next to the white balance setting. Use these values carefully if you want to achieve a realistic image, as they can have a significant impact on how your photograph looks and sounds.
-          </p>
-          <p>
-            Every time you take a picture, it can be a perfect or bad photo. To make sure your photos are always perfect, use the right camera equipment and settings. By choosing the right camera equipment and setting of your camera, you can take great selfies every time.
-          </p>
-        </div>
-
-        <div className="text-block glass">
-          <p>
-            Whether you’re looking for a quick portrait for your social media accounts, or you want to create a more professional shoot for your company profile, or any type of group photo, our studio can definitely help. You can have an amazing photo in no time. Plus, we’re always happy to provide creative direction and support. Come join us today!
-          </p>
-          <p>
-            You can do your self-portrait shoots with friends, loved ones, and even with your pets! Come join us today. You’ll definitely have a blast!
-          </p>
+      <section className="cta-strip site-shell" data-reveal style={{ '--delay': '0.08s' }}>
+        <div className="cta-strip-card card">
+          <div>
+            <span className="eyebrow">Ready when you are</span>
+            <h2>Book the studio and make the camera work for your pace, not against it.</h2>
+          </div>
+          <Link to="/contact" className="button-primary">
+            Start your booking
+            <ArrowRight size={18} strokeWidth={2.2} />
+          </Link>
         </div>
       </section>
     </div>

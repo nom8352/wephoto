@@ -1,47 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --primary: #ffffff;
-  --bg: #0a0a0a;
-  --text: #e0e0e0;
-  --accent: #d4af37; /* Premium gold */
-  --muted: #888888;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --font-main: 'Outfit', sans-serif;
+  color-scheme: dark;
+  --bg: #13100d;
+  --bg-elevated: #1b1713;
+  --bg-soft: rgba(255, 248, 240, 0.06);
+  --surface: rgba(32, 26, 21, 0.78);
+  --surface-strong: rgba(41, 33, 28, 0.92);
+  --surface-border: rgba(255, 240, 224, 0.12);
+  --text: #f5efe7;
+  --text-muted: rgba(245, 239, 231, 0.72);
+  --text-faint: rgba(245, 239, 231, 0.5);
+  --accent: #c8a977;
+  --accent-strong: #e7c998;
+  --accent-soft: rgba(200, 169, 119, 0.16);
+  --shadow: 0 24px 80px rgba(8, 6, 5, 0.42);
+  --shadow-soft: 0 18px 50px rgba(12, 8, 6, 0.28);
+  --radius-sm: 18px;
+  --radius-md: 28px;
+  --radius-lg: 40px;
+  --container: min(1180px, calc(100% - 32px));
+  --font-body: 'Manrope', sans-serif;
+  --font-display: 'Fraunces', serif;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-main);
-  background-color: var(--bg);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-body);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
+  background:
+    radial-gradient(circle at top left, rgba(200, 169, 119, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(122, 101, 73, 0.14), transparent 24%),
+    linear-gradient(180deg, #17120f 0%, #110d0b 45%, #0d0907 100%);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--primary);
-  font-weight: 300;
-  letter-spacing: -0.02em;
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+}
+
+body::before {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent 35%),
+    radial-gradient(circle at center, rgba(255, 240, 224, 0.06), transparent 55%);
+}
+
+body::after {
+  opacity: 0.06;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.55) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mix-blend-mode: soft-light;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {
-  color: var(--accent);
+  color: inherit;
   text-decoration: none;
-  transition: opacity 0.3s ease;
 }
 
-a:hover {
-  opacity: 0.8;
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: #17120f;
+  background: var(--accent-strong);
 }
 
 .layout {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -49,20 +111,143 @@ a:hover {
   flex: 1;
 }
 
-/* Glassmorphism utility */
-.glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
+.site-shell {
+  width: var(--container);
+  margin: 0 auto;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 240, 224, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 248, 240, 0.05);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
-.fade-in {
-  animation: fadeIn 0.8s ease forwards;
+.eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(200, 169, 119, 0.55);
+}
+
+.section-heading {
+  max-width: 760px;
+}
+
+.section-heading h2,
+.section-heading h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+}
+
+.section-heading p,
+.lead {
+  margin: 18px 0 0;
+  max-width: 60ch;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.4vw, 1.14rem);
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 248, 240, 0.07), rgba(255, 248, 240, 0.03));
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 58px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease;
+}
+
+.button-primary {
+  color: #1a140f;
+  border: 1px solid rgba(231, 201, 152, 0.92);
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+  box-shadow: 0 18px 30px rgba(200, 169, 119, 0.2);
+}
+
+.button-secondary {
+  color: var(--text);
+  border: 1px solid rgba(255, 240, 224, 0.18);
+  background: rgba(255, 248, 240, 0.04);
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  transform: translateY(-2px) scale(1.015);
+}
+
+.button-primary:active,
+.button-secondary:active {
+  transform: scale(0.985);
+}
+
+.button-primary:hover {
+  box-shadow: 0 22px 36px rgba(200, 169, 119, 0.24);
+}
+
+.button-secondary:hover {
+  border-color: rgba(255, 240, 224, 0.3);
+  background: rgba(255, 248, 240, 0.08);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --container: min(100% - 24px, 1180px);
+    --radius-md: 24px;
+    --radius-lg: 32px;
+  }
+
+  .button-primary,
+  .button-secondary {
+    width: 100%;
+  }
 }
