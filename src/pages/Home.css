@@ -20,9 +20,9 @@
   padding: clamp(28px, 5vw, 54px);
   overflow: hidden;
   background:
-    radial-gradient(circle at top left, rgba(200, 169, 119, 0.16), transparent 34%),
-    linear-gradient(180deg, rgba(255, 248, 240, 0.06), rgba(255, 248, 240, 0.02)),
-    rgba(24, 19, 15, 0.92);
+    radial-gradient(circle at top left, rgba(215, 167, 179, 0.2), transparent 34%),
+    linear-gradient(180deg, rgba(255, 250, 247, 0.98), rgba(251, 245, 241, 0.9)),
+    rgba(255, 250, 247, 0.94);
 }
 
 .hero-panel::after {
@@ -32,7 +32,7 @@
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(200, 169, 119, 0.18), transparent 68%);
+  background: radial-gradient(circle, rgba(215, 167, 179, 0.2), transparent 68%);
   filter: blur(20px);
   pointer-events: none;
 }
@@ -73,8 +73,8 @@
 .hero-stats div {
   padding: 18px;
   border-radius: 22px;
-  background: rgba(255, 248, 240, 0.05);
-  border: 1px solid rgba(255, 240, 224, 0.09);
+  background: rgba(255, 250, 247, 0.76);
+  border: 1px solid rgba(141, 106, 122, 0.09);
 }
 
 .hero-stats strong {
@@ -98,7 +98,7 @@
   position: absolute;
   overflow: hidden;
   border-radius: 30px;
-  border: 1px solid rgba(255, 240, 224, 0.12);
+  border: 1px solid rgba(141, 106, 122, 0.12);
   box-shadow: var(--shadow);
 }
 
@@ -138,7 +138,7 @@
   gap: 14px;
   width: min(320px, 72%);
   padding: 18px;
-  background: rgba(27, 22, 18, 0.9);
+  background: rgba(255, 250, 247, 0.94);
 }
 
 .hero-note svg {
@@ -173,8 +173,8 @@
   padding: 34px;
   min-height: 100%;
   background:
-    linear-gradient(180deg, rgba(200, 169, 119, 0.12), rgba(255, 248, 240, 0.03)),
-    rgba(24, 19, 15, 0.86);
+    linear-gradient(180deg, rgba(215, 167, 179, 0.16), rgba(255, 250, 247, 0.72)),
+    rgba(255, 250, 247, 0.92);
 }
 
 .feature-kicker {
@@ -230,7 +230,7 @@
   margin-bottom: 18px;
   border-radius: 14px;
   color: var(--accent);
-  background: rgba(200, 169, 119, 0.12);
+  background: rgba(215, 167, 179, 0.16);
 }
 
 .process-grid {
@@ -263,8 +263,8 @@
   gap: 28px;
   padding: 30px;
   background:
-    radial-gradient(circle at bottom left, rgba(200, 169, 119, 0.16), transparent 36%),
-    rgba(24, 19, 15, 0.88);
+    radial-gradient(circle at bottom left, rgba(215, 167, 179, 0.18), transparent 36%),
+    rgba(255, 250, 247, 0.92);
 }
 
 .sessions-copy h2 {
@@ -295,7 +295,7 @@
   height: 10px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 12px rgba(200, 169, 119, 0.4);
+  box-shadow: 0 0 12px rgba(215, 167, 179, 0.4);
 }
 
 .sessions-gallery {
@@ -308,7 +308,7 @@
 .sessions-gallery img {
   height: 100%;
   border-radius: 24px;
-  border: 1px solid rgba(255, 240, 224, 0.1);
+  border: 1px solid rgba(141, 106, 122, 0.1);
   box-shadow: var(--shadow-soft);
 }
 
@@ -323,8 +323,8 @@
   gap: 22px;
   padding: 28px 30px;
   background:
-    linear-gradient(135deg, rgba(231, 201, 152, 0.14), rgba(255, 248, 240, 0.04)),
-    rgba(24, 19, 15, 0.92);
+    linear-gradient(135deg, rgba(215, 167, 179, 0.18), rgba(255, 250, 247, 0.76)),
+    rgba(255, 250, 247, 0.92);
 }
 
 .cta-strip-card h2 {

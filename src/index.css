@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-  color-scheme: dark;
-  --bg: #13100d;
-  --bg-elevated: #1b1713;
-  --bg-soft: rgba(255, 248, 240, 0.06);
-  --surface: rgba(32, 26, 21, 0.78);
-  --surface-strong: rgba(41, 33, 28, 0.92);
-  --surface-border: rgba(255, 240, 224, 0.12);
-  --text: #f5efe7;
-  --text-muted: rgba(245, 239, 231, 0.72);
-  --text-faint: rgba(245, 239, 231, 0.5);
-  --accent: #c8a977;
-  --accent-strong: #e7c998;
-  --accent-soft: rgba(200, 169, 119, 0.16);
-  --shadow: 0 24px 80px rgba(8, 6, 5, 0.42);
-  --shadow-soft: 0 18px 50px rgba(12, 8, 6, 0.28);
+  color-scheme: light;
+  --bg: #f6f1ee;
+  --bg-elevated: #efe6e1;
+  --bg-soft: rgba(255, 250, 247, 0.72);
+  --surface: rgba(255, 250, 247, 0.88);
+  --surface-strong: rgba(248, 239, 235, 0.96);
+  --surface-border: rgba(141, 106, 122, 0.14);
+  --text: #2f2528;
+  --text-muted: rgba(47, 37, 40, 0.72);
+  --text-faint: rgba(47, 37, 40, 0.5);
+  --accent: #d7a7b3;
+  --accent-strong: #8d6a7a;
+  --accent-soft: rgba(215, 167, 179, 0.18);
+  --shadow: 0 24px 80px rgba(118, 92, 102, 0.12);
+  --shadow-soft: 0 18px 50px rgba(118, 92, 102, 0.1);
   --radius-sm: 18px;
   --radius-md: 28px;
   --radius-lg: 40px;
@@ -42,9 +42,9 @@ body {
   color: var(--text);
   line-height: 1.65;
   background:
-    radial-gradient(circle at top left, rgba(200, 169, 119, 0.18), transparent 28%),
-    radial-gradient(circle at 85% 12%, rgba(122, 101, 73, 0.14), transparent 24%),
-    linear-gradient(180deg, #17120f 0%, #110d0b 45%, #0d0907 100%);
+    radial-gradient(circle at top left, rgba(215, 167, 179, 0.24), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(232, 205, 197, 0.34), transparent 24%),
+    linear-gradient(180deg, #f9f4f1 0%, #f4ece8 45%, #efe5e1 100%);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -60,15 +60,15 @@ body::after {
 
 body::before {
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent 35%),
-    radial-gradient(circle at center, rgba(255, 240, 224, 0.06), transparent 55%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.28), transparent 35%),
+    radial-gradient(circle at center, rgba(215, 167, 179, 0.08), transparent 55%);
 }
 
 body::after {
   opacity: 0.06;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.55) 1px, transparent 1px);
+    linear-gradient(rgba(141, 106, 122, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(141, 106, 122, 0.24) 1px, transparent 1px);
   background-size: 120px 120px;
   mix-blend-mode: soft-light;
 }
@@ -99,7 +99,7 @@ button {
 }
 
 ::selection {
-  color: #17120f;
+  color: #fffaf7;
   background: var(--accent-strong);
 }
 
@@ -121,9 +121,9 @@ button {
   align-items: center;
   gap: 10px;
   padding: 10px 16px;
-  border: 1px solid rgba(255, 240, 224, 0.14);
+  border: 1px solid rgba(141, 106, 122, 0.14);
   border-radius: 999px;
-  background: rgba(255, 248, 240, 0.05);
+  background: rgba(255, 250, 247, 0.74);
   color: var(--text-muted);
   font-size: 0.82rem;
   font-weight: 700;
@@ -137,7 +137,7 @@ button {
   height: 8px;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 18px rgba(200, 169, 119, 0.55);
+  box-shadow: 0 0 18px rgba(215, 167, 179, 0.48);
 }
 
 .section-heading {
@@ -167,7 +167,7 @@ button {
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255, 248, 240, 0.07), rgba(255, 248, 240, 0.03));
+  background: linear-gradient(180deg, rgba(255, 250, 247, 0.92), rgba(251, 245, 241, 0.86));
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
@@ -194,16 +194,16 @@ button {
 }
 
 .button-primary {
-  color: #1a140f;
-  border: 1px solid rgba(231, 201, 152, 0.92);
+  color: #fff8f7;
+  border: 1px solid rgba(141, 106, 122, 0.4);
   background: linear-gradient(135deg, var(--accent-strong), var(--accent));
-  box-shadow: 0 18px 30px rgba(200, 169, 119, 0.2);
+  box-shadow: 0 18px 30px rgba(141, 106, 122, 0.16);
 }
 
 .button-secondary {
   color: var(--text);
-  border: 1px solid rgba(255, 240, 224, 0.18);
-  background: rgba(255, 248, 240, 0.04);
+  border: 1px solid rgba(141, 106, 122, 0.16);
+  background: rgba(255, 250, 247, 0.76);
 }
 
 .button-primary:hover,
@@ -217,12 +217,12 @@ button {
 }
 
 .button-primary:hover {
-  box-shadow: 0 22px 36px rgba(200, 169, 119, 0.24);
+  box-shadow: 0 22px 36px rgba(141, 106, 122, 0.2);
 }
 
 .button-secondary:hover {
-  border-color: rgba(255, 240, 224, 0.3);
-  background: rgba(255, 248, 240, 0.08);
+  border-color: rgba(141, 106, 122, 0.3);
+  background: rgba(255, 250, 247, 0.98);
 }
 
 [data-reveal] {
