@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Camera, Clock3, Images, Sparkles } from 'lucide-react';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './Home.css';
 
 const highlights = [
@@ -46,6 +47,13 @@ const sessionTypes = [
 ];
 
 const Home = () => {
+  usePageMeta({
+    title: 'WePhoto | Self-Portrait Studio in Gladesville, Sydney',
+    description:
+      'Private self-portrait studio in Gladesville, Sydney for couples, maternity, families, pets, and personal branding sessions.',
+    canonicalPath: '/',
+  });
+
   return (
     <div className="home">
       <section className="home-hero site-shell">

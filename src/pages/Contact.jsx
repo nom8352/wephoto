@@ -1,4 +1,13 @@
+import { usePageMeta } from '../hooks/usePageMeta';
+
 const Contact = () => {
+  usePageMeta({
+    title: 'Contact | WePhoto Studio',
+    description:
+      'Contact WePhoto in Gladesville, Sydney to ask about availability, session types, and booking details.',
+    canonicalPath: '/contact',
+  });
+
   return (
     <div className="contact fade-in" style={{ padding: '4rem 1rem', maxWidth: '600px', margin: '0 auto' }}>
       <h1 style={{ fontSize: '3rem', marginBottom: '2rem', textAlign: 'center' }}>Get in Touch</h1>

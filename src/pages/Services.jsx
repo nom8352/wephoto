@@ -1,6 +1,14 @@
 import './Services.css';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Services = () => {
+  usePageMeta({
+    title: 'Services | WePhoto Portrait Studio Sydney',
+    description:
+      'Explore self-portrait sessions, headshots, maternity, newborn-style studio portraits, and other WePhoto services in Sydney.',
+    canonicalPath: '/services',
+  });
+
   return (
     <div className="services fade-in">
       <header className="services-header">

@@ -1,6 +1,9 @@
 import './Portfolio.css';
+import { useLocation } from 'react-router-dom';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Portfolio = () => {
+  const location = useLocation();
   const images = [
     'IMG_0491.jpg', 'IMG_0501.jpg', 'IMG_0503.jpg', 'IMG_0505.jpg', 'IMG_0507.jpg',
     'IMG_0654.jpg', 'IMG_1063.jpg', 'IMG_1164.jpg', 'IMG_1175.jpg', 'IMG_1179.jpg',
@@ -10,6 +13,13 @@ const Portfolio = () => {
     'IMG_2991.jpg', 'IMG_3018.jpg', 'IMG_3070.jpg', 'IMG_3095.jpg', 'IMG_3117.jpg',
     'IMG_3217.jpg'
   ];
+
+  usePageMeta({
+    title: 'Portfolio | WePhoto Studio',
+    description:
+      'Browse portrait examples from WePhoto including self-portraits, couples, maternity, and studio sessions.',
+    canonicalPath: location.pathname === '/gallery' ? '/gallery' : '/portfolio',
+  });
 
   return (
     <div className="portfolio fade-in">

@@ -1,7 +1,15 @@
 import './About.css';
 import { Link } from 'react-router-dom';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const About = () => {
+  usePageMeta({
+    title: 'About | WePhoto Studio',
+    description:
+      'Learn about the WePhoto approach to private studio portraits, design-led finishing, and modern self-portrait sessions.',
+    canonicalPath: '/about',
+  });
+
   return (
     <div className="about fade-in">
       <header className="about-header">
