@@ -5,9 +5,9 @@ Last updated: 2026-07-14 (Australia/Brisbane)
 ## Repository
 
 - Branch: `main`
-- Latest pushed commit before this restoration: `ac02012 Add legacy SEO landing pages and route metadata`
+- Restoration deployment commit: `45cf0c5 Restore WordPress content and SEO infrastructure`
 - The WordPress backup remains excluded from Git under `backup/`.
-- The restoration changes are implemented locally and are ready for final commit, push, and deployment verification.
+- The restoration is pushed to `main` and deployed at `https://wephoto.com.au`.
 
 ## WordPress Restoration
 
@@ -40,10 +40,12 @@ Last updated: 2026-07-14 (Australia/Brisbane)
 - `npm run build` passes and generates 29 HTML files and 18 recovered media assets.
 - Cloudflare Pages local verification confirmed `200` for restored pages, `301` for retired URLs, `application/xml` for the sitemap, and `404` for unknown URLs.
 - Browser checks confirmed no hydration warnings, all restored images loaded, one H1 per tested page, and no horizontal overflow at 390px mobile width.
+- Live verification confirmed `200 application/xml` for both sitemap files, 28 sitemap URLs, server-rendered content and metadata, the expected 301 redirects, and a real 404 for unknown URLs.
+- Cloudflare prepends managed content-signal rules to `robots.txt`; general search crawling remains allowed with `search=yes` and `Allow: /`.
+- Public search results still show an older WordPress title from a crawl five months ago, so Google has not yet refreshed the newly deployed pages.
 
-## Next Delivery Step
+## Remaining Search Step
 
-1. Commit and push the restoration.
-2. Wait for the Cloudflare Pages deployment and re-check live status codes and metadata.
-3. Verify or grant access to the `wephoto.com.au` Google Search Console property.
-4. Submit `https://wephoto.com.au/sitemap_index.xml` and request indexing for the priority restored URLs.
+1. Verify or grant access to the `wephoto.com.au` Google Search Console property.
+2. Submit `https://wephoto.com.au/sitemap_index.xml` and request indexing for the homepage and priority restored URLs.
+3. Monitor Page indexing and Crawl stats after Google revisits the site.
