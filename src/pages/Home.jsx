@@ -1,3 +1,4 @@
+import { createElement } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Camera, Clock3, Images, Sparkles } from 'lucide-react';
 import { usePageMeta } from '../hooks/usePageMeta';
@@ -143,7 +144,7 @@ const Home = () => {
                 style={{ '--delay': `${0.16 + index * 0.06}s` }}
               >
                 <span className="experience-icon">
-                  <Icon size={20} strokeWidth={2.1} />
+                  {createElement(Icon, { size: 20, strokeWidth: 2.1 })}
                 </span>
                 <h3>{title}</h3>
                 <p>{text}</p>

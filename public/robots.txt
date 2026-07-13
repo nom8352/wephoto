@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wephoto.com.au/sitemap_index.xml

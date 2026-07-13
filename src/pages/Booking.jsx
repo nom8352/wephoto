@@ -25,9 +25,8 @@ const Booking = () => {
             <span className="eyebrow">Booking</span>
             <h1>Book a portrait session that feels private, polished, and easy.</h1>
             <p className="lead">
-              The old booking page focused on packages. Instead of repeating old pricing from the
-              backup, this page is set up to explain the booking experience clearly and send people
-              to the right next step.
+              Choose a single or group studio session, then send your preferred date and session
+              details directly to WePhoto.
             </p>
 
             <dl className="legacy-meta">
@@ -72,16 +71,20 @@ const Booking = () => {
 
         <section className="legacy-cta card">
           <div>
+            <span className="eyebrow">Session prices</span>
+            <h2>View the original single and group session options.</h2>
+          </div>
+          <Link to="/shop" className="button-primary">
+            View session options
+          </Link>
+        </section>
+
+        <section className="legacy-cta card">
+          <div>
             <span className="eyebrow">Next step</span>
             <h2>Send your preferred date and session type to start the booking.</h2>
-            <p className="legacy-small">
-              This keeps the booking page current without publishing outdated package details from
-              the old site.
-            </p>
           </div>
-          <Link to="/contact" className="button-primary">
-            Go to contact
-          </Link>
+          <Link to="/contact" className="button-primary">Contact WePhoto</Link>
         </section>
       </div>
     </div>

@@ -20,15 +20,21 @@ export function usePageMeta({
   title = defaultTitle,
   description = defaultDescription,
   canonicalPath = '/',
+  robots = 'index, follow',
+  image = '/img/WephotoMain.jpg',
 }) {
   useEffect(() => {
     document.title = title;
 
     ensureMeta('meta[name="description"]', 'name', description);
+    ensureMeta('meta[name="robots"]', 'name', robots);
     ensureMeta('meta[property="og:title"]', 'property', title);
     ensureMeta('meta[property="og:description"]', 'property', description);
+    ensureMeta('meta[property="og:type"]', 'property', 'website');
+    ensureMeta('meta[property="og:image"]', 'property', new URL(image, window.location.origin).toString());
     ensureMeta('meta[name="twitter:title"]', 'name', title);
     ensureMeta('meta[name="twitter:description"]', 'name', description);
+    ensureMeta('meta[name="twitter:card"]', 'name', 'summary_large_image');
 
     let canonical = document.head.querySelector('link[rel="canonical"]');
 
@@ -40,5 +46,6 @@ export function usePageMeta({
 
     const url = new URL(canonicalPath, window.location.origin);
     canonical.setAttribute('href', url.toString());
-  }, [canonicalPath, description, title]);
+    ensureMeta('meta[property="og:url"]', 'property', url.toString());
+  }, [canonicalPath, description, image, robots, title]);
 }

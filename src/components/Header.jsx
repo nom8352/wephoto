@@ -34,7 +34,7 @@ const Header = () => {
           </NavLink>
         </nav>
 
-        <Link to="/contact" className="header-cta">
+        <Link to="/booking" className="header-cta">
           Book now
           <ArrowUpRight size={16} strokeWidth={2.3} />
         </Link>

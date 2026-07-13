@@ -1,6 +1,10 @@
-[
-  {
-    "route": "/*",
-    "destination": "/index.html"
-  }
-]
+/home / 301
+/home-10-masonry-gallery / 301
+/cart /booking 301
+/cart-2 /booking 301
+/checkout /booking 301
+/checkout-2 /booking 301
+/my-account /booking 301
+/author/wephotoad /blog 301
+/product-category/uncategorized /shop 301
+/an-insight-on-the-key-aspects-related-to-self-portrait-photography /photo-studio-sydney/an-insight-on-the-key-aspects-related-to-self-portrait-photography 301
