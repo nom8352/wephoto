@@ -86,6 +86,7 @@ const redirectPairs = [
   ['/checkout', '/booking'],
   ['/checkout-2', '/booking'],
   ['/my-account', '/booking'],
+  ['/contact', '/booking'],
   ['/author/wephotoad', '/blog'],
   ['/product-category/uncategorized', '/shop'],
   [

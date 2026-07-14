@@ -68,7 +68,7 @@ const Home = () => {
             </p>
 
             <div className="hero-actions">
-              <Link to="/contact" className="button-primary">
+              <Link to="/booking" className="button-primary">
                 Book a session
                 <ArrowRight size={18} strokeWidth={2.2} />
               </Link>
@@ -211,7 +211,7 @@ const Home = () => {
             <span className="eyebrow">Ready when you are</span>
             <h2>Book the studio and make the camera work for your pace, not against it.</h2>
           </div>
-          <Link to="/contact" className="button-primary">
+          <Link to="/booking" className="button-primary">
             Start your booking
             <ArrowRight size={18} strokeWidth={2.2} />
           </Link>

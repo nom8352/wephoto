@@ -75,8 +75,8 @@ const Faq = () => {
             <span className="eyebrow">Still unsure?</span>
             <h2>Ask about your session and we can point you in the right direction.</h2>
           </div>
-          <Link to="/contact" className="button-primary">
-            Contact WePhoto
+          <Link to="/booking" className="button-primary">
+            View booking details
           </Link>
         </section>
       </div>

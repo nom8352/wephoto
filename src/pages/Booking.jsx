@@ -84,7 +84,7 @@ const Booking = () => {
             <span className="eyebrow">Next step</span>
             <h2>Send your preferred date and session type to start the booking.</h2>
           </div>
-          <Link to="/contact" className="button-primary">Contact WePhoto</Link>
+          <a href="mailto:wephoto.sydney@gmail.com" className="button-primary">Email WePhoto</a>
         </section>
       </div>
     </div>

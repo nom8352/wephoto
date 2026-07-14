@@ -92,7 +92,7 @@ const About = () => {
         <p>Your journey deserves to be captured with the care and expertise it deserves.</p>
         <div className="cta-links">
           <Link to="/portfolio" className="cta-button glass">Explore Portfolio</Link>
-          <Link to="/contact" className="cta-button glass primary">Book Your Session</Link>
+          <Link to="/booking" className="cta-button glass primary">Book Your Session</Link>
         </div>
       </section>
     </div>

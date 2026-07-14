@@ -30,12 +30,6 @@ const coreRoutes = [
     description: 'Learn about WePhoto, a private self-portrait and portrait studio in Sydney.',
   },
   {
-    path: '/contact',
-    title: 'Contact | WePhoto Studio',
-    description:
-      'Contact WePhoto in Gladesville, Sydney to ask about availability, session types, and booking details.',
-  },
-  {
     path: '/booking',
     title: 'Booking | WePhoto Self-Portrait Studio Sydney',
     description:

@@ -23,6 +23,9 @@ const getLabel = (path) => {
 
 const LegacyContentPage = ({ page }) => {
   const isArticle = articlePaths.has(page.path);
+  const legacyHtml = page.html
+    .replaceAll('href="/contact/"', 'href="/booking"')
+    .replaceAll('href="/contact"', 'href="/booking"');
 
   usePageMeta({
     title: `${page.title} | WePhoto`,
@@ -85,7 +88,7 @@ const LegacyContentPage = ({ page }) => {
           {/* The stored markup is a tag-whitelisted snapshot extracted from the local backup. */}
           <div
             className="legacy-rich-text"
-            dangerouslySetInnerHTML={{ __html: page.html }}
+            dangerouslySetInnerHTML={{ __html: legacyHtml }}
           />
         </article>
 

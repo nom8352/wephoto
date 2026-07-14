@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 import Blog from './pages/Blog';
 import Gallery from './pages/Gallery';
@@ -30,7 +29,6 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/shop" element={<Shop />} />
@@ -52,6 +50,7 @@ function App() {
           <Route path="/checkout" element={<Navigate to="/booking" replace />} />
           <Route path="/checkout-2" element={<Navigate to="/booking" replace />} />
           <Route path="/my-account" element={<Navigate to="/booking" replace />} />
+          <Route path="/contact" element={<Navigate to="/booking" replace />} />
           <Route path="/author/wephotoad" element={<Navigate to="/blog" replace />} />
           <Route path="/product-category/uncategorized" element={<Navigate to="/shop" replace />} />
           <Route

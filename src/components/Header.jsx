@@ -29,9 +29,6 @@ const Header = () => {
           <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             About
           </NavLink>
-          <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Contact
-          </NavLink>
         </nav>
 
         <Link to="/booking" className="header-cta">
