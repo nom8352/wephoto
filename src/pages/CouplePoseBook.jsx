@@ -6,119 +6,119 @@ import './CouplePoseBook.css';
 const poses = [
   {
     number: '01',
-    slug: 'soft-side-by-side',
-    title: 'Soft Side by Side',
-    mood: 'The easy opener',
-    image: '/pose-assets/couples/01-soft-side-by-side.webp',
-    width: 1003,
-    height: 1568,
-    alt: 'Australian couple standing side by side and holding hands in a portrait studio',
-    callouts: ['shoulders gently together', 'keep the joined hands loose'],
+    slug: 'walk-and-talk',
+    title: 'Walk & Talk',
+    mood: 'Start with movement',
+    image: '/pose-assets/couples/01-walk-and-talk.webp',
+    width: 1122,
+    height: 1402,
+    alt: 'Australian couple walking and talking on a coastal path at golden hour',
+    callouts: ['take small, uneven steps', 'talk before you look'],
     steps: [
-      'Turn both bodies about 20 degrees towards the camera.',
-      'Bring the inside shoulders close without pressing together.',
-      'Hold hands softly and shift weight onto the outside legs.',
+      'Begin a few metres back and walk at half your usual pace.',
+      'Keep one hand in a pocket and let the other arms move naturally.',
+      'Tell each other a story instead of watching the camera.',
     ],
-    camera: 'Full length · Eye level · 50 mm',
-    avoid: 'Do not pull the joined hands down or lock both knees.',
+    camera: 'Full length · 35-50 mm · 1/500 sec or faster',
+    avoid: 'Do not match every step or force eye contact for the whole walk.',
   },
   {
     number: '02',
-    slug: 'forehead-touch',
-    title: 'Forehead Touch',
-    mood: 'Quiet and connected',
-    image: '/pose-assets/couples/02-forehead-touch.webp',
-    width: 992,
-    height: 1586,
-    alt: 'Australian couple touching foreheads in a warm studio portrait',
-    callouts: ['touch foreheads, not noses', 'hands land softly'],
+    slug: 'shoulder-bump',
+    title: 'Shoulder Bump',
+    mood: 'A little chaos helps',
+    image: '/pose-assets/couples/02-shoulder-bump.webp',
+    width: 1003,
+    height: 1568,
+    alt: 'Australian couple laughing during a playful shoulder bump outdoors',
+    callouts: ['tiny bump, real reaction', 'leave room for movement'],
     steps: [
-      'Face each other in a relaxed three-quarter profile.',
-      'Step close enough for the foreheads to meet naturally.',
-      'Place hands at the waist and upper arms, then close the eyes.',
+      'Walk close enough for your shoulders to almost meet.',
+      'Give one gentle bump, then let the other person react.',
+      'Keep moving for two more steps while the laughter settles.',
     ],
-    camera: 'Three-quarter or full length · Side angle',
-    avoid: 'Avoid lifting the chin; keep both necks long and relaxed.',
+    camera: 'Full length · Continuous AF · Short burst',
+    avoid: 'Keep the bump light; the reaction should be bigger than the contact.',
   },
   {
     number: '03',
-    slug: 'back-hug',
-    title: 'The Back Hug',
-    mood: 'Warm, not crowded',
-    image: '/pose-assets/couples/03-back-hug.webp',
-    width: 992,
-    height: 1586,
-    alt: 'Australian couple posing with a gentle back hug in a studio',
-    callouts: ['offset the faces', 'layer the hands at the waist'],
+    slug: 'pull-me-in',
+    title: 'Pull Me In',
+    mood: 'Play with the distance',
+    image: '/pose-assets/couples/03-pull-me-in.webp',
+    width: 1002,
+    height: 1569,
+    alt: 'Australian couple playing on a sandstone coastal trail with one partner pulling the other closer',
+    callouts: ['build a loose diagonal', 'guide from the shirt or waist'],
     steps: [
-      'Place one partner half a step behind and slightly to the side.',
-      'Wrap the arms around the waist without squeezing the shoulders.',
-      'Keep one face to camera while the other partner looks across.',
+      'Place one partner half a step ahead and turn them slightly away.',
+      'Catch the loose shirt or place a gentle hand at the waist.',
+      'Pull once, softly, and photograph the turn back rather than the finish.',
     ],
-    camera: 'Full or three-quarter length · Slightly above waist',
-    avoid: 'Do not hide the rear partner completely behind the front shoulder.',
+    camera: 'Three-quarter or full length · 50 mm · Back-button focus',
+    avoid: 'Never tug an arm or wrist; keep the movement low and comfortable.',
   },
   {
     number: '04',
-    slug: 'walk-together',
-    title: 'Walk Together',
-    mood: 'Movement makes it natural',
-    image: '/pose-assets/couples/04-walk-together.webp',
+    slug: 'picnic-pause',
+    title: 'Picnic Pause',
+    mood: 'Relax into the frame',
+    image: '/pose-assets/couples/04-picnic-pause.webp',
     width: 1122,
     height: 1402,
-    alt: 'Australian couple walking hand in hand during a studio portrait session',
-    callouts: ['take tiny, slow steps', 'look at each other first'],
+    alt: 'Australian couple sitting casually on a picnic rug beneath eucalyptus trees',
+    callouts: ['stagger your heights', 'keep the knees relaxed'],
     steps: [
-      'Start farther back and take three very small steps forward.',
-      'Keep joined hands near hip height and let the free arms swing.',
-      'Look at each other, then towards the camera on the next pass.',
+      'Sit at different angles instead of facing the camera in a row.',
+      'Raise one knee each and use the outside hands for support.',
+      'Chat across the gap, then let the shoulders meet for one frame.',
     ],
-    camera: 'Full length · Continuous focus · Fast shutter',
-    avoid: 'Large steps look rushed; keep the stride short and easy.',
+    camera: 'Seated eye level · 35-50 mm · Keep the setting visible',
+    avoid: 'Do not mirror the same leg position or sit perfectly upright.',
   },
   {
     number: '05',
-    slug: 'seated-shoulder-lean',
-    title: 'Seated Shoulder Lean',
-    mood: 'Calm and close',
-    image: '/pose-assets/couples/05-seated-shoulder-lean.webp',
+    slug: 'side-wrap',
+    title: 'Side Wrap',
+    mood: 'Close without posing',
+    image: '/pose-assets/couples/05-side-wrap.webp',
     width: 1003,
     height: 1568,
-    alt: 'Australian couple seated together with a shoulder lean in a studio',
-    callouts: ['sit on the front half', 'lean from the shoulder'],
+    alt: 'Australian couple standing in a loose side embrace at a Sydney foreshore lookout',
+    callouts: ['stand half a step apart', 'look beyond the camera'],
     steps: [
-      'Sit close on the front half of the bench with feet grounded.',
-      'Angle the knees slightly away to keep the silhouettes clear.',
-      'Rest the head lightly on the shoulder and soften every hand.',
+      'Stand facing the same direction with one person slightly behind.',
+      'Wrap one arm loosely at the waist and leave the other hands casual.',
+      'Look towards the view and react to something outside the frame.',
     ],
-    camera: 'Three-quarter length · Seated eye level · 50 mm',
-    avoid: 'Do not collapse through the waist; stay tall before leaning in.',
+    camera: 'Full length · 50-85 mm · Expose for backlit skin',
+    avoid: 'Do not stack both faces or turn this into a tight back hug.',
   },
   {
     number: '06',
-    slug: 'look-back',
-    title: 'The Look Back',
-    mood: 'Playful with shape',
-    image: '/pose-assets/couples/06-look-back.webp',
-    width: 983,
-    height: 1600,
-    alt: 'Australian couple holding hands while one partner looks back in a studio pose',
-    callouts: ['keep a soft bend in the arm', 'turn from the shoulders'],
+    slug: 'run-back-to-me',
+    title: 'Run Back to Me',
+    mood: 'Finish with energy',
+    image: '/pose-assets/couples/06-run-back-to-me.webp',
+    width: 1003,
+    height: 1568,
+    alt: 'Australian couple laughing and jogging along a coastal track at sunset',
+    callouts: ['two easy steps only', 'turn back through the shoulders'],
     steps: [
-      'Place one partner a small step ahead and connect the inside hands.',
-      'Keep the joined arms soft instead of pulling them straight.',
-      'Turn from the shoulders, then bring the eyes back to your partner.',
+      'Let one partner move two easy steps ahead on a safe, level path.',
+      'Turn the upper body back while the other person follows behind.',
+      'Reach without grabbing and keep going through the laugh.',
     ],
-    camera: 'Full length · Eye level · Leave space to move',
-    avoid: 'Do not twist only the neck; let the upper body join the turn.',
+    camera: 'Full length · Continuous AF · 1/800 sec or faster',
+    avoid: 'Keep it to a playful jog and check the path before shooting.',
   },
 ];
 
 const CouplePoseBook = () => {
   usePageMeta({
-    title: 'Couple Pose Book | Easy Studio Poses | WePhoto',
+    title: 'Outdoor Couple Pose Book | Natural Poses | WePhoto',
     description:
-      'Six easy couple poses with clear positioning, camera tips and visual notes for a relaxed WePhoto studio session.',
+      'Six natural outdoor couple poses with simple prompts, camera tips and visual notes for a relaxed Australian photo session.',
     canonicalPath: '/pose-book/couples',
     image: poses[0].image,
   });
@@ -129,7 +129,7 @@ const CouplePoseBook = () => {
     name: 'WePhoto Couple Pose Book',
     url: 'https://wephoto.com.au/pose-book/couples',
     description:
-      'A visual guide to six easy couple poses for a relaxed self-portrait studio session.',
+      'A visual guide to six natural outdoor couple poses for a relaxed Australian photo session.',
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: poses.length,
@@ -152,11 +152,11 @@ const CouplePoseBook = () => {
       <section id="top" className="pose-book-hero site-shell">
         <div className="pose-book-intro card" data-reveal style={{ '--delay': '0.05s' }}>
           <div>
-            <span className="eyebrow">WePhoto pose book · Couples</span>
-            <h1>Less posing.<br />More connection.</h1>
+            <span className="eyebrow">WePhoto pose book · Outdoor couples</span>
+            <h1>Move first.<br />Pose second.</h1>
             <p>
-              Six simple starting points for couples who want natural studio portraits without
-              wondering what to do with every hand, shoulder, or step.
+              Six playful prompts for couples who want relaxed outdoor photos without freezing
+              into a pose. Walk, talk, laugh, and let the in-between moments do the work.
             </p>
           </div>
           <div className="pose-book-intro-note" aria-hidden="true">
@@ -242,7 +242,7 @@ const CouplePoseBook = () => {
             <span className="eyebrow">Save your favourites</span>
             <h2>Use these as a starting point, then make each pose feel like you.</h2>
           </div>
-          <Link to="/booking" className="button-primary">Plan your session</Link>
+          <Link to="/booking" className="button-primary">Plan your outdoor session</Link>
         </div>
       </section>
     </div>

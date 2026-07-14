@@ -31,7 +31,7 @@ Last updated: 2026-07-15 (Australia/Brisbane)
 - `robots.txt` allows search crawling and declares `https://wephoto.com.au/sitemap_index.xml`.
 - The previous street address and postcode were removed from visible content and LocalBusiness structured data at the owner's request.
 - The Contact page was retired, removed from navigation and the sitemap, and permanently redirected to `/booking`; direct email remains available there.
-- `/pose-book/couples` adds six original Australian couple pose guides with generated studio images, English handwritten callouts, positioning steps, camera notes, and mobile layouts.
+- `/pose-book/couples` adds six original outdoor Australian couple pose guides with generated coastal lifestyle images, English handwritten callouts, movement prompts, camera notes, and mobile layouts.
 - Trailing-slash duplicates and retired WordPress URLs use HTTP 301 redirects.
 - Unknown URLs return HTTP 404 instead of an empty `200` response.
 - `/blog` links all eight restored articles, and the footer links the restored guide, FAQ, shop, gallery, blog, and service landing pages.
@@ -39,7 +39,7 @@ Last updated: 2026-07-15 (Australia/Brisbane)
 ## Verification
 
 - `npm run lint` passes.
-- `npm run build` passes and generates 29 HTML files, 18 recovered media assets, and six optimised couple pose images.
+- `npm run build` passes and generates 29 HTML files, 18 recovered media assets, and six optimised outdoor couple pose images.
 - Cloudflare Pages local verification confirmed `200` for restored pages, `301` for retired URLs, `application/xml` for the sitemap, and `404` for unknown URLs.
 - Browser checks confirmed no hydration warnings, all restored images loaded, one H1 per tested page, and no horizontal overflow at 390px mobile width.
 - Live verification confirmed `200 application/xml` for both sitemap files, server-rendered content and metadata, the expected 301 redirects, and a real 404 for unknown URLs.
