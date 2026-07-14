@@ -26,6 +26,9 @@ const Header = () => {
           <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Portfolio
           </NavLink>
+          <NavLink to="/pose-book/couples" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Pose Book
+          </NavLink>
           <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             About
           </NavLink>

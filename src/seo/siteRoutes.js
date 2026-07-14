@@ -25,6 +25,12 @@ const coreRoutes = [
     description: 'The original WePhoto studio gallery, restored from the previous website.',
   },
   {
+    path: '/pose-book/couples',
+    title: 'Couple Pose Book | Easy Studio Poses | WePhoto',
+    description:
+      'Six easy couple poses with clear positioning, camera tips and visual notes for a relaxed WePhoto studio session.',
+  },
+  {
     path: '/about',
     title: 'About | WePhoto Studio',
     description: 'Learn about WePhoto, a private self-portrait and portrait studio in Sydney.',

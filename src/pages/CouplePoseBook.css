@@ -1,0 +1,432 @@
+.pose-book {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 34px 0 24px;
+}
+
+.pose-book-hero {
+  display: grid;
+  gap: 18px;
+}
+
+.pose-book-intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 30px;
+  min-height: 430px;
+  padding: clamp(34px, 6vw, 72px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 20%, rgba(242, 184, 198, 0.32), transparent 26%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(250, 241, 243, 0.9));
+}
+
+.pose-book-intro::after {
+  content: '';
+  position: absolute;
+  right: -70px;
+  bottom: -90px;
+  width: 320px;
+  height: 320px;
+  border: 2px solid rgba(222, 143, 164, 0.2);
+  border-radius: 48% 52% 57% 43%;
+  transform: rotate(14deg);
+}
+
+.pose-book-intro h1 {
+  margin: 26px 0 0;
+  max-width: 10ch;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7.2rem);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 0.88;
+}
+
+.pose-book-intro p {
+  max-width: 55ch;
+  margin: 26px 0 0;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.pose-book-intro-note {
+  align-self: end;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  color: var(--accent-strong);
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  transform: rotate(-7deg);
+}
+
+.pose-book-index {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.pose-book-index a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 88px;
+  padding: 16px;
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  color: var(--text-muted);
+  background: rgba(255, 250, 247, 0.74);
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.pose-book-index a:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.pose-book-index span {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.pose-book-pages {
+  display: grid;
+  gap: 30px;
+}
+
+.pose-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  gap: clamp(24px, 4vw, 54px);
+  min-height: 780px;
+  padding: clamp(18px, 3vw, 34px);
+  scroll-margin-top: 120px;
+  overflow: hidden;
+}
+
+.pose-spread:nth-child(even) .pose-photo {
+  order: 2;
+}
+
+.pose-photo {
+  position: relative;
+  min-height: 690px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #e8e2de;
+}
+
+.pose-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pose-photo figcaption {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(52, 44, 45, 0.34);
+  backdrop-filter: blur(8px);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.photo-callout {
+  position: absolute;
+  z-index: 2;
+  max-width: 180px;
+  padding: 8px 14px;
+  color: #7e4a57;
+  border: 2px solid rgba(126, 74, 87, 0.44);
+  border-radius: 48% 52% 46% 54%;
+  background: rgba(255, 250, 247, 0.9);
+  box-shadow: 0 8px 22px rgba(95, 64, 71, 0.1);
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+.photo-callout::after {
+  content: '';
+  position: absolute;
+  width: 42px;
+  border-top: 2px solid rgba(126, 74, 87, 0.58);
+}
+
+.photo-callout-one {
+  top: 12%;
+  right: 5%;
+  transform: rotate(4deg);
+}
+
+.photo-callout-one::after {
+  right: 94%;
+  bottom: -8px;
+  transform: rotate(28deg);
+}
+
+.photo-callout-two {
+  right: 5%;
+  bottom: 18%;
+  transform: rotate(-4deg);
+}
+
+.photo-callout-two::after {
+  right: 90%;
+  top: -7px;
+  transform: rotate(-24deg);
+}
+
+.pose-notes {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: clamp(10px, 2vw, 24px);
+}
+
+.pose-number {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.pose-mood {
+  display: inline-block;
+  margin: 18px 0 0;
+  color: #9a6572;
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  font-weight: 700;
+  transform: rotate(-2deg);
+}
+
+.pose-notes h2 {
+  margin: 2px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+.pose-steps {
+  display: grid;
+  gap: 18px;
+  margin: 34px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: pose-step;
+}
+
+.pose-steps li {
+  position: relative;
+  padding-left: 48px;
+  color: var(--text-muted);
+  counter-increment: pose-step;
+}
+
+.pose-steps li::before {
+  content: counter(pose-step);
+  position: absolute;
+  top: -4px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: #8f5966;
+  border: 1.5px solid rgba(143, 89, 102, 0.34);
+  border-radius: 45% 55% 48% 52%;
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  font-weight: 700;
+  transform: rotate(-5deg);
+}
+
+.pose-camera-note,
+.pose-avoid-note {
+  display: flex;
+  gap: 14px;
+  margin-top: 26px;
+  padding: 18px;
+  border-radius: 20px;
+}
+
+.pose-camera-note {
+  color: #5e5355;
+  background: rgba(237, 227, 218, 0.72);
+}
+
+.pose-avoid-note {
+  margin-top: 12px;
+  color: #704954;
+  background: rgba(242, 184, 198, 0.16);
+}
+
+.pose-camera-note svg,
+.pose-avoid-note svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.pose-camera-note span,
+.pose-avoid-note span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pose-camera-note p,
+.pose-avoid-note p {
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.next-pose {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  margin-top: 28px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(126, 74, 87, 0.28);
+  color: #7e4a57;
+  font-family: 'Caveat', cursive;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.pose-book-cta-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: clamp(26px, 4vw, 44px);
+  background:
+    radial-gradient(circle at 10% 50%, rgba(242, 184, 198, 0.3), transparent 22%),
+    rgba(255, 250, 247, 0.92);
+}
+
+.pose-book-cta-card > svg {
+  color: var(--accent-strong);
+}
+
+.pose-book-cta-card h2 {
+  max-width: 22ch;
+  margin: 16px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+@media (max-width: 1050px) {
+  .pose-book-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pose-spread {
+    grid-template-columns: 1fr;
+  }
+
+  .pose-spread:nth-child(even) .pose-photo {
+    order: initial;
+  }
+
+  .pose-photo {
+    min-height: min(1100px, 125vw);
+  }
+}
+
+@media (max-width: 720px) {
+  .pose-book {
+    padding-top: 22px;
+  }
+
+  .pose-book-intro {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 30px 24px 80px;
+  }
+
+  .pose-book-intro h1 {
+    font-size: clamp(3rem, 17vw, 5rem);
+  }
+
+  .pose-book-intro-note {
+    position: absolute;
+    right: 28px;
+    bottom: 20px;
+    margin: 0;
+  }
+
+  .pose-book-index {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .pose-book-index a {
+    flex: 0 0 148px;
+    min-height: 76px;
+    scroll-snap-align: start;
+  }
+
+  .pose-spread {
+    min-height: auto;
+    padding: 12px;
+    border-radius: 28px;
+    scroll-margin-top: 290px;
+  }
+
+  .pose-photo {
+    min-height: 0;
+    aspect-ratio: 2 / 3;
+    border-radius: 22px;
+  }
+
+  .photo-callout {
+    max-width: 132px;
+    padding: 7px 10px;
+    font-size: 1.12rem;
+  }
+
+  .pose-notes {
+    padding: 20px 10px 16px;
+  }
+
+  .pose-book-cta-card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pose-book-index a {
+    transition: none;
+  }
+}

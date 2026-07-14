@@ -9,6 +9,7 @@ import About from './pages/About';
 import Booking from './pages/Booking';
 import Blog from './pages/Blog';
 import Gallery from './pages/Gallery';
+import CouplePoseBook from './pages/CouplePoseBook';
 import LegacyContentPage from './pages/LegacyContentPage';
 import NotFound from './pages/NotFound';
 import Shop from './pages/Shop';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/pose-book/couples" element={<CouplePoseBook />} />
           <Route path="/about" element={<About />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/blog" element={<Blog />} />

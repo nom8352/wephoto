@@ -26,6 +26,7 @@ const Footer = () => {
           <div>
             <span>Plan</span>
             <Link to="/guide">Studio guide</Link>
+            <Link to="/pose-book/couples">Couple pose book</Link>
             <Link to="/faq">FAQ</Link>
             <Link to="/blog">Photography guides</Link>
             <Link to="/shop">Session options</Link>
