@@ -9,14 +9,6 @@ const schemas = [
     email: 'wephoto.sydney@gmail.com',
     description:
       'A private self-portrait and professional portrait studio in Gladesville, Sydney.',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Unit 22, 33-37 College Street',
-      addressLocality: 'Gladesville',
-      addressRegion: 'NSW',
-      postalCode: '2111',
-      addressCountry: 'AU',
-    },
     areaServed: 'Sydney',
   },
   {

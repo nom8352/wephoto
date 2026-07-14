@@ -36,7 +36,7 @@ const Booking = () => {
               </div>
               <div>
                 <dt>Location</dt>
-                <dd>Gladesville NSW 2111, with the current session details confirmed directly.</dd>
+                <dd>Studio details are confirmed directly with your booking.</dd>
               </div>
             </dl>
           </div>

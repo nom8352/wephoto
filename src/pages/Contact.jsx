@@ -12,9 +12,8 @@ const Contact = () => {
     <div className="contact fade-in" style={{ padding: '4rem 1rem', maxWidth: '600px', margin: '0 auto' }}>
       <h1 style={{ fontSize: '3rem', marginBottom: '2rem', textAlign: 'center' }}>Get in Touch</h1>
       <div className="glass" style={{ padding: '1.5rem', marginBottom: '2.5rem', textAlign: 'center', border: '1px solid var(--accent)' }}>
-        <p style={{ fontWeight: '500' }}>Visit our Sydney Studio:</p>
-        <p>Unit 22, 33-37 College Street</p>
-        <p>Gladesville NSW 2111, Australia</p>
+        <p style={{ fontWeight: '500' }}>Contact our Sydney studio</p>
+        <p>Location details are confirmed directly with your booking.</p>
         <p>wephoto.sydney@gmail.com</p>
       </div>
       <form className="glass" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

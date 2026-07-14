@@ -29,7 +29,7 @@ Last updated: 2026-07-14 (Australia/Brisbane)
 - LocalBusiness, WebSite, WebPage/Article, Breadcrumb, ImageGallery, CollectionPage, and Service JSON-LD are included where appropriate.
 - `sitemap.xml` contains all 28 canonical URLs, and the original Yoast-compatible `sitemap_index.xml` path points to it.
 - `robots.txt` allows search crawling and declares `https://wephoto.com.au/sitemap_index.xml`.
-- The original studio address is restored in the visible contact details and LocalBusiness structured data.
+- The previous street address and postcode were removed from visible content and LocalBusiness structured data at the owner's request.
 - Trailing-slash duplicates and retired WordPress URLs use HTTP 301 redirects.
 - Unknown URLs return HTTP 404 instead of an empty `200` response.
 - `/blog` links all eight restored articles, and the footer links the restored guide, FAQ, shop, gallery, blog, and service landing pages.

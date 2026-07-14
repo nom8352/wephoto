@@ -41,8 +41,7 @@ const Footer = () => {
           </div>
           <div>
             <span>Visit</span>
-            <p>Unit 22, 33-37 College Street</p>
-            <p>Gladesville NSW 2111, Australia</p>
+            <p>Sydney studio</p>
             <p>Flexible self-portrait bookings</p>
             <Link to="/booking">Book your session</Link>
           </div>
