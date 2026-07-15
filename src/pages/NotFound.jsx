@@ -16,11 +16,11 @@ const NotFound = () => {
         <span className="eyebrow">404</span>
         <h1>This page is no longer here.</h1>
         <p className="lead">
-          The address may be outdated. Use the studio guide or return to the homepage to continue.
+          The address may be outdated. Browse the pose library or return to the homepage to continue.
         </p>
         <div className="not-found-actions">
           <Link to="/" className="button-primary">Return home</Link>
-          <Link to="/guide" className="button-secondary">View the guide</Link>
+          <Link to="/pose-book" className="button-secondary">Browse pose books</Link>
         </div>
       </section>
     </div>

@@ -4,60 +4,60 @@ import './LegacyPages.css';
 
 const faqs = [
   {
-    question: 'How does a self-portrait session work?',
-    answer:
-      'You step into a prepared studio with professional lighting, a monitor preview, and a remote trigger. You control the timing, expressions, and pacing yourself.',
+    question: 'What is a WePhoto pose book?',
+    answer: 'It is a visual contact sheet that places twelve related pose ideas in one image. The numbered legend and short directions sit outside the photographs so the sheet stays easy to scan.',
   },
   {
-    question: 'Do I need photography experience?',
-    answer:
-      'No. The setup is designed to be simple. Most guests settle in after a few test shots and quickly find a rhythm.',
+    question: 'How should I use the poses?',
+    answer: 'Choose two or three ideas, copy the general body direction, then keep moving. The strongest photo is often the reaction or transition after the planned pose.',
   },
   {
-    question: 'Can I bring a partner, kids, or pets?',
-    answer:
-      'Yes. Couple, family, maternity, and pet-friendly sessions all fit the studio concept well, as long as the booking is planned for that group size.',
+    question: 'Are the guide images original?',
+    answer: 'Yes. WePhoto creates original reference images for its pose books. We do not republish photographs taken from Pinterest boards or other creators’ websites.',
   },
   {
-    question: 'What should I wear?',
-    answer:
-      'Choose outfits that match the mood you want in the final photos. Soft neutrals and well-fitted pieces usually photograph best.',
+    question: 'Are the images real photo sessions?',
+    answer: 'The new pose-book visuals are generated reference images. They are intended to explain body position, framing, and shot variety rather than represent a booked client session.',
   },
   {
-    question: 'Will I see the photos during the session?',
-    answer:
-      'Yes. Live monitor feedback helps you adjust your pose, expression, and framing as you go.',
+    question: 'Can I save a sheet for a personal shoot?',
+    answer: 'Yes. You may save a sheet for personal reference. Please link back to WePhoto when sharing the complete guide publicly, and do not resell or redistribute the image as your own product.',
   },
   {
-    question: 'How do I get my images after the session?',
-    answer:
-      'Image delivery and selection details can vary, so the best option is to confirm the current process at the time of booking.',
+    question: 'Does WePhoto still operate a portrait studio?',
+    answer: 'No. The physical self-portrait studio is no longer operating. WePhoto now focuses on free pose books and practical photo, video, editing, and social content guides.',
   },
 ];
 
 const Faq = () => {
   usePageMeta({
-    title: 'FAQ | WePhoto Self-Portrait Studio Sydney',
-    description:
-      'Frequently asked questions about WePhoto self-portrait sessions in Sydney, including what to wear, how the studio works, and who the sessions suit.',
+    title: 'FAQ | WePhoto Posebooks & Content Guides',
+    description: 'Answers about WePhoto pose books, original guide images, personal use, and the new content-guide platform.',
     canonicalPath: '/faq',
   });
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  };
+
   return (
     <div className="legacy-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="legacy-page-shell">
         <section className="legacy-hero card legacy-hero-grid">
           <div>
             <span className="eyebrow">FAQ</span>
-            <h1>Questions people usually ask before their first session.</h1>
-            <p className="lead">
-              The old FAQ page explained the basics of the self-portrait studio. This version keeps
-              the useful answers and strips away the filler.
-            </p>
+            <h1>How to use WePhoto pose books.</h1>
+            <p className="lead">A few clear answers about the visual guides, the images, and what WePhoto is building next.</p>
           </div>
-
           <div className="legacy-visual">
-            <img src="/img/IMG_1648.jpg" alt="WePhoto frequently asked questions" loading="lazy" />
+            <img src="/pose-assets/social/12-social-media-poses.webp" alt="WePhoto social media pose book" loading="lazy" />
           </div>
         </section>
 
@@ -72,12 +72,10 @@ const Faq = () => {
 
         <section className="legacy-cta card">
           <div>
-            <span className="eyebrow">Still unsure?</span>
-            <h2>Ask about your session and we can point you in the right direction.</h2>
+            <span className="eyebrow">Start here</span>
+            <h2>Choose a complete twelve-pose visual guide.</h2>
           </div>
-          <Link to="/booking" className="button-primary">
-            View booking details
-          </Link>
+          <Link to="/pose-book" className="button-primary">Browse pose books</Link>
         </section>
       </div>
     </div>

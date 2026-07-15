@@ -12,7 +12,7 @@ const Header = () => {
           </span>
           <span className="logo-copy">
             <strong>WePhoto</strong>
-            <small>Self portrait studio</small>
+            <small>Pose & content guides</small>
           </span>
         </Link>
 
@@ -20,22 +20,22 @@ const Header = () => {
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Home
           </NavLink>
-          <NavLink to="/services" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Services
+          <NavLink to="/pose-book" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Pose Books
           </NavLink>
-          <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Portfolio
+          <NavLink to="/guides" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Create Better
           </NavLink>
-          <NavLink to="/pose-book/couples" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Pose Book
+          <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Photo Guides
           </NavLink>
           <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             About
           </NavLink>
         </nav>
 
-        <Link to="/booking" className="header-cta">
-          Book now
+        <Link to="/pose-book/social-media" className="header-cta">
+          Start with 12 poses
           <ArrowUpRight size={16} strokeWidth={2.3} />
         </Link>
       </div>

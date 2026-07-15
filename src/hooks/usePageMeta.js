@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
-const defaultTitle = 'WePhoto | Self-Portrait Studio in Gladesville, Sydney';
+const defaultTitle = 'WePhoto | Social Media Posebooks & Content Guides';
 const defaultDescription =
-  'Private self-portrait sessions, headshots, maternity, pet and studio portraits in Gladesville, Sydney.';
+  'Saveable posebooks and practical photo, Reels, editing, and social media guides for more confident content.';
 
 function ensureMeta(selector, attr, value) {
   let element = document.head.querySelector(selector);
@@ -21,7 +21,7 @@ export function usePageMeta({
   description = defaultDescription,
   canonicalPath = '/',
   robots = 'index, follow',
-  image = '/img/WephotoMain.jpg',
+  image = '/pose-assets/social/12-social-media-poses.webp',
 }) {
   useEffect(() => {
     document.title = title;
@@ -35,6 +35,7 @@ export function usePageMeta({
     ensureMeta('meta[name="twitter:title"]', 'name', title);
     ensureMeta('meta[name="twitter:description"]', 'name', description);
     ensureMeta('meta[name="twitter:card"]', 'name', 'summary_large_image');
+    ensureMeta('meta[name="twitter:image"]', 'name', new URL(image, window.location.origin).toString());
 
     let canonical = document.head.querySelector('link[rel="canonical"]');
 

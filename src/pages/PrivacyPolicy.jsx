@@ -4,7 +4,7 @@ import './LegacyPages.css';
 const PrivacyPolicy = () => {
   usePageMeta({
     title: 'Privacy Policy | WePhoto',
-    description: 'Privacy policy and studio contact information for WePhoto.',
+    description: 'Privacy information for visitors using WePhoto pose books and content guides.',
     canonicalPath: '/privacy-policy',
   });
 
@@ -13,22 +13,11 @@ const PrivacyPolicy = () => {
       <div className="legacy-page-shell">
         <section className="legacy-panel card">
           <span className="eyebrow">Privacy policy</span>
-          <h2>How WePhoto handles basic visitor and enquiry information.</h2>
-          <p>
-            When you contact WePhoto, any details you submit such as your name, email address,
-            booking preferences, and message content may be used to respond to your enquiry and
-            organise your session.
-          </p>
-          <p>
-            Standard website analytics, server logs, and spam protection tools may collect limited
-            technical information such as browser type, device details, IP address, and referring
-            pages in order to keep the website secure and understand how people use it.
-          </p>
-          <p>
-            If you would like to update or remove contact information you have shared through an
-            enquiry, use the studio contact details on the contact page and request assistance
-            directly.
-          </p>
+          <h1>How WePhoto handles basic website information.</h1>
+          <p>WePhoto provides public pose books and educational content. The website does not currently accept studio bookings, payments, or customer photo uploads.</p>
+          <p>Standard analytics, server logs, security, and spam-protection tools may collect limited technical information such as browser type, device details, IP address, referring page, and pages viewed. This information helps keep the website secure and understand which guides are useful.</p>
+          <p>Some pages may link to external websites. Those services have their own privacy practices, and WePhoto is not responsible for how third-party sites collect or use information.</p>
+          <p>If interactive features, newsletters, or downloadable products are introduced later, this policy will be updated before collecting the additional information required for those services.</p>
         </section>
       </div>
     </div>

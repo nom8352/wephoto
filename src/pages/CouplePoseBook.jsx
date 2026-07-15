@@ -285,7 +285,7 @@ const CouplePoseBook = () => {
             <span className="eyebrow">Save your favourites</span>
             <h2>Use these as a starting point, then make each pose feel like you.</h2>
           </div>
-          <Link to="/booking" className="button-primary">Plan your outdoor session</Link>
+          <Link to="/pose-book" className="button-primary">Explore more pose books</Link>
         </div>
       </section>
     </div>

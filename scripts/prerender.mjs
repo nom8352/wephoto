@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
-import { indexableRoutes, render } from '../dist-ssr/entry-server.js';
+import { indexableRoutes, render, retiredRedirects } from '../dist-ssr/entry-server.js';
 
 const dist = resolve('dist');
 const template = await readFile(resolve(dist, 'index.html'), 'utf8');
@@ -29,8 +29,10 @@ function buildDocument(url) {
   document = replaceMeta(document, 'property', 'og:title', meta.title);
   document = replaceMeta(document, 'property', 'og:description', meta.description);
   document = replaceMeta(document, 'property', 'og:url', canonical);
+  document = replaceMeta(document, 'property', 'og:image', `https://wephoto.com.au${meta.image}`);
   document = replaceMeta(document, 'name', 'twitter:title', meta.title);
   document = replaceMeta(document, 'name', 'twitter:description', meta.description);
+  document = replaceMeta(document, 'name', 'twitter:image', `https://wephoto.com.au${meta.image}`);
   document = document.replace(
     /<link\s+rel="canonical"[^>]*>/i,
     `<link rel="canonical" href="${canonical}" />`,
@@ -78,25 +80,8 @@ await writeFile(
   'utf8',
 );
 
-const redirectPairs = [
-  ['/home', '/'],
-  ['/home-10-masonry-gallery', '/'],
-  ['/cart', '/booking'],
-  ['/cart-2', '/booking'],
-  ['/checkout', '/booking'],
-  ['/checkout-2', '/booking'],
-  ['/my-account', '/booking'],
-  ['/contact', '/booking'],
-  ['/author/wephotoad', '/blog'],
-  ['/product-category/uncategorized', '/shop'],
-  [
-    '/an-insight-on-the-key-aspects-related-to-self-portrait-photography',
-    '/photo-studio-sydney/an-insight-on-the-key-aspects-related-to-self-portrait-photography',
-  ],
-];
-
 const redirects = [
-  ...redirectPairs.flatMap(([from, to]) => [`${from} ${to} 301`, `${from}/ ${to} 301`]),
+  ...retiredRedirects.flatMap(([from, to]) => [`${from} ${to} 301`, `${from}/ ${to} 301`]),
   ...indexableRoutes
     .filter(({ path }) => path !== '/')
     .map(({ path }) => `${path}/ ${path} 301`),

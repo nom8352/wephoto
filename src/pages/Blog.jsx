@@ -18,9 +18,9 @@ const articles = legacyPages.filter((page) => articlePaths.has(page.path));
 
 const Blog = () => {
   usePageMeta({
-    title: 'Photography guides | WePhoto Blog',
+    title: 'Photography Guides for Better Social Content | WePhoto',
     description:
-      'Restored WePhoto guides covering self-portrait, couple, and family photography ideas.',
+      'Practical WePhoto articles covering self portraits, couple poses, family photos, and stronger social content.',
     canonicalPath: '/blog',
   });
 
@@ -44,18 +44,18 @@ const Blog = () => {
       />
       <div className="legacy-page-shell">
         <section className="legacy-hero card">
-          <span className="eyebrow">WePhoto journal</span>
-          <h1>Photography guides from the original studio website.</h1>
+          <span className="eyebrow">Photography guides</span>
+          <h1>Better photos start before you press the shutter.</h1>
           <p className="lead">
-            The complete set of self-portrait, couple, and family photography articles restored
-            from the previous WePhoto site.
+            Practical reading on self portraits, couple direction, family photos, and the small
+            decisions that make social content feel more natural.
           </p>
         </section>
 
         <section className="journal-grid">
           {articles.map((article) => (
             <article key={article.path} className="journal-card card">
-              <span className="journal-label">Photography guide</span>
+              <span className="journal-label">From the WePhoto archive</span>
               <h2>{article.title}</h2>
               <p>{article.description}</p>
               <Link to={article.path}>Read the guide</Link>

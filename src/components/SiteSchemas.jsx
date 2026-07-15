@@ -1,15 +1,13 @@
 const schemas = [
   {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': 'https://wephoto.com.au/#studio',
+    '@type': 'Organization',
+    '@id': 'https://wephoto.com.au/#organization',
     name: 'WePhoto',
     url: 'https://wephoto.com.au/',
-    image: 'https://wephoto.com.au/img/WephotoMain.jpg',
-    email: 'wephoto.sydney@gmail.com',
+    image: 'https://wephoto.com.au/pose-assets/social/12-social-media-poses.webp',
     description:
-      'A private self-portrait and professional portrait studio in Gladesville, Sydney.',
-    areaServed: 'Sydney',
+      'An English-language library of visual pose books and practical social media content guides.',
   },
   {
     '@context': 'https://schema.org',
@@ -18,6 +16,7 @@ const schemas = [
     name: 'WePhoto',
     url: 'https://wephoto.com.au/',
     inLanguage: 'en-AU',
+    publisher: { '@id': 'https://wephoto.com.au/#organization' },
   },
 ];
 

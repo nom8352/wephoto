@@ -15,17 +15,16 @@ const articlePaths = new Set([
 
 const getLabel = (path) => {
   if (articlePaths.has(path)) return 'Photography journal';
-  if (path === '/faq') return 'Frequently asked questions';
-  if (path === '/guide') return 'Studio guide';
-  if (path.includes('policy') || path.includes('refund')) return 'Studio policy';
-  return 'Sydney photography';
+  return 'WePhoto guide';
 };
 
 const LegacyContentPage = ({ page }) => {
   const isArticle = articlePaths.has(page.path);
   const legacyHtml = page.html
-    .replaceAll('href="/contact/"', 'href="/booking"')
-    .replaceAll('href="/contact"', 'href="/booking"');
+    .replaceAll('href="/contact/"', 'href="/pose-book"')
+    .replaceAll('href="/contact"', 'href="/pose-book"')
+    .replaceAll('href="/booking/"', 'href="/pose-book"')
+    .replaceAll('href="/booking"', 'href="/pose-book"');
 
   usePageMeta({
     title: `${page.title} | WePhoto`,
@@ -43,7 +42,7 @@ const LegacyContentPage = ({ page }) => {
     inLanguage: 'en-AU',
     ...(page.datePublished && { datePublished: page.datePublished }),
     ...(page.dateModified && { dateModified: page.dateModified }),
-    publisher: { '@id': 'https://wephoto.com.au/#studio' },
+    publisher: { '@id': 'https://wephoto.com.au/#organization' },
     isPartOf: { '@id': 'https://wephoto.com.au/#website' },
   };
 
@@ -85,6 +84,11 @@ const LegacyContentPage = ({ page }) => {
             {page.description && <p className="lead">{page.description}</p>}
           </header>
 
+          <aside className="legacy-archive-note">
+            <strong>Archive note</strong>
+            <p>This guide comes from the former WePhoto studio archive. The physical studio is no longer operating; WePhoto now publishes pose books and social content guides.</p>
+          </aside>
+
           {/* The stored markup is a tag-whitelisted snapshot extracted from the local backup. */}
           <div
             className="legacy-rich-text"
@@ -92,14 +96,14 @@ const LegacyContentPage = ({ page }) => {
           />
         </article>
 
-        {!page.path.includes('policy') && !page.path.includes('refund') && (
+        {isArticle && (
           <section className="legacy-cta card">
             <div>
-              <span className="eyebrow">WePhoto Studio</span>
-              <h2>Ready to create your own studio portraits?</h2>
+              <span className="eyebrow">Try it visually</span>
+              <h2>Choose twelve poses for your next photo.</h2>
             </div>
-            <Link to="/booking" className="button-primary">
-              View session options
+            <Link to="/pose-book" className="button-primary">
+              Browse pose books
             </Link>
           </section>
         )}

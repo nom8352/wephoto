@@ -1,123 +1,136 @@
-.about {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
+.about-page {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 58px;
+  padding: 34px 0 24px;
 }
 
-.about-header {
-  text-align: center;
+.about-hero-card {
+  min-height: 540px;
+  padding: clamp(34px, 7vw, 80px);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(242, 184, 198, 0.3), transparent 27%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(250, 241, 243, 0.9));
 }
 
-.about-section {
-  padding: 3rem;
-  line-height: 1.8;
+.about-hero-card h1 {
+  max-width: 13ch;
+  margin: 28px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, 8vw, 7rem);
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  line-height: 0.86;
 }
 
-.about-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: var(--primary);
-}
-
-.section-content p {
-  font-size: 1.15rem;
-  margin-bottom: 1.5rem;
-  color: var(--text);
-}
-
-.artist-grid {
+.about-story-card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: minmax(100px, 0.3fr) minmax(0, 1fr);
+  gap: clamp(28px, 7vw, 90px);
+  padding: clamp(30px, 6vw, 64px);
 }
 
-.artist-card {
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.about-story-number {
+  color: var(--accent-strong);
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 0.8;
 }
 
-.artist-card h3 {
-  font-size: 2rem;
-  color: var(--accent);
+.about-story-card h2,
+.about-principle h3,
+.about-cta-card h2 {
+  font-family: var(--font-display);
+  font-weight: 650;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
 }
 
-.artist-card p {
-  font-size: 1.1rem;
-  color: var(--text);
-  line-height: 1.8;
+.about-story-card h2 {
+  max-width: 15ch;
+  margin: 24px 0 0;
+  font-size: clamp(2.5rem, 5vw, 5rem);
 }
 
-.location-info {
-  padding: 2rem;
-  text-align: center;
-  font-size: 1.1rem;
-  border-color: var(--accent);
+.about-story-card p {
+  max-width: 68ch;
+  color: var(--text-muted);
 }
 
-.why-choose-us {
-  padding: 4rem;
-  text-align: center;
-}
-
-.usp-grid {
+.about-principles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 28px;
 }
 
-.usp-item h4 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: var(--accent);
+.about-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
 }
 
-.usp-item p {
-  color: var(--muted);
-  line-height: 1.6;
+.about-principle {
+  min-height: 260px;
+  padding: 26px;
 }
 
-.about-seo {
+.about-principle > svg {
+  color: #80505c;
+}
+
+.about-principle h3 {
+  margin: 48px 0 0;
+  font-size: 1.55rem;
+}
+
+.about-principle p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.about-cta-card {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: clamp(28px, 5vw, 50px);
 }
 
-.about-cta {
-  text-align: center;
-  padding: 5rem 2rem;
+.about-cta-card h2 {
+  max-width: 16ch;
+  margin: 20px 0 0;
+  font-size: clamp(2rem, 4vw, 4rem);
 }
 
-.cta-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 3rem;
+@media (max-width: 880px) {
+  .about-principle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.cta-button.primary {
-  background: var(--accent);
-  color: var(--bg);
-  border: none;
-}
+@media (max-width: 640px) {
+  .about-page {
+    gap: 42px;
+    padding-top: 22px;
+  }
 
-.cta-button.primary:hover {
-  background: white;
-  color: var(--bg);
-}
+  .about-hero-card {
+    min-height: 480px;
+    padding: 30px 22px;
+  }
 
-@media (max-width: 768px) {
-  .artist-grid {
+  .about-hero-card h1 {
+    font-size: clamp(3.4rem, 17vw, 5rem);
+  }
+
+  .about-story-card,
+  .about-principle-grid {
     grid-template-columns: 1fr;
   }
-  
-  .about-section {
-    padding: 2rem 1.5rem;
+
+  .about-cta-card {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

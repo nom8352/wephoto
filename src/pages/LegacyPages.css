@@ -221,6 +221,29 @@
   text-wrap: balance;
 }
 
+.legacy-archive-note {
+  max-width: 820px;
+  margin: 30px auto 0;
+  padding: 18px 20px;
+  border: 1px solid var(--surface-border);
+  border-radius: 18px;
+  color: #704954;
+  background: rgba(242, 184, 198, 0.14);
+}
+
+.legacy-archive-note strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.legacy-archive-note p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 .legacy-rich-text {
   max-width: 820px;
   margin: 38px auto 0;

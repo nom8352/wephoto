@@ -1,53 +1,58 @@
 # WePhoto Current Status
 
-Last updated: 2026-07-15 (Australia/Brisbane)
+Last updated: 2026-07-15
 
-## Repository
+## Current Direction
 
-- Branch: `main`
-- Restoration deployment commit: `45cf0c5 Restore WordPress content and SEO infrastructure`
-- The WordPress backup remains excluded from Git under `backup/`.
-- The restoration is pushed to `main` and deployed at `https://wephoto.com.au`.
+- WePhoto is now an English-language social media pose-book and content-guide platform.
+- Positioning: `WePhoto — Social Media Posebooks & Content Guides`.
+- Primary message: `Look better. Post better.`
+- The physical self-portrait studio is no longer operating.
+- Booking, pricing, session-product, location, and active-studio claims have been removed from the current platform experience.
+- The original WordPress backup remains excluded from Git under `backup/`.
 
-## WordPress Restoration
+## Live Content Model
 
-- All 29 published WordPress `page` and `product` records are accounted for.
-- Seventeen content pages were restored from cached public HTML after removing scripts, forms, plugin markup, inline styling, and unsafe attributes.
-- Eight original photography articles were restored with their previous public URLs and copy.
-- The five Sydney photography landing pages now use their original public content instead of replacement summaries.
-- FAQ, Guide, Privacy Policy, and Refund Policy use their previous public content.
-- The original gallery uses six recovered images.
-- Guide and service pages use 12 additional recovered GIF/JPG assets.
-- Single and group session product URLs were restored. The previous database prices are shown with a current-availability notice.
-- Cart, checkout, account, old home, author, and duplicate insight URLs permanently redirect to the closest active page.
-- Backup files, WordPress code, plugins, customer data, and suspicious server files were not copied into the application.
+- `/` is a visual discovery homepage for pose books and social content guidance.
+- `/pose-book` is the central pose-book library.
+- `/pose-book/social-media` contains one original 3-by-4 contact sheet with 12 poses for an adult Australian woman, an English legend, and positioning cues.
+- `/pose-book/couples` contains one original 3-by-4 contact sheet with 12 outdoor couple poses, an English legend, movement prompts, and camera notes.
+- `/guides` covers four practical pillars: photo tips, Reels and video, editing, and social growth.
+- `/blog` preserves eight useful self-portrait, couple, and family photography articles from the former site.
+- `/about` explains the transition from physical studio to open visual guide library.
+- `/faq` discloses that the new pose-book visuals are original generated references and confirms that the physical studio has closed.
+- `/privacy-policy` now reflects a public content website rather than a booking business.
+
+## Content Production
+
+- The launch library has two completed 12-pose contact sheets, representing 24 pose references.
+- Seven additional sheets are planned: Men, Best Friends, Travel, Professional and LinkedIn, Selfie and Mirror, Family, and Sitting and Cafe.
+- A complete first library will contain nine image files and 108 pose references.
+- New sheets should use one original 3-by-4 image, exactly 12 panels, consistent adult subjects and wardrobe, blank gutters, and no embedded text, numbers, labels, logos, or watermarks.
+- Pose names and instructions belong in accessible HTML outside the image.
 
 ## Search And Indexing
 
-- The production build pre-renders 28 indexable routes plus a dedicated `404.html`.
-- Every generated page contains server-rendered body content, a unique title, description, canonical URL, and robots directive.
-- LocalBusiness, WebSite, WebPage/Article, Breadcrumb, ImageGallery, CollectionPage, and Service JSON-LD are included where appropriate.
-- `sitemap.xml` contains all 28 canonical URLs, and the original Yoast-compatible `sitemap_index.xml` path points to it.
+- The production build pre-renders 17 indexable routes plus a dedicated `404.html`.
+- `sitemap.xml` includes the active platform pages and the eight retained photography articles.
+- Booking, shop, product, portfolio, gallery, services, studio guide, and Sydney service landing pages are excluded from the sitemap.
+- Retired commercial and local-studio URLs use HTTP 301 redirects to `/pose-book`, `/pose-book/social-media`, `/guides`, or `/privacy-policy` as appropriate.
+- Each active route has server-rendered content, a unique title, description, canonical URL, robots directive, and route-specific Open Graph image.
+- Site-wide structured data now uses `Organization` and `WebSite`; the obsolete `LocalBusiness` studio schema has been removed.
+- Pose guides use `CollectionPage`, `ImageObject`, and `ItemList`; FAQ uses `FAQPage`; retained articles use `Article` and include a visible archive notice.
 - `robots.txt` allows search crawling and declares `https://wephoto.com.au/sitemap_index.xml`.
-- The previous street address and postcode were removed from visible content and LocalBusiness structured data at the owner's request.
-- The Contact page was retired, removed from navigation and the sitemap, and permanently redirected to `/booking`; direct email remains available there.
-- `/pose-book/couples` presents 12 original outdoor Australian couple poses in one generated 3-by-4 contact-sheet image, with no text over the photographs, a separate numbered legend, movement prompts, and camera notes.
-- Trailing-slash duplicates and retired WordPress URLs use HTTP 301 redirects.
-- Unknown URLs return HTTP 404 instead of an empty `200` response.
-- `/blog` links all eight restored articles, and the footer links the restored guide, FAQ, shop, gallery, blog, and service landing pages.
 
 ## Verification
 
 - `npm run lint` passes.
-- `npm run build` passes and generates 29 HTML files, 18 recovered media assets, and one optimised 12-photo outdoor couple contact sheet.
-- Cloudflare Pages local verification confirmed `200` for restored pages, `301` for retired URLs, `application/xml` for the sitemap, and `404` for unknown URLs.
-- Browser checks confirmed no hydration warnings, all restored images loaded, one H1 per tested page, and no horizontal overflow at 390px mobile width.
-- Live verification confirmed `200 application/xml` for both sitemap files, server-rendered content and metadata, the expected 301 redirects, and a real 404 for unknown URLs.
-- Cloudflare prepends managed content-signal rules to `robots.txt`; general search crawling remains allowed with `search=yes` and `Allow: /`.
-- Public search results still show an older WordPress title from a crawl five months ago, so Google has not yet refreshed the newly deployed pages.
+- `npm run build` passes and generates 17 indexable route documents plus `404.html`.
+- Automated checks confirm one H1 on every core page, no booking CTA or `LocalBusiness` markup on active platform pages, 17 sitemap URLs, and the expected retired-route mappings.
+- Desktop and 390px mobile browser checks cover the homepage, pose-book library, and content-guide page.
+- The two contact-sheet assets are optimised WebP files and load without embedded labels over the photos.
 
-## Remaining Search Step
+## Next Work
 
-1. Verify or grant access to the `wephoto.com.au` Google Search Console property.
-2. Submit `https://wephoto.com.au/sitemap_index.xml` and request indexing for the homepage and priority restored URLs.
-3. Monitor Page indexing and Crawl stats after Google revisits the site.
+1. Generate the seven planned 12-pose contact sheets using the approved account-by-account prompt packs.
+2. Add each completed sheet to `/pose-book` only after checking panel count, identity consistency, anatomy, duplicate poses, and absence of embedded text.
+3. Expand the strongest guide topics into dedicated indexable articles after the visual library is established.
+4. Monitor Google Search Console after the sitemap and redirect changes are recrawled.

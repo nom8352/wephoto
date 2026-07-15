@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { renderToString } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
-import { getRouteMeta, indexableRoutes } from './seo/siteRoutes';
+import { getRouteMeta, indexableRoutes, retiredRedirects } from './seo/siteRoutes';
 
 export function render(url) {
   const html = renderToString(
@@ -19,4 +19,4 @@ export function render(url) {
   };
 }
 
-export { indexableRoutes };
+export { indexableRoutes, retiredRedirects };
