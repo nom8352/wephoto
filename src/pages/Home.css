@@ -96,7 +96,11 @@
 }
 
 .hero-sheet img {
+  display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
   border-radius: 20px;
 }
 
@@ -130,6 +134,10 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+}
+
+.featured-pose-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .featured-pose-card {
@@ -215,6 +223,10 @@
 .category-strip h3 {
   margin: 18px 0 0;
   font-size: clamp(1.8rem, 3vw, 3rem);
+}
+
+.category-strip > .button-secondary {
+  justify-self: end;
 }
 
 .category-list {
@@ -390,6 +402,14 @@
 
   .featured-pose-image {
     height: 520px;
+  }
+
+  .featured-pose-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .category-strip > .button-secondary {
+    justify-self: start;
   }
 
   .content-pillar-grid {

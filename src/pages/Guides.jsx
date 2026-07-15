@@ -58,7 +58,7 @@ const Guides = () => {
   usePageMeta({
     title: 'Social Media Photo & Content Guides | WePhoto',
     description:
-      'Practical guides for better social media photos, Reels, editing, and repeatable content planning.',
+      'Learn practical social media photography, Reels, editing, and content-planning techniques for clearer, more confident posts.',
     canonicalPath: '/guides',
   });
 

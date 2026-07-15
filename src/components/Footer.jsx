@@ -37,11 +37,11 @@ const Footer = () => {
             <Link to="/privacy-policy">Privacy</Link>
           </div>
           <div>
-            <span>Coming next</span>
-            <p>Men</p>
-            <p>Best friends</p>
-            <p>Travel</p>
-            <p>Professional</p>
+            <span>More pose books</span>
+            <Link to="/pose-book/professional">Professional</Link>
+            <Link to="/pose-book/selfie-mirror">Selfie & mirror</Link>
+            <Link to="/pose-book/family">Family</Link>
+            <Link to="/pose-book/sitting-cafe">Sitting & cafe</Link>
           </div>
         </div>
 

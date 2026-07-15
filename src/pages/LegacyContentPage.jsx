@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getLegacySeo } from '../data/legacySeo';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './LegacyPages.css';
 
@@ -20,15 +21,20 @@ const getLabel = (path) => {
 
 const LegacyContentPage = ({ page }) => {
   const isArticle = articlePaths.has(page.path);
+  const seo = getLegacySeo(page);
   const legacyHtml = page.html
+    .replaceAll(
+      'src="/legacy/2021/11/wephoto_photo_studio-5.jpg"',
+      'width="1080" height="1080" src="/legacy/2021/11/wephoto_photo_studio-5.jpg"',
+    )
     .replaceAll('href="/contact/"', 'href="/pose-book"')
     .replaceAll('href="/contact"', 'href="/pose-book"')
     .replaceAll('href="/booking/"', 'href="/pose-book"')
     .replaceAll('href="/booking"', 'href="/pose-book"');
 
   usePageMeta({
-    title: `${page.title} | WePhoto`,
-    description: page.description,
+    title: seo.title,
+    description: seo.description,
     canonicalPath: page.path,
   });
 
@@ -37,7 +43,7 @@ const LegacyContentPage = ({ page }) => {
     '@type': isArticle ? 'Article' : 'WebPage',
     headline: page.title,
     name: page.title,
-    description: page.description,
+    description: seo.description,
     url: `https://wephoto.com.au${page.path}`,
     inLanguage: 'en-AU',
     ...(page.datePublished && { datePublished: page.datePublished }),

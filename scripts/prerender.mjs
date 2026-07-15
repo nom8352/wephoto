@@ -4,6 +4,7 @@ import { indexableRoutes, render, retiredRedirects } from '../dist-ssr/entry-ser
 
 const dist = resolve('dist');
 const template = await readFile(resolve(dist, 'index.html'), 'utf8');
+const buildDate = new Date().toISOString().slice(0, 10);
 
 const escapeHtml = (value) =>
   String(value)
@@ -51,10 +52,11 @@ await writeFile(resolve(dist, '404.html'), buildDocument('/__not-found__'), 'utf
 
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-  ...indexableRoutes.map(({ path }) => {
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+  ...indexableRoutes.map(({ path, image }) => {
     const location = `https://wephoto.com.au${path === '/' ? '/' : path}`;
-    return `  <url><loc>${location}</loc><lastmod>2026-07-15</lastmod></url>`;
+    const imageLocation = `https://wephoto.com.au${image}`;
+    return `  <url><loc>${location}</loc><lastmod>${buildDate}</lastmod><image:image><image:loc>${imageLocation}</image:loc></image:image></url>`;
   }),
   '</urlset>',
   '',
@@ -67,7 +69,7 @@ const sitemapIndex = [
   '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   '  <sitemap>',
   '    <loc>https://wephoto.com.au/sitemap.xml</loc>',
-  '    <lastmod>2026-07-15</lastmod>',
+  `    <lastmod>${buildDate}</lastmod>`,
   '  </sitemap>',
   '</sitemapindex>',
   '',
@@ -76,7 +78,25 @@ const sitemapIndex = [
 await writeFile(resolve(dist, 'sitemap_index.xml'), sitemapIndex, 'utf8');
 await writeFile(
   resolve(dist, 'robots.txt'),
-  'User-agent: *\nAllow: /\n\nSitemap: https://wephoto.com.au/sitemap_index.xml\n',
+  [
+    'User-agent: *',
+    'Allow: /',
+    '',
+    'User-agent: OAI-SearchBot',
+    'Allow: /',
+    '',
+    'User-agent: ChatGPT-User',
+    'Allow: /',
+    '',
+    'User-agent: PerplexityBot',
+    'Allow: /',
+    '',
+    'User-agent: Bingbot',
+    'Allow: /',
+    '',
+    'Sitemap: https://wephoto.com.au/sitemap_index.xml',
+    '',
+  ].join('\n'),
   'utf8',
 );
 

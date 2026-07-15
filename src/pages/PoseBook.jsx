@@ -18,17 +18,61 @@ const availableBooks = [
     href: '/pose-book/couples',
     tags: ['Couples', 'Outdoor', 'Movement'],
   },
+  {
+    title: 'Social Media Poses for Men',
+    description: 'Twelve relaxed standing, walking, seated, and profile ideas for natural everyday content.',
+    image: '/pose-assets/men/12-social-media-poses-for-men.webp',
+    href: '/pose-book/men',
+    tags: ['Men', 'Urban', 'Social media'],
+  },
+  {
+    title: 'Best Friend Poses',
+    description: 'Twelve easy two-person prompts built around movement, conversation, and genuine connection.',
+    image: '/pose-assets/best-friends/12-best-friend-poses.webp',
+    href: '/pose-book/best-friends',
+    tags: ['Friends', 'Lifestyle', 'Movement'],
+  },
+  {
+    title: 'Travel Photo Poses',
+    description: 'Twelve ways to stay natural in the frame while letting a beautiful destination tell the story.',
+    image: '/pose-assets/travel/12-travel-photo-poses.webp',
+    href: '/pose-book/travel',
+    tags: ['Solo', 'Travel', 'Outdoor'],
+  },
+  {
+    title: 'Professional & LinkedIn Poses',
+    description: 'Twelve approachable headshot and personal-branding ideas for a polished professional profile.',
+    image: '/pose-assets/professional/12-professional-linkedin-poses.webp',
+    href: '/pose-book/professional',
+    tags: ['Professional', 'LinkedIn', 'Personal brand'],
+  },
+  {
+    title: 'Selfie & Mirror Poses',
+    description: 'Twelve phone angles, body positions, and framing ideas for natural solo photos at home.',
+    image: '/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp',
+    href: '/pose-book/selfie-mirror',
+    tags: ['Selfie', 'Mirror', 'Phone'],
+  },
+  {
+    title: 'Natural Family Photo Poses',
+    description: 'Twelve warm group prompts built around walking, cuddles, play, and real family connection.',
+    image: '/pose-assets/family/12-family-photo-poses.webp',
+    href: '/pose-book/family',
+    tags: ['Family', 'Outdoor', 'Connection'],
+  },
+  {
+    title: 'Sitting & Cafe Poses',
+    description: 'Twelve relaxed seated ideas using coffee, window light, tables, and simple hand placement.',
+    image: '/pose-assets/sitting-cafe/12-sitting-cafe-poses.webp',
+    href: '/pose-book/sitting-cafe',
+    tags: ['Solo', 'Cafe', 'Sitting'],
+  },
 ];
 
-const upcomingBooks = [
-  ['Social Media Poses for Men', 'Confident, relaxed prompts for profiles and everyday content.'],
-  ['Best Friend Poses', 'Easy two-person ideas with movement, variety, and real interaction.'],
-  ['Travel Photo Poses', 'Ways to include the setting without looking lost inside the frame.'],
-  ['Professional & LinkedIn Poses', 'Approachable posture and expression ideas for a polished profile.'],
-  ['Selfie & Mirror Poses', 'Phone angles, hand placement, and framing for solo shooting.'],
-  ['Family Photo Poses', 'Simple group shapes that keep faces visible and bodies relaxed.'],
-  ['Sitting & Cafe Poses', 'Natural seated ideas for tables, benches, stools, and casual spaces.'],
-];
+const getPoseSheetSize = (image) =>
+  image.includes('/social/') || image.includes('/couples/')
+    ? { width: 887, height: 1774 }
+    : { width: 1024, height: 1536 };
 
 const PoseBook = () => {
   usePageMeta({
@@ -77,37 +121,29 @@ const PoseBook = () => {
           <h2>Start with a complete 12-pose guide.</h2>
         </header>
         <div className="pose-library-grid">
-          {availableBooks.map((book, index) => (
-            <Link key={book.href} to={book.href} className="pose-library-book card" data-reveal style={{ '--delay': `${0.08 + index * 0.08}s` }}>
-              <div className="pose-library-cover">
-                <img src={book.image} alt={`${book.title} contact sheet`} loading={index === 0 ? 'eager' : 'lazy'} />
-              </div>
-              <div className="pose-library-copy">
-                <div className="pose-library-tags">{book.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                <h2>{book.title}</h2>
-                <p>{book.description}</p>
-                <strong>View all 12 poses <ArrowRight size={17} /></strong>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="pose-library-coming site-shell">
-        <header className="section-heading" data-reveal>
-          <span className="eyebrow">Growing next</span>
-          <h2>A pose book for every kind of post.</h2>
-          <p>New sheets will follow the same clean 3-by-4 format, with the pose names and instructions outside the photos.</p>
-        </header>
-        <div className="coming-grid">
-          {upcomingBooks.map(([title, description], index) => (
-            <article key={title} className="coming-card card" data-reveal style={{ '--delay': `${0.05 + index * 0.04}s` }}>
-              <span>{String(index + 3).padStart(2, '0')}</span>
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <small>In production</small>
-            </article>
-          ))}
+          {availableBooks.map((book, index) => {
+            const { width, height } = getPoseSheetSize(book.image);
+            return (
+              <Link key={book.href} to={book.href} className="pose-library-book card" data-reveal style={{ '--delay': `${0.08 + index * 0.08}s` }}>
+                <div className="pose-library-cover">
+                  <img
+                    src={book.image}
+                    alt={`${book.title} contact sheet`}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    width={width}
+                    height={height}
+                  />
+                </div>
+                <div className="pose-library-copy">
+                  <div className="pose-library-tags">{book.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                  <h2>{book.title}</h2>
+                  <p>{book.description}</p>
+                  <strong>View all 12 poses <ArrowRight size={17} /></strong>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
 

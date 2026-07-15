@@ -3,8 +3,8 @@ import './LegacyPages.css';
 
 const PrivacyPolicy = () => {
   usePageMeta({
-    title: 'Privacy Policy | WePhoto',
-    description: 'Privacy information for visitors using WePhoto pose books and content guides.',
+    title: 'Privacy Policy for WePhoto Visitors | WePhoto',
+    description: 'Read how WePhoto handles basic website data, analytics, external links, and privacy choices when you browse our pose books and content guides.',
     canonicalPath: '/privacy-policy',
   });
 

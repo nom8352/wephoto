@@ -57,7 +57,14 @@ const Faq = () => {
             <p className="lead">A few clear answers about the visual guides, the images, and what WePhoto is building next.</p>
           </div>
           <div className="legacy-visual">
-            <img src="/pose-assets/social/12-social-media-poses.webp" alt="WePhoto social media pose book" loading="lazy" />
+            <img
+              src="/pose-assets/social/12-social-media-poses.webp"
+              alt="WePhoto social media pose book"
+              loading="lazy"
+              decoding="async"
+              width="887"
+              height="1774"
+            />
           </div>
         </section>
 

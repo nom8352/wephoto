@@ -75,6 +75,10 @@
   gap: 20px;
 }
 
+.pose-library-book:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .pose-library-book {
   display: grid;
   grid-template-columns: minmax(180px, 0.72fr) minmax(0, 1fr);
@@ -233,6 +237,10 @@
   .pose-library-grid,
   .coming-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pose-library-book:last-child:nth-child(odd) {
+    grid-column: auto;
   }
 
   .pose-library-cover {

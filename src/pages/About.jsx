@@ -15,7 +15,7 @@ const About = () => {
   usePageMeta({
     title: 'About WePhoto | Posebooks & Content Guides',
     description:
-      'Learn why WePhoto creates original visual pose books and practical social media content guides.',
+      'Learn how WePhoto creates original visual pose books and practical social media guides for better photos, Reels, and everyday content.',
     canonicalPath: '/about',
   });
 

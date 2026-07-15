@@ -1,4 +1,5 @@
 import legacyPages from '../data/legacyPages.json';
+import { getLegacySeo } from '../data/legacySeo';
 
 const defaultImage = '/pose-assets/social/12-social-media-poses.webp';
 
@@ -7,7 +8,7 @@ const coreRoutes = [
     path: '/',
     title: 'WePhoto | Social Media Posebooks & Content Guides',
     description: 'Saveable posebooks and practical photo, Reels, editing, and social media guides for more confident content.',
-    image: defaultImage,
+    image: '/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp',
   },
   {
     path: '/pose-book',
@@ -28,9 +29,51 @@ const coreRoutes = [
     image: defaultImage,
   },
   {
+    path: '/pose-book/men',
+    title: '12 Social Media Poses for Men | WePhoto',
+    description: 'Twelve relaxed social media poses for men, with simple direction for natural profile photos and everyday content.',
+    image: '/pose-assets/men/12-social-media-poses-for-men.webp',
+  },
+  {
+    path: '/pose-book/best-friends',
+    title: '12 Best Friend Poses | Photo Pose Guide | WePhoto',
+    description: 'Twelve natural best friend poses with movement, laughter, and simple prompts for relaxed photos together.',
+    image: '/pose-assets/best-friends/12-best-friend-poses.webp',
+  },
+  {
+    path: '/pose-book/travel',
+    title: '12 Travel Photo Poses | Visual Pose Guide | WePhoto',
+    description: 'Twelve travel photo poses that balance natural movement, flattering angles, and a beautiful coastal setting.',
+    image: '/pose-assets/travel/12-travel-photo-poses.webp',
+  },
+  {
+    path: '/pose-book/professional',
+    title: '12 Professional & LinkedIn Poses | WePhoto',
+    description: 'Twelve approachable professional poses for LinkedIn headshots, personal branding, and a polished online profile.',
+    image: '/pose-assets/professional/12-professional-linkedin-poses.webp',
+  },
+  {
+    path: '/pose-book/selfie-mirror',
+    title: '12 Selfie & Mirror Poses | Visual Guide | WePhoto',
+    description: 'Twelve selfie and mirror pose ideas with simple phone placement, body angles, and framing cues for natural solo photos.',
+    image: '/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp',
+  },
+  {
+    path: '/pose-book/family',
+    title: '12 Natural Family Photo Poses | WePhoto',
+    description: 'Twelve natural family photo poses with walking, cuddles, play, and simple group arrangements for relaxed outdoor portraits.',
+    image: '/pose-assets/family/12-family-photo-poses.webp',
+  },
+  {
+    path: '/pose-book/sitting-cafe',
+    title: '12 Sitting & Cafe Poses | Photo Guide | WePhoto',
+    description: 'Twelve natural sitting and cafe poses with coffee, window light, and easy hand placement for relaxed lifestyle photos.',
+    image: '/pose-assets/sitting-cafe/12-sitting-cafe-poses.webp',
+  },
+  {
     path: '/guides',
     title: 'Social Media Photo & Content Guides | WePhoto',
-    description: 'Practical guides for better social media photos, Reels, editing, and repeatable content planning.',
+    description: 'Learn practical social media photography, Reels, editing, and content-planning techniques for clearer, more confident posts.',
     image: defaultImage,
   },
   {
@@ -42,7 +85,7 @@ const coreRoutes = [
   {
     path: '/about',
     title: 'About WePhoto | Posebooks & Content Guides',
-    description: 'Learn why WePhoto creates original visual pose books and practical social media content guides.',
+    description: 'Learn how WePhoto creates original visual pose books and practical social media guides for better photos, Reels, and everyday content.',
     image: defaultImage,
   },
   {
@@ -53,8 +96,8 @@ const coreRoutes = [
   },
   {
     path: '/privacy-policy',
-    title: 'Privacy Policy | WePhoto',
-    description: 'Privacy information for visitors using WePhoto pose books and content guides.',
+    title: 'Privacy Policy for WePhoto Visitors | WePhoto',
+    description: 'Read how WePhoto handles basic website data, analytics, external links, and privacy choices when you browse our pose books and content guides.',
     image: defaultImage,
   },
 ];
@@ -100,12 +143,16 @@ export const retiredRedirects = [
 
 const restoredRoutes = legacyPages
   .filter((page) => activeLegacyPaths.has(page.path))
-  .map((page) => ({
-    path: page.path,
-    title: `${page.title} | WePhoto`,
-    description: page.description,
-    image: defaultImage,
-  }));
+  .map((page) => {
+    const seo = getLegacySeo(page);
+
+    return {
+      path: page.path,
+      title: seo.title,
+      description: seo.description,
+      image: defaultImage,
+    };
+  });
 
 export const indexableRoutes = [...coreRoutes, ...restoredRoutes];
 

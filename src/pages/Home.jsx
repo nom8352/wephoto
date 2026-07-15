@@ -21,17 +21,68 @@ const featuredPoseBooks = [
     href: '/pose-book/couples',
     alt: 'A contact sheet showing twelve outdoor couple poses',
   },
+  {
+    title: 'Social Media Poses for Men',
+    count: '12 poses',
+    description: 'Relaxed urban prompts for profiles, dating apps, and everyday social content.',
+    image: '/pose-assets/men/12-social-media-poses-for-men.webp',
+    href: '/pose-book/men',
+    alt: 'A contact sheet showing twelve social media poses for men',
+  },
+  {
+    title: 'Best Friend Poses',
+    count: '12 poses',
+    description: 'Movement and interaction ideas that keep photos together warm and natural.',
+    image: '/pose-assets/best-friends/12-best-friend-poses.webp',
+    href: '/pose-book/best-friends',
+    alt: 'A contact sheet showing twelve best friend poses',
+  },
+  {
+    title: 'Travel Photo Poses',
+    count: '12 poses',
+    description: 'Easy ways to look natural while keeping the destination visible in the frame.',
+    image: '/pose-assets/travel/12-travel-photo-poses.webp',
+    href: '/pose-book/travel',
+    alt: 'A contact sheet showing twelve travel photo poses',
+  },
+  {
+    title: 'Professional & LinkedIn Poses',
+    count: '12 poses',
+    description: 'Approachable headshot and personal-branding prompts for a polished profile.',
+    image: '/pose-assets/professional/12-professional-linkedin-poses.webp',
+    href: '/pose-book/professional',
+    alt: 'A contact sheet showing twelve professional and LinkedIn poses',
+  },
+  {
+    title: 'Selfie & Mirror Poses',
+    count: '12 poses',
+    description: 'Phone placement, body angles, and framing ideas for natural solo photos.',
+    image: '/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp',
+    href: '/pose-book/selfie-mirror',
+    alt: 'A contact sheet showing twelve selfie and mirror poses',
+  },
+  {
+    title: 'Natural Family Photo Poses',
+    count: '12 poses',
+    description: 'Walking, cuddles, play, and simple group arrangements for a relaxed family session.',
+    image: '/pose-assets/family/12-family-photo-poses.webp',
+    href: '/pose-book/family',
+    alt: 'A contact sheet showing twelve natural family photo poses',
+  },
+  {
+    title: 'Sitting & Cafe Poses',
+    count: '12 poses',
+    description: 'Relaxed seated ideas using coffee, window light, and simple hand placement.',
+    image: '/pose-assets/sitting-cafe/12-sitting-cafe-poses.webp',
+    href: '/pose-book/sitting-cafe',
+    alt: 'A contact sheet showing twelve sitting and cafe poses',
+  },
 ];
 
-const upcomingCategories = [
-  'Men',
-  'Best friends',
-  'Travel',
-  'Professional',
-  'Selfie & mirror',
-  'Family',
-  'Sitting & cafe',
-];
+const getPoseSheetSize = (image) =>
+  image.includes('/social/') || image.includes('/couples/')
+    ? { width: 887, height: 1774 }
+    : { width: 1024, height: 1536 };
 
 const contentPillars = [
   {
@@ -62,7 +113,7 @@ const Home = () => {
     description:
       'Saveable posebooks and practical photo, Reels, editing, and social media guides for more confident content.',
     canonicalPath: '/',
-    image: '/pose-assets/social/12-social-media-poses.webp',
+    image: '/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp',
   });
 
   return (
@@ -93,10 +144,12 @@ const Home = () => {
           <div className="hero-pose-preview" aria-label="Featured social media pose sheet">
             <div className="hero-sheet card">
               <img
-                src="/pose-assets/social/12-social-media-poses.webp"
-                alt="Twelve social media poses in one visual contact sheet"
-                width="887"
-                height="1774"
+                src="/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp"
+                alt="Twelve selfie and mirror poses in one visual contact sheet"
+                width="1024"
+                height="1536"
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
             <div className="hero-sheet-note card">
@@ -115,35 +168,43 @@ const Home = () => {
         </header>
 
         <div className="featured-pose-grid">
-          {featuredPoseBooks.map((book, index) => (
-            <Link
-              key={book.href}
-              to={book.href}
-              className="featured-pose-card card"
-              data-reveal
-              style={{ '--delay': `${0.08 + index * 0.08}s` }}
-            >
-              <div className="featured-pose-image">
-                <img src={book.image} alt={book.alt} loading="lazy" />
-              </div>
-              <div className="featured-pose-copy">
-                <span>{book.count}</span>
-                <h3>{book.title}</h3>
-                <p>{book.description}</p>
-                <strong>Open pose book <ArrowRight size={17} /></strong>
-              </div>
-            </Link>
-          ))}
+          {featuredPoseBooks.map((book, index) => {
+            const { width, height } = getPoseSheetSize(book.image);
+            return (
+              <Link
+                key={book.href}
+                to={book.href}
+                className="featured-pose-card card"
+                data-reveal
+                style={{ '--delay': `${0.08 + index * 0.08}s` }}
+              >
+                <div className="featured-pose-image">
+                  <img
+                    src={book.image}
+                    alt={book.alt}
+                    loading="lazy"
+                    decoding="async"
+                    width={width}
+                    height={height}
+                  />
+                </div>
+                <div className="featured-pose-copy">
+                  <span>{book.count}</span>
+                  <h3>{book.title}</h3>
+                  <p>{book.description}</p>
+                  <strong>Open pose book <ArrowRight size={17} /></strong>
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="category-strip card" data-reveal>
           <div>
-            <span className="eyebrow">Next in the library</span>
-            <h3>More ways to find your angle.</h3>
+            <span className="eyebrow">The complete starter library</span>
+            <h3>Nine guides. 108 pose references.</h3>
           </div>
-          <div className="category-list">
-            {upcomingCategories.map((category) => <span key={category}>{category}</span>)}
-          </div>
+          <Link to="/pose-book" className="button-secondary">Browse all pose books <ArrowRight size={18} /></Link>
         </div>
       </section>
 
