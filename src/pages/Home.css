@@ -302,7 +302,7 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(118px, 0.82fr) minmax(0, 1fr);
-  min-height: 292px;
+  min-height: 236px;
   padding: 12px;
   overflow: hidden;
   border: 1px solid rgba(30, 28, 32, 0.055);
@@ -342,7 +342,7 @@
   border-radius: 12px;
   background-color: var(--bg-elevated);
   background-repeat: no-repeat;
-  background-size: 300% 400%;
+  background-size: auto 400%;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -795,7 +795,7 @@
 
   .home-guide-card {
     grid-template-columns: minmax(122px, 0.78fr) minmax(0, 1fr);
-    min-height: 270px;
+    min-height: 230px;
   }
 
   .home-step-grid li {
