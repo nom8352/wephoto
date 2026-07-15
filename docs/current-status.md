@@ -31,7 +31,7 @@ Last updated: 2026-07-15 (Australia/Brisbane)
 - `robots.txt` allows search crawling and declares `https://wephoto.com.au/sitemap_index.xml`.
 - The previous street address and postcode were removed from visible content and LocalBusiness structured data at the owner's request.
 - The Contact page was retired, removed from navigation and the sitemap, and permanently redirected to `/booking`; direct email remains available there.
-- `/pose-book/couples` adds six original outdoor Australian couple pose guides with generated coastal lifestyle images, English handwritten callouts, movement prompts, camera notes, and mobile layouts.
+- `/pose-book/couples` presents six original outdoor Australian couple poses in a 3-by-2 desktop and 2-by-3 mobile contact sheet, with clean photographs, captions below each image, separate movement prompts, and camera notes.
 - Trailing-slash duplicates and retired WordPress URLs use HTTP 301 redirects.
 - Unknown URLs return HTTP 404 instead of an empty `200` response.
 - `/blog` links all eight restored articles, and the footer links the restored guide, FAQ, shop, gallery, blog, and service landing pages.

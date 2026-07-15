@@ -1,4 +1,4 @@
-import { ArrowDown, Camera, CircleAlert, Heart, MoveRight } from 'lucide-react';
+import { Camera, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './CouplePoseBook.css';
@@ -13,7 +13,6 @@ const poses = [
     width: 1122,
     height: 1402,
     alt: 'Australian couple walking and talking on a coastal path at golden hour',
-    callouts: ['take small, uneven steps', 'talk before you look'],
     steps: [
       'Begin a few metres back and walk at half your usual pace.',
       'Keep one hand in a pocket and let the other arms move naturally.',
@@ -31,7 +30,6 @@ const poses = [
     width: 1003,
     height: 1568,
     alt: 'Australian couple laughing during a playful shoulder bump outdoors',
-    callouts: ['tiny bump, real reaction', 'leave room for movement'],
     steps: [
       'Walk close enough for your shoulders to almost meet.',
       'Give one gentle bump, then let the other person react.',
@@ -49,7 +47,6 @@ const poses = [
     width: 1002,
     height: 1569,
     alt: 'Australian couple playing on a sandstone coastal trail with one partner pulling the other closer',
-    callouts: ['build a loose diagonal', 'guide from the shirt or waist'],
     steps: [
       'Place one partner half a step ahead and turn them slightly away.',
       'Catch the loose shirt or place a gentle hand at the waist.',
@@ -67,7 +64,6 @@ const poses = [
     width: 1122,
     height: 1402,
     alt: 'Australian couple sitting casually on a picnic rug beneath eucalyptus trees',
-    callouts: ['stagger your heights', 'keep the knees relaxed'],
     steps: [
       'Sit at different angles instead of facing the camera in a row.',
       'Raise one knee each and use the outside hands for support.',
@@ -85,7 +81,6 @@ const poses = [
     width: 1003,
     height: 1568,
     alt: 'Australian couple standing in a loose side embrace at a Sydney foreshore lookout',
-    callouts: ['stand half a step apart', 'look beyond the camera'],
     steps: [
       'Stand facing the same direction with one person slightly behind.',
       'Wrap one arm loosely at the waist and leave the other hands casual.',
@@ -103,7 +98,6 @@ const poses = [
     width: 1003,
     height: 1568,
     alt: 'Australian couple laughing and jogging along a coastal track at sunset',
-    callouts: ['two easy steps only', 'turn back through the shoulders'],
     steps: [
       'Let one partner move two easy steps ahead on a safe, level path.',
       'Turn the upper body back while the other person follows behind.',
@@ -149,91 +143,75 @@ const CouplePoseBook = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <section id="top" className="pose-book-hero site-shell">
-        <div className="pose-book-intro card" data-reveal style={{ '--delay': '0.05s' }}>
-          <div>
-            <span className="eyebrow">WePhoto pose book · Outdoor couples</span>
-            <h1>Move first.<br />Pose second.</h1>
-            <p>
-              Six playful prompts for couples who want relaxed outdoor photos without freezing
-              into a pose. Walk, talk, laugh, and let the in-between moments do the work.
-            </p>
-          </div>
-          <div className="pose-book-intro-note" aria-hidden="true">
-            <span>start here</span>
-            <ArrowDown size={34} strokeWidth={1.7} />
+      <section className="pose-book-hero site-shell">
+        <div className="pose-board card" data-reveal style={{ '--delay': '0.05s' }}>
+          <header className="pose-board-header">
+            <span className="eyebrow">WePhoto pose book · Australian outdoors</span>
+            <div className="pose-board-title">
+              <span aria-hidden="true">06</span>
+              <h1>Outdoor<br />Couple Poses</h1>
+            </div>
+            <p>Simple <i /> Natural <i /> Playful</p>
+          </header>
+
+          <div className="pose-collage">
+            {poses.map((pose, index) => (
+              <figure id={pose.slug} key={pose.slug} className="pose-tile">
+                <div className="pose-tile-media">
+                  <img
+                    src={pose.image}
+                    alt={pose.alt}
+                    loading={index < 3 ? 'eager' : 'lazy'}
+                    width={pose.width}
+                    height={pose.height}
+                  />
+                </div>
+                <figcaption>
+                  <span>{pose.number}</span>
+                  <div>
+                    <strong>{pose.title}</strong>
+                    <small>{pose.mood}</small>
+                  </div>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
-
-        <nav className="pose-book-index" aria-label="Couple pose index">
-          {poses.map((pose) => (
-            <a key={pose.slug} href={`#${pose.slug}`}>
-              <span>{pose.number}</span>
-              {pose.title}
-            </a>
-          ))}
-        </nav>
       </section>
 
-      <div className="pose-book-pages site-shell">
-        {poses.map((pose, index) => (
-          <article
-            id={pose.slug}
-            key={pose.slug}
-            className="pose-spread card"
-            data-reveal
-            style={{ '--delay': '0.08s' }}
-          >
-            <figure className="pose-photo">
-              <img
-                src={pose.image}
-                alt={pose.alt}
-                loading={index === 0 ? 'eager' : 'lazy'}
-                width={pose.width}
-                height={pose.height}
-              />
-              <figcaption>WePhoto Couple Pose {pose.number}</figcaption>
-              <span className="photo-callout photo-callout-one">{pose.callouts[0]}</span>
-              <span className="photo-callout photo-callout-two">{pose.callouts[1]}</span>
-            </figure>
+      <section className="pose-guide site-shell">
+        <header className="pose-guide-heading">
+          <span className="eyebrow">Keep it natural</span>
+          <h2>Six prompts to use on location.</h2>
+          <p>Give the action first, then photograph the reaction that follows.</p>
+        </header>
 
-            <div className="pose-notes">
+        <div className="pose-guide-grid">
+          {poses.map((pose) => (
+            <article key={pose.slug} className="pose-guide-card card" data-reveal>
               <header>
-                <span className="pose-number">Pose {pose.number}</span>
-                <p className="pose-mood">{pose.mood}</p>
-                <h2>{pose.title}</h2>
+                <span>{pose.number}</span>
+                <div>
+                  <h3>{pose.title}</h3>
+                  <p>{pose.mood}</p>
+                </div>
               </header>
 
-              <ol className="pose-steps">
+              <ol>
                 {pose.steps.map((step) => (
                   <li key={step}>{step}</li>
                 ))}
               </ol>
 
               <div className="pose-camera-note">
-                <Camera size={18} strokeWidth={2} />
-                <div>
-                  <span>Camera note</span>
-                  <p>{pose.camera}</p>
-                </div>
+                <Camera size={17} strokeWidth={2} />
+                <p>{pose.camera}</p>
               </div>
-
-              <div className="pose-avoid-note">
-                <CircleAlert size={18} strokeWidth={2} />
-                <div>
-                  <span>Keep it natural</span>
-                  <p>{pose.avoid}</p>
-                </div>
-              </div>
-
-              <a className="next-pose" href={index < poses.length - 1 ? `#${poses[index + 1].slug}` : '#top'}>
-                {index < poses.length - 1 ? 'Next pose' : 'Back to the top'}
-                <MoveRight size={18} strokeWidth={2.1} />
-              </a>
-            </div>
-          </article>
-        ))}
-      </div>
+              <p className="pose-natural-note">{pose.avoid}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="pose-book-cta site-shell">
         <div className="pose-book-cta-card card">
