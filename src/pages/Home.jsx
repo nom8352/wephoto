@@ -5,6 +5,7 @@ import {
   ArrowRight,
   Bookmark,
   BriefcaseBusiness,
+  Calculator,
   Camera,
   Coffee,
   Heart,
@@ -280,6 +281,19 @@ const Home = () => {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="home-tools-promo site-shell" data-reveal>
+        <span className="home-tools-icon"><Calculator size={30} strokeWidth={1.8} /></span>
+        <div>
+          <span className="home-kicker">Free creator tools</span>
+          <h2>Turn content numbers into a clear next step.</h2>
+          <p>Calculate engagement, resize images without distortion, and prepare posts with no signup.</p>
+        </div>
+        <Link to="/tools" className="button-secondary">
+          Open creator tools
+          <ArrowRight size={17} />
+        </Link>
       </section>
 
       <section className="home-cta site-shell" data-reveal>

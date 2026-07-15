@@ -40,6 +40,9 @@ Last updated: 2026-07-15
 - `/about` explains the transition from physical studio to open visual guide library.
 - `/faq` discloses that the new pose-book visuals are original generated references and confirms that the physical studio has closed.
 - `/privacy-policy` now reflects a public content website rather than a booking business.
+- `/tools` is the free creator-tool hub, with browser-based utilities and a roadmap for additional planning tools.
+- `/tools/engagement-rate-calculator` calculates engagement by followers or reach using likes, comments, saves, and shares.
+- `/tools/image-size-calculator` calculates proportional resize dimensions and crop amounts for six common social formats without uploading an image.
 
 ## Content Production
 
@@ -50,13 +53,14 @@ Last updated: 2026-07-15
 
 ## Search And Indexing
 
-- The production build pre-renders 24 indexable routes plus a dedicated `404.html`.
+- The production build pre-renders 27 indexable routes plus a dedicated `404.html`.
 - `sitemap.xml` includes the active platform pages and the eight retained photography articles.
 - Booking, shop, product, portfolio, gallery, services, studio guide, and Sydney service landing pages are excluded from the sitemap.
 - Retired commercial and local-studio URLs use HTTP 301 redirects to `/pose-book`, `/pose-book/social-media`, `/guides`, or `/privacy-policy` as appropriate.
 - Each active route has server-rendered content, a unique title, description, canonical URL, robots directive, and route-specific Open Graph image.
 - Site-wide structured data now uses `Organization` and `WebSite`; the obsolete `LocalBusiness` studio schema has been removed.
 - Pose guides use `CollectionPage`, `ImageObject`, and `ItemList`; FAQ uses `FAQPage`; retained articles use `Article` and include a visible archive notice.
+- The creator-tool hub uses `CollectionPage`, and both live calculators use `WebApplication` structured data with visible explanatory content and FAQs.
 - `robots.txt` allows search crawling and declares `https://wephoto.com.au/sitemap_index.xml`.
 - The origin robots file explicitly allows `OAI-SearchBot`, `ChatGPT-User`, `PerplexityBot`, and `Bingbot`; Cloudflare currently prepends managed rules that allow search/reference use while blocking selected training crawlers.
 - `sitemap.xml` adds image sitemap entries for route-specific pose sheets and generates fresh `lastmod` dates at build time.
@@ -64,17 +68,19 @@ Last updated: 2026-07-15
 ## Verification
 
 - `npm run lint` passes.
-- `npm run build` passes and generates 24 indexable route documents plus `404.html`.
-- Automated checks confirm one H1 on every core page, no booking CTA or `LocalBusiness` markup on active platform pages, 24 sitemap URLs, and the expected retired-route mappings.
+- `npm run build` passes and generates 27 indexable route documents plus `404.html`.
+- Automated checks confirm one H1, unique metadata, canonical URLs, and valid JSON-LD on all three tool routes, with 27 sitemap URLs in total.
 - Desktop and 390px mobile browser checks cover the homepage, pose-book library, and representative pose-guide pages.
 - All nine contact-sheet assets are optimised WebP files and load without embedded labels over the photos.
 - The redesigned homepage hero uses the 2:3 selfie-and-mirror sheet with explicit dimensions and high fetch priority instead of the visually overlong 1:2 launch sheet.
 - The redesigned homepage was browser-checked at 1440px and 390px with no horizontal overflow, console errors, or console warnings.
 - The mobile navigation opens and closes correctly and reports its state through `aria-expanded`.
+- Desktop and 390px mobile browser checks confirm both calculators work without page-level horizontal overflow or console warnings.
+- Test values produce `6%` for 600 interactions across 10,000 followers, `7.5%` across 8,000 reached accounts, and a proportional `1800 × 1350` resize with a `720px` side crop for a 4032 × 3024 image targeting 1080 × 1350.
 
 ## Next Work
 
-1. Commit and publish the homepage and brand redesign after approval.
-2. Expand the strongest guide topics into dedicated indexable articles now that the visual library is established.
-3. Use search and engagement data to choose the next pose-book categories rather than adding more by default.
+1. Prioritise a Reels safe-zone checker and caption character counter as the next lightweight, high-repeat tools.
+2. Add a follower-growth calculator and content-capacity planner when the analytics section expands.
+3. Expand the strongest guide topics into dedicated indexable articles now that the visual library is established.
 4. Monitor Google Search Console after the sitemap and route additions are recrawled.

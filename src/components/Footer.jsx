@@ -20,9 +20,9 @@ const Footer = () => {
           </div>
           <div>
             <span>Create</span>
+            <Link to="/tools">Creator tools</Link>
             <Link to="/guides#photo-tips">Photo tips</Link>
             <Link to="/guides#reels">Reels & video</Link>
-            <Link to="/guides#editing">Editing</Link>
           </div>
           <div>
             <span>WePhoto</span>
@@ -32,8 +32,8 @@ const Footer = () => {
           </div>
           <div>
             <span>More</span>
-            <Link to="/pose-book/professional">Professional</Link>
-            <Link to="/pose-book/family">Family</Link>
+            <Link to="/tools/engagement-rate-calculator">Engagement calculator</Link>
+            <Link to="/tools/image-size-calculator">Image size calculator</Link>
             <Link to="/privacy-policy">Privacy</Link>
           </div>
         </div>

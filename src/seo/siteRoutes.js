@@ -100,6 +100,24 @@ const coreRoutes = [
     description: 'Read how WePhoto handles basic website data, analytics, external links, and privacy choices when you browse our pose books and content guides.',
     image: defaultImage,
   },
+  {
+    path: '/tools',
+    title: 'Free Social Media Creator Tools | WePhoto',
+    description: 'Use free WePhoto calculators for social media engagement, image sizes, aspect ratios, and more. No signup and no account connection.',
+    image: defaultImage,
+  },
+  {
+    path: '/tools/engagement-rate-calculator',
+    title: 'Free Instagram Engagement Rate Calculator | WePhoto',
+    description: 'Calculate Instagram engagement rate by followers or reach using likes, comments, saves, and shares. Free, private, and no signup required.',
+    image: defaultImage,
+  },
+  {
+    path: '/tools/image-size-calculator',
+    title: 'Social Media Image Size & Ratio Calculator | WePhoto',
+    description: 'Calculate image aspect ratios, resize dimensions, and crop amounts for Instagram, Pinterest, YouTube, and LinkedIn without stretching photos.',
+    image: defaultImage,
+  },
 ];
 
 export const activeLegacyPaths = new Set([

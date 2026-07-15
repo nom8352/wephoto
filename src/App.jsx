@@ -12,6 +12,9 @@ import Blog from './pages/Blog';
 import About from './pages/About';
 import Faq from './pages/Faq';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Tools from './pages/Tools';
+import EngagementCalculator from './pages/EngagementCalculator';
+import ImageSizeCalculator from './pages/ImageSizeCalculator';
 import LegacyContentPage from './pages/LegacyContentPage';
 import NotFound from './pages/NotFound';
 import legacyPages from './data/legacyPages.json';
@@ -51,6 +54,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/tools" element={<Tools />} />
+          <Route path="/tools/engagement-rate-calculator" element={<EngagementCalculator />} />
+          <Route path="/tools/image-size-calculator" element={<ImageSizeCalculator />} />
 
           {activeLegacyPages.map((page) => (
             <Route key={page.path} path={page.path} element={<LegacyContentPage page={page} />} />

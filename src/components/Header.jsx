@@ -31,6 +31,9 @@ const Header = () => {
           <NavLink to="/guides" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Creator Guides
           </NavLink>
+          <NavLink to="/tools" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Creator Tools
+          </NavLink>
           <NavLink to="/blog" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Photo Articles
           </NavLink>
