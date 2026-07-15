@@ -1,109 +1,142 @@
 import { createElement } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Bookmark, Camera, Compass, Sparkles, TrendingUp, Video } from 'lucide-react';
+import {
+  Aperture,
+  ArrowRight,
+  Bookmark,
+  BriefcaseBusiness,
+  Camera,
+  Coffee,
+  Heart,
+  House,
+  Plane,
+  Search,
+  Send,
+  Smartphone,
+  Sparkles,
+  TrendingUp,
+  Users,
+  Video,
+} from 'lucide-react';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './Home.css';
 
 const featuredPoseBooks = [
   {
     title: 'Social Media Poses',
-    count: '12 poses',
-    description: 'Natural standing, seated, walking, and profile ideas for your next post.',
+    description: 'Natural solo ideas for stories, carousels, and everyday posts.',
     image: '/pose-assets/social/12-social-media-poses.webp',
     href: '/pose-book/social-media',
-    alt: 'A contact sheet showing twelve social media poses for women',
+    icon: Smartphone,
+    position: '0% 0%',
   },
   {
     title: 'Outdoor Couple Poses',
-    count: '12 poses',
-    description: 'Movement-led prompts for relaxed couple photos that do not feel staged.',
+    description: 'Relaxed movement prompts for dates, travel, and golden hour.',
     image: '/pose-assets/couples/12-outdoor-couple-poses.webp',
     href: '/pose-book/couples',
-    alt: 'A contact sheet showing twelve outdoor couple poses',
+    icon: Heart,
+    position: '50% 0%',
   },
   {
-    title: 'Social Media Poses for Men',
-    count: '12 poses',
-    description: 'Relaxed urban prompts for profiles, dating apps, and everyday social content.',
+    title: "Men's Poses",
+    description: 'Simple, confident ideas for profiles and lifestyle photos.',
     image: '/pose-assets/men/12-social-media-poses-for-men.webp',
     href: '/pose-book/men',
-    alt: 'A contact sheet showing twelve social media poses for men',
+    icon: Aperture,
+    position: '100% 0%',
   },
   {
     title: 'Best Friend Poses',
-    count: '12 poses',
-    description: 'Movement and interaction ideas that keep photos together warm and natural.',
+    description: 'Warm, candid prompts built around movement and connection.',
     image: '/pose-assets/best-friends/12-best-friend-poses.webp',
     href: '/pose-book/best-friends',
-    alt: 'A contact sheet showing twelve best friend poses',
+    icon: Users,
+    position: '0% 33.333%',
   },
   {
-    title: 'Travel Photo Poses',
-    count: '12 poses',
-    description: 'Easy ways to look natural while keeping the destination visible in the frame.',
+    title: 'Travel Poses',
+    description: 'Keep yourself natural while the destination tells the story.',
     image: '/pose-assets/travel/12-travel-photo-poses.webp',
     href: '/pose-book/travel',
-    alt: 'A contact sheet showing twelve travel photo poses',
+    icon: Plane,
+    position: '50% 33.333%',
   },
   {
-    title: 'Professional & LinkedIn Poses',
-    count: '12 poses',
-    description: 'Approachable headshot and personal-branding prompts for a polished profile.',
+    title: 'Professional & LinkedIn',
+    description: 'Approachable poses for headshots and personal branding.',
     image: '/pose-assets/professional/12-professional-linkedin-poses.webp',
     href: '/pose-book/professional',
-    alt: 'A contact sheet showing twelve professional and LinkedIn poses',
+    icon: BriefcaseBusiness,
+    position: '100% 33.333%',
   },
   {
     title: 'Selfie & Mirror Poses',
-    count: '12 poses',
-    description: 'Phone placement, body angles, and framing ideas for natural solo photos.',
+    description: 'Flattering phone angles and easy mirror-photo prompts.',
     image: '/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp',
     href: '/pose-book/selfie-mirror',
-    alt: 'A contact sheet showing twelve selfie and mirror poses',
+    icon: Camera,
+    position: '0% 66.666%',
   },
   {
-    title: 'Natural Family Photo Poses',
-    count: '12 poses',
-    description: 'Walking, cuddles, play, and simple group arrangements for a relaxed family session.',
+    title: 'Natural Family Poses',
+    description: 'Playful group ideas for families with children of all ages.',
     image: '/pose-assets/family/12-family-photo-poses.webp',
     href: '/pose-book/family',
-    alt: 'A contact sheet showing twelve natural family photo poses',
+    icon: House,
+    position: '50% 66.666%',
   },
   {
     title: 'Sitting & Cafe Poses',
-    count: '12 poses',
-    description: 'Relaxed seated ideas using coffee, window light, and simple hand placement.',
+    description: 'Casual seated ideas using coffee, tables, and window light.',
     image: '/pose-assets/sitting-cafe/12-sitting-cafe-poses.webp',
     href: '/pose-book/sitting-cafe',
-    alt: 'A contact sheet showing twelve sitting and cafe poses',
+    icon: Coffee,
+    position: '100% 66.666%',
   },
 ];
-
-const getPoseSheetSize = (image) =>
-  image.includes('/social/') || image.includes('/couples/')
-    ? { width: 887, height: 1774 }
-    : { width: 1024, height: 1536 };
 
 const contentPillars = [
   {
     icon: Camera,
-    title: 'Shoot better',
-    text: 'Simple phone-camera, light, framing, and self-timer techniques that improve the photo before editing.',
-  },
-  {
-    icon: Video,
-    title: 'Make better Reels',
-    text: 'Practical shot lists, talking-head framing, B-roll ideas, and movement prompts for short-form video.',
+    title: 'Shoot with clarity',
+    text: 'Plan the light, framing, and body position before you press the shutter.',
   },
   {
     icon: Sparkles,
-    title: 'Edit with restraint',
-    text: 'Clean crops, consistent colour, readable covers, and an editing workflow that still looks like you.',
+    title: 'Edit with ease',
+    text: 'Use cleaner crops and consistent colour without losing what feels real.',
+  },
+  {
+    icon: Send,
+    title: 'Post with purpose',
+    text: 'Turn one useful idea into a photo post, Reel, and clear caption.',
   },
   {
     icon: TrendingUp,
-    title: 'Post with purpose',
-    text: 'Build useful content pillars, repeat what works, and make each post easier to plan and understand.',
+    title: 'Grow with confidence',
+    text: 'Build repeatable content habits around the topics people save and share.',
+  },
+];
+
+const steps = [
+  {
+    number: '01',
+    icon: Search,
+    title: 'Choose a guide',
+    text: 'Pick a subject and setting that match the content you want to create.',
+  },
+  {
+    number: '02',
+    icon: Camera,
+    title: 'Follow the prompts',
+    text: 'Use the pose directions and visual sequence without copying every detail.',
+  },
+  {
+    number: '03',
+    icon: Sparkles,
+    title: 'Shoot and create',
+    text: 'Keep moving, find your strongest frame, then make the post your own.',
   },
 ];
 
@@ -119,142 +152,151 @@ const Home = () => {
   return (
     <div className="home">
       <section className="home-hero site-shell">
-        <div className="hero-panel card" data-reveal style={{ '--delay': '0.05s' }}>
-          <div className="hero-copy">
-            <span className="eyebrow">Social media posebooks & content guides</span>
-            <h1>Look better.<br />Post better.</h1>
-            <p className="lead">
-              Find a pose, understand the shot, and create content with more confidence. Every
-              WePhoto guide is designed to be visual, practical, and easy to save for later.
-            </p>
-            <div className="hero-actions">
-              <Link to="/pose-book" className="button-primary">
-                Explore pose books
-                <ArrowRight size={18} strokeWidth={2.2} />
-              </Link>
-              <Link to="/guides" className="button-secondary">Create better content</Link>
+        <div className="hero-copy" data-reveal style={{ '--delay': '0.04s' }}>
+          <div className="hero-overline">
+            <span className="home-kicker">Pose guides & content ideas for creators</span>
+            <span className="hero-prompt-count"><strong>108</strong> original prompts</span>
+          </div>
+          <h1>
+            Better photos.<br />
+            Better content.<br />
+            <em>Every time.</em>
+          </h1>
+          <p className="lead">
+            Ready-to-use pose sheets and practical prompts to help you shoot with confidence and
+            create content that feels natural.
+          </p>
+          <div className="hero-actions">
+            <Link to="/pose-book" className="button-primary">
+              Explore the library
+              <ArrowRight size={18} strokeWidth={2.2} />
+            </Link>
+            <Link to="/guides" className="button-secondary">
+              See how it works
+              <Video size={17} strokeWidth={2} />
+            </Link>
+          </div>
+          <div className="hero-signals" aria-label="WePhoto guide features">
+            <span><Bookmark size={17} /><strong>Easy to save</strong><small>One-sheet visual guides</small></span>
+            <span><Camera size={17} /><strong>Made for creators</strong><small>Photos, Reels, and more</small></span>
+            <span><Heart size={17} /><strong>All levels welcome</strong><small>Simple and practical</small></span>
+          </div>
+        </div>
+
+        <div className="hero-visual" data-reveal style={{ '--delay': '0.14s' }}>
+          <span className="hero-doodle hero-doodle-one" aria-hidden="true">*</span>
+          <span className="hero-doodle hero-doodle-two" aria-hidden="true">+</span>
+          <div className="hero-guide-sheet">
+            <span className="hero-guide-tab">Pose / Post / Repeat</span>
+            <div className="hero-guide-label">
+              <span>12 poses</span>
+              <span>One sheet</span>
             </div>
-            <div className="hero-signals" aria-label="WePhoto guide features">
-              <span><Bookmark size={16} /> Saveable visual sheets</span>
-              <span><Compass size={16} /> Clear pose directions</span>
-              <span><Camera size={16} /> Practical shooting tips</span>
+            <img
+              src="/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp"
+              alt="Twelve selfie and mirror poses in one visual contact sheet"
+              width="1024"
+              height="1536"
+              loading="eager"
+              fetchPriority="high"
+            />
+            <div className="hero-guide-footer">
+              <span>Clear directions. Easy to follow.</span>
+              <Heart size={25} strokeWidth={2.4} aria-hidden="true" />
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="hero-pose-preview" aria-label="Featured social media pose sheet">
-            <div className="hero-sheet card">
-              <img
-                src="/pose-assets/selfie-mirror/12-selfie-mirror-poses.webp"
-                alt="Twelve selfie and mirror poses in one visual contact sheet"
-                width="1024"
-                height="1536"
-                loading="eager"
-                fetchPriority="high"
+      <section className="home-library site-shell">
+        <header className="home-section-heading" data-reveal>
+          <span className="home-kicker">Browse by guide category</span>
+          <h2>Find the right guide for every moment.</h2>
+          <p>Practical pose sheets for every kind of creator, subject, and setting.</p>
+        </header>
+
+        <div className="home-guide-grid">
+          {featuredPoseBooks.map((book, index) => (
+            <Link
+              key={book.href}
+              to={book.href}
+              className="home-guide-card"
+              data-reveal
+              style={{ '--delay': `${0.05 + (index % 3) * 0.06}s` }}
+            >
+              <div
+                className="home-guide-thumb"
+                role="img"
+                aria-label={`${book.title} pose guide preview`}
+                style={{ backgroundImage: `url("${book.image}")`, backgroundPosition: book.position }}
               />
-            </div>
-            <div className="hero-sheet-note card">
-              <strong>12 poses. One sheet.</strong>
-              <span>Save it before your next shoot.</span>
-            </div>
-          </div>
+              <div className="home-guide-copy">
+                <div className="home-guide-meta">
+                  <span className="home-guide-icon">{createElement(book.icon, { size: 19, strokeWidth: 1.9 })}</span>
+                  <span className="home-guide-number">{String(index + 1).padStart(2, '0')} / 09</span>
+                </div>
+                <h3>{book.title}</h3>
+                <p>{book.description}</p>
+                <strong>View guide <ArrowRight size={15} /></strong>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
-      <section className="featured-library site-shell">
-        <header className="section-heading" data-reveal>
-          <span className="eyebrow">Start with the shot</span>
-          <h2>Pose ideas you can see at a glance.</h2>
-          <p>Each guide keeps the photos clean and places the instructions underneath, so you can compare the full sequence quickly.</p>
+      <section className="home-steps site-shell">
+        <header className="home-section-heading" data-reveal>
+          <span className="home-kicker">Use the guides in 3 simple steps</span>
+          <h2>Shoot with confidence in three easy steps.</h2>
         </header>
-
-        <div className="featured-pose-grid">
-          {featuredPoseBooks.map((book, index) => {
-            const { width, height } = getPoseSheetSize(book.image);
-            return (
-              <Link
-                key={book.href}
-                to={book.href}
-                className="featured-pose-card card"
-                data-reveal
-                style={{ '--delay': `${0.08 + index * 0.08}s` }}
-              >
-                <div className="featured-pose-image">
-                  <img
-                    src={book.image}
-                    alt={book.alt}
-                    loading="lazy"
-                    decoding="async"
-                    width={width}
-                    height={height}
-                  />
-                </div>
-                <div className="featured-pose-copy">
-                  <span>{book.count}</span>
-                  <h3>{book.title}</h3>
-                  <p>{book.description}</p>
-                  <strong>Open pose book <ArrowRight size={17} /></strong>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-
-        <div className="category-strip card" data-reveal>
-          <div>
-            <span className="eyebrow">The complete starter library</span>
-            <h3>Nine guides. 108 pose references.</h3>
-          </div>
-          <Link to="/pose-book" className="button-secondary">Browse all pose books <ArrowRight size={18} /></Link>
-        </div>
+        <ol className="home-step-grid">
+          {steps.map((step, index) => (
+            <li key={step.number} data-reveal style={{ '--delay': `${0.08 + index * 0.08}s` }}>
+              <span className="home-step-icon">{createElement(step.icon, { size: 29, strokeWidth: 1.8 })}</span>
+              <div>
+                <span>{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </section>
 
-      <section className="content-guides site-shell">
-        <header className="section-heading" data-reveal>
-          <span className="eyebrow">Beyond the pose</span>
-          <h2>Build the whole post, not just the picture.</h2>
-          <p>Use short, practical guides to improve the way you shoot, edit, and publish social content.</p>
+      <section className="home-content site-shell">
+        <header className="home-section-heading" data-reveal>
+          <span className="home-kicker">It is more than just poses</span>
+          <h2>Shoot better. Edit better. Post better.</h2>
+          <p>Everything you need to create content you are proud to share.</p>
         </header>
-
-        <div className="content-pillar-grid">
+        <div className="home-content-grid">
           {contentPillars.map(({ icon, title, text }, index) => (
-            <article key={title} className="content-pillar card" data-reveal style={{ '--delay': `${0.08 + index * 0.05}s` }}>
-              <span>{createElement(icon, { size: 21, strokeWidth: 2 })}</span>
-              <h3>{title}</h3>
-              <p>{text}</p>
+            <article key={title} data-reveal style={{ '--delay': `${0.08 + index * 0.06}s` }}>
+              <span>{createElement(icon, { size: 24, strokeWidth: 1.8 })}</span>
+              <div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
             </article>
           ))}
         </div>
-        <Link to="/guides" className="button-secondary content-guides-link">
-          Explore content guides
-          <ArrowRight size={18} />
+      </section>
+
+      <section className="home-cta site-shell" data-reveal>
+        <div className="home-cta-visual" aria-hidden="true">
+          <img src="/pose-assets/men/12-social-media-poses-for-men.webp" alt="" width="1024" height="1536" loading="lazy" />
+          <img src="/pose-assets/social/12-social-media-poses.webp" alt="" width="887" height="1774" loading="lazy" />
+          <img src="/pose-assets/best-friends/12-best-friend-poses.webp" alt="" width="1024" height="1536" loading="lazy" />
+        </div>
+        <div className="home-cta-copy">
+          <span>The complete creator library</span>
+          <h2>Everything you need to create stronger content.</h2>
+          <p>Nine original pose guides, 108 visual prompts, and practical shooting advice.</p>
+        </div>
+        <Link to="/pose-book" className="home-cta-button">
+          Explore the full library
+          <ArrowRight size={17} />
         </Link>
-      </section>
-
-      <section className="home-method site-shell">
-        <div className="home-method-card card" data-reveal>
-          <div>
-            <span className="eyebrow">The WePhoto method</span>
-            <h2>Choose. Practise. Make it yours.</h2>
-          </div>
-          <ol>
-            <li><span>01</span><strong>Choose a sheet</strong><p>Start with the person, setting, or type of post you want to create.</p></li>
-            <li><span>02</span><strong>Try the action</strong><p>Use the prompt as a starting point instead of copying every detail.</p></li>
-            <li><span>03</span><strong>Keep moving</strong><p>The strongest frame is often the moment between the planned poses.</p></li>
-          </ol>
-        </div>
-      </section>
-
-      <section className="cta-strip site-shell" data-reveal>
-        <div className="cta-strip-card card">
-          <div>
-            <span className="eyebrow">Ready for your next post?</span>
-            <h2>Start with twelve poses you can use today.</h2>
-          </div>
-          <Link to="/pose-book/social-media" className="button-primary">
-            Open social media poses
-            <ArrowRight size={18} strokeWidth={2.2} />
-          </Link>
-        </div>
       </section>
     </div>
   );

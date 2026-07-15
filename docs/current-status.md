@@ -11,6 +11,17 @@ Last updated: 2026-07-15
 - Booking, pricing, session-product, location, and active-studio claims have been removed from the current platform experience.
 - The original WordPress backup remains excluded from Git under `backup/`.
 
+## Visual Direction
+
+- The homepage now uses a high-contrast soft editorial utility style built around the visual language of pose sheets and camera framing.
+- The primary brand colours are Signal Coral (`#FF3F74`) and Electric Cobalt (`#2F4BE8`), with Tangerine (`#FF8A3D`) used sparingly for movement cues.
+- The brand mark is a coral gradient circle with `W.` in white, a white framing corner, and a cobalt focus point, paired with a compact `WePhoto` wordmark and `Pose & Content Guides` descriptor.
+- The same `W.` mark is used for the SVG favicon.
+- The homepage uses a large sans-serif headline, an angled 12-pose sheet, nine compact category cards, a three-step workflow, creator-guide pillars, and a coral library call to action.
+- Repeating identity motifs include frame corners, `01/09` guide numbering, a `Pose / Post / Repeat` sheet tab, tri-colour signal lines, and a coral-to-cobalt library call to action.
+- Category cards crop individual panels from the existing contact sheets in CSS, keeping the previews useful without creating duplicate image assets.
+- Typography remains fully sans serif with Outfit for display copy and DM Sans for body copy.
+
 ## Live Content Model
 
 - `/` is a visual discovery homepage for pose books and social content guidance.
@@ -57,11 +68,13 @@ Last updated: 2026-07-15
 - Automated checks confirm one H1 on every core page, no booking CTA or `LocalBusiness` markup on active platform pages, 24 sitemap URLs, and the expected retired-route mappings.
 - Desktop and 390px mobile browser checks cover the homepage, pose-book library, and representative pose-guide pages.
 - All nine contact-sheet assets are optimised WebP files and load without embedded labels over the photos.
-- The homepage hero uses the 2:3 selfie-and-mirror sheet with explicit dimensions and high fetch priority instead of the visually overlong 1:2 launch sheet.
+- The redesigned homepage hero uses the 2:3 selfie-and-mirror sheet with explicit dimensions and high fetch priority instead of the visually overlong 1:2 launch sheet.
+- The redesigned homepage was browser-checked at 1440px and 390px with no horizontal overflow, console errors, or console warnings.
+- The mobile navigation opens and closes correctly and reports its state through `aria-expanded`.
 
 ## Next Work
 
-1. Commit and publish the complete nine-guide library after approval.
+1. Commit and publish the homepage and brand redesign after approval.
 2. Expand the strongest guide topics into dedicated indexable articles now that the visual library is established.
 3. Use search and engagement data to choose the next pose-book categories rather than adding more by default.
 4. Monitor Google Search Console after the sitemap and route additions are recrawled.

@@ -1,42 +1,47 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { ArrowUpRight, Camera } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 import './Header.css';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className="header-wrap">
-      <div className="header site-shell card">
-        <Link to="/" className="logo" aria-label="WePhoto home">
-          <span className="logo-mark">
-            <Camera size={18} strokeWidth={2.1} />
-          </span>
-          <span className="logo-copy">
-            <strong>WePhoto</strong>
-            <small>Pose & content guides</small>
-          </span>
-        </Link>
+      <div className="header site-shell">
+        <BrandLogo />
 
-        <nav className="nav-links" aria-label="Primary navigation">
-          <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Home
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? <X size={21} /> : <Menu size={21} />}
+        </button>
+
+        <nav id="primary-navigation" className={`nav-links ${menuOpen ? 'is-open' : ''}`} aria-label="Primary navigation">
+          <NavLink to="/pose-book" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Pose Library
           </NavLink>
-          <NavLink to="/pose-book" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Pose Books
+          <NavLink to="/guides" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Creator Guides
           </NavLink>
-          <NavLink to="/guides" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Create Better
+          <NavLink to="/blog" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Photo Articles
           </NavLink>
-          <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Photo Guides
-          </NavLink>
-          <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+          <NavLink to="/about" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : undefined)}>
             About
           </NavLink>
         </nav>
 
-        <Link to="/pose-book/social-media" className="header-cta">
-          Start with 12 poses
-          <ArrowUpRight size={16} strokeWidth={2.3} />
+        <Link to="/pose-book" className="header-cta" onClick={closeMenu}>
+          Browse library
+          <ArrowRight size={16} strokeWidth={2.3} />
         </Link>
       </div>
     </header>
