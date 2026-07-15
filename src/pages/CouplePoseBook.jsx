@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './CouplePoseBook.css';
 
+const contactSheet = {
+  image: '/pose-assets/couples/12-outdoor-couple-poses.webp',
+  width: 887,
+  height: 1774,
+  alt: 'Twelve outdoor couple poses photographed with an Australian couple on a Sydney coastal walk',
+};
+
 const poses = [
   {
     number: '01',
     slug: 'walk-and-talk',
     title: 'Walk & Talk',
     mood: 'Start with movement',
-    image: '/pose-assets/couples/01-walk-and-talk.webp',
-    width: 1122,
-    height: 1402,
-    alt: 'Australian couple walking and talking on a coastal path at golden hour',
     steps: [
       'Begin a few metres back and walk at half your usual pace.',
       'Keep one hand in a pocket and let the other arms move naturally.',
@@ -26,10 +29,6 @@ const poses = [
     slug: 'shoulder-bump',
     title: 'Shoulder Bump',
     mood: 'A little chaos helps',
-    image: '/pose-assets/couples/02-shoulder-bump.webp',
-    width: 1003,
-    height: 1568,
-    alt: 'Australian couple laughing during a playful shoulder bump outdoors',
     steps: [
       'Walk close enough for your shoulders to almost meet.',
       'Give one gentle bump, then let the other person react.',
@@ -43,10 +42,6 @@ const poses = [
     slug: 'pull-me-in',
     title: 'Pull Me In',
     mood: 'Play with the distance',
-    image: '/pose-assets/couples/03-pull-me-in.webp',
-    width: 1002,
-    height: 1569,
-    alt: 'Australian couple playing on a sandstone coastal trail with one partner pulling the other closer',
     steps: [
       'Place one partner half a step ahead and turn them slightly away.',
       'Catch the loose shirt or place a gentle hand at the waist.',
@@ -60,10 +55,6 @@ const poses = [
     slug: 'picnic-pause',
     title: 'Picnic Pause',
     mood: 'Relax into the frame',
-    image: '/pose-assets/couples/04-picnic-pause.webp',
-    width: 1122,
-    height: 1402,
-    alt: 'Australian couple sitting casually on a picnic rug beneath eucalyptus trees',
     steps: [
       'Sit at different angles instead of facing the camera in a row.',
       'Raise one knee each and use the outside hands for support.',
@@ -77,10 +68,6 @@ const poses = [
     slug: 'side-wrap',
     title: 'Side Wrap',
     mood: 'Close without posing',
-    image: '/pose-assets/couples/05-side-wrap.webp',
-    width: 1003,
-    height: 1568,
-    alt: 'Australian couple standing in a loose side embrace at a Sydney foreshore lookout',
     steps: [
       'Stand facing the same direction with one person slightly behind.',
       'Wrap one arm loosely at the waist and leave the other hands casual.',
@@ -94,10 +81,6 @@ const poses = [
     slug: 'run-back-to-me',
     title: 'Run Back to Me',
     mood: 'Finish with energy',
-    image: '/pose-assets/couples/06-run-back-to-me.webp',
-    width: 1003,
-    height: 1568,
-    alt: 'Australian couple laughing and jogging along a coastal track at sunset',
     steps: [
       'Let one partner move two easy steps ahead on a safe, level path.',
       'Turn the upper body back while the other person follows behind.',
@@ -106,15 +89,93 @@ const poses = [
     camera: 'Full length · Continuous AF · 1/800 sec or faster',
     avoid: 'Keep it to a playful jog and check the path before shooting.',
   },
+  {
+    number: '07',
+    slug: 'back-to-back',
+    title: 'Back to Back',
+    mood: 'Pause, then glance',
+    steps: [
+      'Stand back to back with only the shoulders making light contact.',
+      'Shift weight onto different legs to keep the outlines uneven.',
+      'On three, glance sideways at each other without turning the feet.',
+    ],
+    camera: 'Three-quarter length · 50 mm · Eye level',
+    avoid: 'Do not press together or force both faces towards the camera.',
+  },
+  {
+    number: '08',
+    slug: 'pass-and-look-back',
+    title: 'Pass & Look Back',
+    mood: 'Cross paths naturally',
+    steps: [
+      'Start on opposite sides and walk past each other slowly.',
+      'Take two more steps before both partners turn back.',
+      'Let the shoulders lead the turn and keep the arms loose.',
+    ],
+    camera: 'Full length · 35-50 mm · 1/500 sec or faster',
+    avoid: 'Do not stop on the same foot or twist only through the neck.',
+  },
+  {
+    number: '09',
+    slug: 'sandstone-sit',
+    title: 'Sandstone Sit',
+    mood: 'Change the levels',
+    steps: [
+      'Choose a broad, safe ledge and sit at slightly different heights.',
+      'Keep feet grounded and angle the knees away from each other.',
+      'Talk across the space instead of looking straight at the lens.',
+    ],
+    camera: 'Seated eye level · 50 mm · Keep the landscape visible',
+    avoid: 'Check the ledge first and stay well away from exposed edges.',
+  },
+  {
+    number: '10',
+    slug: 'coffee-stroll',
+    title: 'Coffee Stroll',
+    mood: 'Give the hands a job',
+    steps: [
+      'Carry one unbranded takeaway cup and begin a slow walk.',
+      'Pass the cup between you or take turns pretending to steal it.',
+      'Keep talking while the photographer follows from the front.',
+    ],
+    camera: 'Three-quarter length · 50 mm · Continuous focus',
+    avoid: 'Keep the cup below the face and remove visible branding.',
+  },
+  {
+    number: '11',
+    slug: 'view-and-turn',
+    title: 'View & Turn',
+    mood: 'Let the landscape lead',
+    steps: [
+      'Face the view with one partner standing half a step behind.',
+      'Keep the bodies slightly open so both outlines stay visible.',
+      'Ask one person to look back while the other stays with the view.',
+    ],
+    camera: 'Environmental portrait · 35 mm · Expose for backlight',
+    avoid: 'Do not place both heads on the same line or hide either profile.',
+  },
+  {
+    number: '12',
+    slug: 'easy-spin',
+    title: 'Easy Spin',
+    mood: 'End on a high note',
+    steps: [
+      'Connect one hand and leave enough room for a comfortable turn.',
+      'Lead a slow half-spin while the other partner stays grounded.',
+      'Keep moving through the laugh after the turn is finished.',
+    ],
+    camera: 'Full length · Continuous AF · 1/800 sec or faster',
+    avoid: 'Keep elbows soft and use a half-turn rather than a fast full spin.',
+  },
 ];
 
 const CouplePoseBook = () => {
   usePageMeta({
-    title: 'Outdoor Couple Pose Book | Natural Poses | WePhoto',
+    title: '12 Outdoor Couple Poses | Pose Book | WePhoto',
     description:
-      'Six natural outdoor couple poses with simple prompts, camera tips and visual notes for a relaxed Australian photo session.',
+      'Twelve natural outdoor couple poses in one visual guide, with simple prompts and camera tips for a relaxed Australian photo session.',
     canonicalPath: '/pose-book/couples',
-    image: poses[0].image,
+    image: contactSheet.image,
   });
 
   const schema = {
@@ -123,7 +184,13 @@ const CouplePoseBook = () => {
     name: 'WePhoto Couple Pose Book',
     url: 'https://wephoto.com.au/pose-book/couples',
     description:
-      'A visual guide to six natural outdoor couple poses for a relaxed Australian photo session.',
+      'A visual guide to twelve natural outdoor couple poses for a relaxed Australian photo session.',
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `https://wephoto.com.au${contactSheet.image}`,
+      width: contactSheet.width,
+      height: contactSheet.height,
+    },
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: poses.length,
@@ -131,7 +198,6 @@ const CouplePoseBook = () => {
         '@type': 'ListItem',
         position: index + 1,
         name: pose.title,
-        image: `https://wephoto.com.au${pose.image}`,
       })),
     },
   };
@@ -148,47 +214,46 @@ const CouplePoseBook = () => {
           <header className="pose-board-header">
             <span className="eyebrow">WePhoto pose book · Australian outdoors</span>
             <div className="pose-board-title">
-              <span aria-hidden="true">06</span>
+              <span aria-hidden="true">12</span>
               <h1>Outdoor<br />Couple Poses</h1>
             </div>
             <p>Simple <i /> Natural <i /> Playful</p>
           </header>
 
-          <div className="pose-collage">
-            {poses.map((pose, index) => (
-              <figure id={pose.slug} key={pose.slug} className="pose-tile">
-                <div className="pose-tile-media">
-                  <img
-                    src={pose.image}
-                    alt={pose.alt}
-                    loading={index < 3 ? 'eager' : 'lazy'}
-                    width={pose.width}
-                    height={pose.height}
-                  />
-                </div>
-                <figcaption>
+          <figure className="pose-contact-sheet">
+            <img
+              src={contactSheet.image}
+              alt={contactSheet.alt}
+              loading="eager"
+              width={contactSheet.width}
+              height={contactSheet.height}
+            />
+          </figure>
+
+          <nav className="pose-sheet-legend" aria-label="Outdoor couple pose index">
+            {poses.map((pose) => (
+              <a key={pose.slug} href={`#${pose.slug}`}>
                   <span>{pose.number}</span>
                   <div>
                     <strong>{pose.title}</strong>
                     <small>{pose.mood}</small>
                   </div>
-                </figcaption>
-              </figure>
+              </a>
             ))}
-          </div>
+          </nav>
         </div>
       </section>
 
       <section className="pose-guide site-shell">
         <header className="pose-guide-heading">
           <span className="eyebrow">Keep it natural</span>
-          <h2>Six prompts to use on location.</h2>
+          <h2>Twelve prompts to use on location.</h2>
           <p>Give the action first, then photograph the reaction that follows.</p>
         </header>
 
         <div className="pose-guide-grid">
           {poses.map((pose) => (
-            <article key={pose.slug} className="pose-guide-card card" data-reveal>
+            <article id={pose.slug} key={pose.slug} className="pose-guide-card card" data-reveal>
               <header>
                 <span>{pose.number}</span>
                 <div>

@@ -31,7 +31,7 @@ Last updated: 2026-07-15 (Australia/Brisbane)
 - `robots.txt` allows search crawling and declares `https://wephoto.com.au/sitemap_index.xml`.
 - The previous street address and postcode were removed from visible content and LocalBusiness structured data at the owner's request.
 - The Contact page was retired, removed from navigation and the sitemap, and permanently redirected to `/booking`; direct email remains available there.
-- `/pose-book/couples` presents six original outdoor Australian couple poses in a 3-by-2 desktop and 2-by-3 mobile contact sheet, with clean photographs, captions below each image, separate movement prompts, and camera notes.
+- `/pose-book/couples` presents 12 original outdoor Australian couple poses in one generated 3-by-4 contact-sheet image, with no text over the photographs, a separate numbered legend, movement prompts, and camera notes.
 - Trailing-slash duplicates and retired WordPress URLs use HTTP 301 redirects.
 - Unknown URLs return HTTP 404 instead of an empty `200` response.
 - `/blog` links all eight restored articles, and the footer links the restored guide, FAQ, shop, gallery, blog, and service landing pages.
@@ -39,7 +39,7 @@ Last updated: 2026-07-15 (Australia/Brisbane)
 ## Verification
 
 - `npm run lint` passes.
-- `npm run build` passes and generates 29 HTML files, 18 recovered media assets, and six optimised outdoor couple pose images.
+- `npm run build` passes and generates 29 HTML files, 18 recovered media assets, and one optimised 12-photo outdoor couple contact sheet.
 - Cloudflare Pages local verification confirmed `200` for restored pages, `301` for retired URLs, `application/xml` for the sitemap, and `404` for unknown URLs.
 - Browser checks confirmed no hydration warnings, all restored images loaded, one H1 per tested page, and no horizontal overflow at 390px mobile width.
 - Live verification confirmed `200 application/xml` for both sitemap files, server-rendered content and metadata, the expected 301 redirects, and a real 404 for unknown URLs.

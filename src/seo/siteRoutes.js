@@ -26,9 +26,9 @@ const coreRoutes = [
   },
   {
     path: '/pose-book/couples',
-    title: 'Outdoor Couple Pose Book | Natural Poses | WePhoto',
+    title: '12 Outdoor Couple Poses | Pose Book | WePhoto',
     description:
-      'Six natural outdoor couple poses with simple prompts, camera tips and visual notes for a relaxed Australian photo session.',
+      'Twelve natural outdoor couple poses in one visual guide, with simple prompts and camera tips for a relaxed Australian photo session.',
   },
   {
     path: '/about',
