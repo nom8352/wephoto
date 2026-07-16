@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
-import { Heart } from 'lucide-react';
+import { BarChart3, Crop, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import NextStep from '../components/NextStep';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './CouplePoseBook.css';
 
@@ -31,6 +32,7 @@ const VisualPoseBook = ({ book }) => {
         '@type': 'ListItem',
         position: index + 1,
         name: pose.title,
+        description: [pose.cues?.join(' '), pose.fix].filter(Boolean).join(' '),
       })),
     },
   };
@@ -100,13 +102,43 @@ const VisualPoseBook = ({ book }) => {
                 </div>
               </header>
               <ol>
-                {pose.cues.map((cue) => <li key={cue}>{cue}</li>)}
+                {pose.cues.map((cue, cueIndex) => <li key={`${pose.slug}-${cueIndex}`}>{cue}</li>)}
               </ol>
               <p className="pose-natural-note">{pose.note}</p>
+              {(pose.mistake || pose.fix) && (
+                <div className="pose-fix">
+                  {pose.mistake && (
+                    <p className="pose-fix-mistake"><span>Common mistake</span>{pose.mistake}</p>
+                  )}
+                  {pose.fix && (
+                    <p className="pose-fix-solution"><span>Fix</span>{pose.fix}</p>
+                  )}
+                </div>
+              )}
             </article>
           ))}
         </div>
       </section>
+
+      <NextStep
+        heading="You have the pose. Now prepare the post."
+        items={[
+          {
+            to: '/tools/image-size-calculator',
+            eyebrow: 'Before you post',
+            title: 'Size it for the platform',
+            text: 'Resize and crop your shot for Instagram, Pinterest, or LinkedIn without stretching it.',
+            icon: Crop,
+          },
+          {
+            to: '/tools/engagement-rate-calculator',
+            eyebrow: 'After you post',
+            title: 'Check if it worked',
+            text: 'Measure engagement by followers or reach, privately in your browser.',
+            icon: BarChart3,
+          },
+        ]}
+      />
 
       <section className="pose-book-cta site-shell">
         <div className="pose-book-cta-card card">

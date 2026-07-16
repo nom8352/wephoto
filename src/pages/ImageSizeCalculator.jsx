@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { Crop, Image, LockKeyhole, RotateCcw, ScanLine } from 'lucide-react';
+import { Camera, Crop, Image, LockKeyhole, RotateCcw, ScanLine, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import NextStep from '../components/NextStep';
+import PrivacyBadge from '../components/PrivacyBadge';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './Tools.css';
 
@@ -85,6 +87,7 @@ const ImageSizeCalculator = () => {
         <span className="tools-kicker">Social image preparation</span>
         <h1>Image Size &<br /><em>Ratio Calculator</em></h1>
         <p>See exactly how a photo fits a social format. Resize proportionally, identify the crop, and avoid stretched images.</p>
+        <PrivacyBadge />
       </section>
 
       <section className="calculator-shell site-shell">
@@ -98,7 +101,7 @@ const ImageSizeCalculator = () => {
           <div className="calculator-group-heading"><span>02</span><h2>Choose the destination</h2></div>
           <div className="image-preset-grid">
             {presets.map((preset) => (
-              <button key={preset.id} type="button" className={selectedPreset === preset.id ? 'active' : ''} onClick={() => selectPreset(preset)}>
+              <button key={preset.id} type="button" className={selectedPreset === preset.id ? 'active' : ''} aria-pressed={selectedPreset === preset.id} onClick={() => selectPreset(preset)}>
                 <strong>{preset.platform}</strong><span>{preset.format}</span><small>{preset.width} × {preset.height}</small>
               </button>
             ))}
@@ -176,6 +179,26 @@ const ImageSizeCalculator = () => {
           </details>
         </div>
       </section>
+
+      <NextStep
+        heading="Need better photos to post in the first place?"
+        items={[
+          {
+            to: '/pose-book',
+            eyebrow: 'Pose library',
+            title: 'Browse 108 pose ideas',
+            text: 'Nine visual pose sheets with step-by-step direction for every shot.',
+            icon: Camera,
+          },
+          {
+            to: '/pose-book/selfie-mirror',
+            eyebrow: 'Most popular',
+            title: 'Selfie & mirror poses',
+            text: 'Flattering phone angles and mirror-photo prompts you can try today.',
+            icon: Users,
+          },
+        ]}
+      />
     </div>
   );
 };

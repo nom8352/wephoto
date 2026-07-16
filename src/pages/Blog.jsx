@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { guideArticles } from '../data/guideArticles';
 import legacyPages from '../data/legacyPages.json';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './LegacyPages.css';
@@ -14,13 +15,13 @@ const articlePaths = new Set([
   '/tips-to-enhance-your-couple-photography-experience',
 ]);
 
-const articles = legacyPages.filter((page) => articlePaths.has(page.path));
+const archiveArticles = legacyPages.filter((page) => articlePaths.has(page.path));
 
 const Blog = () => {
   usePageMeta({
     title: 'Photography Guides for Better Social Content | WePhoto',
     description:
-      'Practical WePhoto articles covering self portraits, couple poses, family photos, and stronger social content.',
+      'Practical WePhoto articles covering Instagram poses, selfies, couples, LinkedIn headshots, engagement rate, and image sizes.',
     canonicalPath: '/blog',
   });
 
@@ -29,11 +30,18 @@ const Blog = () => {
     '@type': 'CollectionPage',
     name: 'WePhoto photography guides',
     url: 'https://wephoto.com.au/blog',
-    hasPart: articles.map((article) => ({
-      '@type': 'Article',
-      headline: article.title,
-      url: `https://wephoto.com.au${article.path}`,
-    })),
+    hasPart: [
+      ...guideArticles.map((article) => ({
+        '@type': 'Article',
+        headline: article.headline,
+        url: `https://wephoto.com.au${article.path}`,
+      })),
+      ...archiveArticles.map((article) => ({
+        '@type': 'Article',
+        headline: article.title,
+        url: `https://wephoto.com.au${article.path}`,
+      })),
+    ],
   };
 
   return (
@@ -47,13 +55,21 @@ const Blog = () => {
           <span className="eyebrow">Photography guides</span>
           <h1>Better photos start before you press the shutter.</h1>
           <p className="lead">
-            Practical reading on self portraits, couple direction, family photos, and the small
-            decisions that make social content feel more natural.
+            Practical reading on poses, selfies, couples, LinkedIn portraits, engagement maths, and
+            image sizes — with free pose books and creator tools linked throughout.
           </p>
         </section>
 
         <section className="journal-grid">
-          {articles.map((article) => (
+          {guideArticles.map((article) => (
+            <article key={article.path} className="journal-card card">
+              <span className="journal-label">New guide</span>
+              <h2>{article.headline}</h2>
+              <p>{article.description}</p>
+              <Link to={article.path}>Read the guide</Link>
+            </article>
+          ))}
+          {archiveArticles.map((article) => (
             <article key={article.path} className="journal-card card">
               <span className="journal-label">From the WePhoto archive</span>
               <h2>{article.title}</h2>

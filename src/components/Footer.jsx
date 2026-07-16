@@ -34,6 +34,8 @@ const Footer = () => {
             <span>More</span>
             <Link to="/tools/engagement-rate-calculator">Engagement calculator</Link>
             <Link to="/tools/image-size-calculator">Image size calculator</Link>
+            <Link to="/tools/reels-safe-zone-checker">Reels safe zone</Link>
+            <Link to="/tools/caption-character-counter">Caption counter</Link>
             <Link to="/privacy-policy">Privacy</Link>
           </div>
         </div>

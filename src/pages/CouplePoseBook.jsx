@@ -1,5 +1,6 @@
-import { Camera, Heart } from 'lucide-react';
+import { BarChart3, Camera, Crop, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import NextStep from '../components/NextStep';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './CouplePoseBook.css';
 
@@ -23,6 +24,8 @@ const poses = [
     ],
     camera: 'Full length · 35-50 mm · 1/500 sec or faster',
     avoid: 'Do not match every step or force eye contact for the whole walk.',
+    mistake: 'Matching every step and staring at the camera the whole time.',
+    fix: 'Walk at half pace, keep talking, and let your eyes drift naturally.',
   },
   {
     number: '02',
@@ -36,6 +39,8 @@ const poses = [
     ],
     camera: 'Full length · Continuous AF · Short burst',
     avoid: 'Keep the bump light; the reaction should be bigger than the contact.',
+    mistake: 'Stopping still for a stiff, posed shoulder bump.',
+    fix: 'Keep walking through the bump and capture the reaction on the next step.',
   },
   {
     number: '03',
@@ -49,6 +54,8 @@ const poses = [
     ],
     camera: 'Three-quarter or full length · 50 mm · Back-button focus',
     avoid: 'Never tug an arm or wrist; keep the movement low and comfortable.',
+    mistake: 'Yanking an arm or wrist to force the turn back.',
+    fix: 'Catch the shirt or waist with one gentle pull and photograph the turn back.',
   },
   {
     number: '04',
@@ -62,6 +69,8 @@ const poses = [
     ],
     camera: 'Seated eye level · 35-50 mm · Keep the setting visible',
     avoid: 'Do not mirror the same leg position or sit perfectly upright.',
+    mistake: 'Sitting in a mirror-image row facing the camera.',
+    fix: 'Angle your bodies differently and chat across the gap before leaning in.',
   },
   {
     number: '05',
@@ -75,6 +84,8 @@ const poses = [
     ],
     camera: 'Full length · 50-85 mm · Expose for backlit skin',
     avoid: 'Do not stack both faces or turn this into a tight back hug.',
+    mistake: 'Stacking both faces toward the camera in a tight back hug.',
+    fix: 'Stand side by side facing the view with one loose arm at the waist.',
   },
   {
     number: '06',
@@ -88,6 +99,8 @@ const poses = [
     ],
     camera: 'Full length · Continuous AF · 1/800 sec or faster',
     avoid: 'Keep it to a playful jog and check the path before shooting.',
+    mistake: 'Sprinting on uneven ground without checking the path first.',
+    fix: 'Use a playful jog on level ground and keep reaching without grabbing.',
   },
   {
     number: '07',
@@ -101,6 +114,8 @@ const poses = [
     ],
     camera: 'Three-quarter length · 50 mm · Eye level',
     avoid: 'Do not press together or force both faces towards the camera.',
+    mistake: 'Pressing full bodies together and turning both faces to the lens.',
+    fix: 'Let only the shoulders touch and glance sideways at each other on three.',
   },
   {
     number: '08',
@@ -114,6 +129,8 @@ const poses = [
     ],
     camera: 'Full length · 35-50 mm · 1/500 sec or faster',
     avoid: 'Do not stop on the same foot or twist only through the neck.',
+    mistake: 'Stopping on the same foot and twisting only through the neck.',
+    fix: 'Take two more steps past each other before the shoulders lead the turn back.',
   },
   {
     number: '09',
@@ -127,6 +144,8 @@ const poses = [
     ],
     camera: 'Seated eye level · 50 mm · Keep the landscape visible',
     avoid: 'Check the ledge first and stay well away from exposed edges.',
+    mistake: 'Perching on an unstable ledge with identical leg positions.',
+    fix: 'Check the seat is safe, sit at different heights, and angle knees away from each other.',
   },
   {
     number: '10',
@@ -140,6 +159,8 @@ const poses = [
     ],
     camera: 'Three-quarter length · 50 mm · Continuous focus',
     avoid: 'Keep the cup below the face and remove visible branding.',
+    mistake: 'Holding the cup above chin height with visible branding.',
+    fix: 'Keep the cup below the face and swap it playfully as you walk.',
   },
   {
     number: '11',
@@ -153,6 +174,8 @@ const poses = [
     ],
     camera: 'Environmental portrait · 35 mm · Expose for backlight',
     avoid: 'Do not place both heads on the same line or hide either profile.',
+    mistake: 'Placing both heads on the same horizontal line.',
+    fix: 'Stand half a step apart with open bodies so both profiles stay visible.',
   },
   {
     number: '12',
@@ -166,6 +189,8 @@ const poses = [
     ],
     camera: 'Full length · Continuous AF · 1/800 sec or faster',
     avoid: 'Keep elbows soft and use a half-turn rather than a fast full spin.',
+    mistake: 'Leading a fast full spin with locked elbows.',
+    fix: 'Connect one hand, use a slow half-turn, and keep moving through the laugh.',
   },
 ];
 
@@ -263,8 +288,8 @@ const CouplePoseBook = () => {
               </header>
 
               <ol>
-                {pose.steps.map((step) => (
-                  <li key={step}>{step}</li>
+                {pose.steps.map((step, stepIndex) => (
+                  <li key={`${pose.slug}-${stepIndex}`}>{step}</li>
                 ))}
               </ol>
 
@@ -273,10 +298,40 @@ const CouplePoseBook = () => {
                 <p>{pose.camera}</p>
               </div>
               <p className="pose-natural-note">{pose.avoid}</p>
+              {(pose.mistake || pose.fix) && (
+                <div className="pose-fix">
+                  {pose.mistake && (
+                    <p className="pose-fix-mistake"><span>Common mistake</span>{pose.mistake}</p>
+                  )}
+                  {pose.fix && (
+                    <p className="pose-fix-solution"><span>Fix</span>{pose.fix}</p>
+                  )}
+                </div>
+              )}
             </article>
           ))}
         </div>
       </section>
+
+      <NextStep
+        heading="You have the pose. Now prepare the post."
+        items={[
+          {
+            to: '/tools/image-size-calculator',
+            eyebrow: 'Before you post',
+            title: 'Size it for the platform',
+            text: 'Resize and crop your shot for Instagram, Pinterest, or LinkedIn without stretching it.',
+            icon: Crop,
+          },
+          {
+            to: '/tools/engagement-rate-calculator',
+            eyebrow: 'After you post',
+            title: 'Check if it worked',
+            text: 'Measure engagement by followers or reach, privately in your browser.',
+            icon: BarChart3,
+          },
+        ]}
+      />
 
       <section className="pose-book-cta site-shell">
         <div className="pose-book-cta-card card">

@@ -1,6 +1,8 @@
-import { ArrowRight, Calculator, ChartNoAxesColumnIncreasing, Clock3, Image, ScanLine, WalletCards } from 'lucide-react';
+import { ArrowRight, Calculator, Camera, ChartNoAxesColumnIncreasing, Clock3, Image, ScanLine, TextCursorInput, WalletCards } from 'lucide-react';
 import { createElement } from 'react';
 import { Link } from 'react-router-dom';
+import NextStep from '../components/NextStep';
+import PrivacyBadge from '../components/PrivacyBadge';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './Tools.css';
 
@@ -19,13 +21,26 @@ const liveTools = [
     href: '/tools/image-size-calculator',
     label: 'Check image size',
   },
+  {
+    icon: ScanLine,
+    title: 'Reels Safe Zone Checker',
+    description: 'Preview where Instagram Reels and TikTok controls may cover faces, titles, and captions.',
+    href: '/tools/reels-safe-zone-checker',
+    label: 'Check safe zones',
+  },
+  {
+    icon: TextCursorInput,
+    title: 'Caption Character Counter',
+    description: 'Count characters, preview cutoffs, hashtags, and mentions for Instagram, TikTok, LinkedIn, and X.',
+    href: '/tools/caption-character-counter',
+    label: 'Count characters',
+  },
 ];
 
 const nextTools = [
   { icon: ChartNoAxesColumnIncreasing, title: 'Follower Growth Calculator', text: 'Measure growth between two dates and project the next 30 days.' },
   { icon: Clock3, title: 'Content Capacity Planner', text: 'Turn your available weekly hours into a realistic publishing plan.' },
   { icon: WalletCards, title: 'Campaign ROI Calculator', text: 'Compare spend, revenue, leads, reach, and cost per engagement.' },
-  { icon: ScanLine, title: 'Reels Safe Zone Checker', text: 'Preview where platform controls may cover important text and faces.' },
 ];
 
 const Tools = () => {
@@ -59,9 +74,10 @@ const Tools = () => {
           <span className="tools-kicker">Free creator toolkit</span>
           <h1>Useful numbers.<br /><em>Clear next steps.</em></h1>
           <p>Simple tools for planning, measuring, and preparing social content. Everything runs in your browser with no signup.</p>
+          <PrivacyBadge />
         </div>
         <div className="tools-hero-badge" data-reveal style={{ '--delay': '0.12s' }}>
-          <span>02</span>
+          <span>04</span>
           <strong>live tools</strong>
           <small>Private. Fast. Free.</small>
         </div>
@@ -75,11 +91,11 @@ const Tools = () => {
         <div className="tools-live-grid">
           {liveTools.map(({ icon: Icon, title, description, href, label }, index) => (
             <Link key={href} to={href} className="tools-live-card" data-reveal style={{ '--delay': `${0.08 + index * 0.08}s` }}>
-              <span className="tools-card-number">0{index + 1} / 02</span>
+              <span className="tools-card-number">0{index + 1} / 0{liveTools.length}</span>
               <span className="tools-card-icon">{createElement(Icon, { size: 28, strokeWidth: 1.8 })}</span>
-              <h2>{title}</h2>
+              <h3>{title}</h3>
               <p>{description}</p>
-              <strong>{label} <ArrowRight size={17} /></strong>
+              <strong>{label} <ArrowRight size={17} aria-hidden="true" /></strong>
             </Link>
           ))}
         </div>
@@ -100,6 +116,19 @@ const Tools = () => {
           ))}
         </div>
       </section>
+
+      <NextStep
+        heading="Need better photos to post in the first place?"
+        items={[
+          {
+            to: '/pose-book',
+            eyebrow: 'Pose library',
+            title: 'Browse 108 pose ideas',
+            text: 'Nine visual pose sheets with step-by-step direction for every shot.',
+            icon: Camera,
+          },
+        ]}
+      />
     </div>
   );
 };

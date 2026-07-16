@@ -21,6 +21,8 @@ export const menPoseBook = {
       mood: 'Start easy',
       cues: ['Stand just inside the doorway and rest one shoulder lightly against the frame.', 'Keep one hand in a pocket and let the other arm hang naturally.'],
       note: 'Stay tall through the chest instead of sinking into the wall.',
+      mistake: 'Slumping into the door frame and letting the chest collapse.',
+      fix: 'Stay tall through the chest and keep only light shoulder contact with the frame.',
     },
     {
       slug: 'walk-towards-camera',
@@ -28,6 +30,8 @@ export const menPoseBook = {
       mood: 'Add movement',
       cues: ['Begin several steps back and walk at half your usual speed.', 'Look just past the camera and let both arms swing naturally.'],
       note: 'Take short steps so the photographer can keep your eyes sharp.',
+      mistake: 'Walking at full speed so the eyes blur in every frame.',
+      fix: 'Cut your pace in half and take shorter steps so focus stays sharp.',
     },
     {
       slug: 'look-away',
@@ -35,6 +39,8 @@ export const menPoseBook = {
       mood: 'Keep it candid',
       cues: ['Angle your body slightly away while keeping the front shoulder open.', 'Turn your eyes towards the light rather than moving the whole head.'],
       note: 'Keep the chin level and leave space between your arms and torso.',
+      mistake: 'Turning the whole head and closing off the front shoulder.',
+      fix: 'Angle the body slightly away but keep the front shoulder open and move the eyes only.',
     },
     {
       slug: 'hands-in-pockets',
@@ -42,6 +48,8 @@ export const menPoseBook = {
       mood: 'Simple and grounded',
       cues: ['Place only your thumbs or fingertips inside the pockets.', 'Shift your weight onto one leg and soften the opposite knee.'],
       note: 'Avoid pushing both hands deep into the pockets or locking the elbows.',
+      mistake: 'Pushing both hands deep into the pockets and locking the elbows.',
+      fix: 'Leave only thumbs or fingertips in the pockets and shift weight onto one leg.',
     },
     {
       slug: 'adjust-the-sleeve',
@@ -49,6 +57,8 @@ export const menPoseBook = {
       mood: 'Give hands a job',
       cues: ['Look down and slowly roll or straighten one sleeve.', 'Pause halfway through the movement for the strongest frame.'],
       note: 'Keep the fingers loose and the shoulders relaxed.',
+      mistake: 'Rushing through the sleeve adjustment with tense fingers and raised shoulders.',
+      fix: 'Slow the movement down and pause halfway with loose fingers and relaxed shoulders.',
     },
     {
       slug: 'wall-lean',
@@ -56,6 +66,8 @@ export const menPoseBook = {
       mood: 'Use the location',
       cues: ['Lean one shoulder against the wall and bend the outside knee.', 'Keep your hips away from the wall and look towards the open street.'],
       note: 'Use light contact instead of flattening your whole back against the wall.',
+      mistake: 'Flattening your whole back against the wall and hiding your shape.',
+      fix: 'Use light shoulder contact, bend the outside knee, and keep hips away from the wall.',
     },
     {
       slug: 'seated-on-steps',
@@ -63,6 +75,8 @@ export const menPoseBook = {
       mood: 'Change the level',
       cues: ['Sit near the edge with your feet placed at different distances.', 'Rest the forearms loosely on the knees and lean forward slightly.'],
       note: 'Keep your back long and avoid pressing your knees together.',
+      mistake: 'Slouching back with knees pressed together and both feet flat in a line.',
+      fix: 'Sit near the edge, stagger your feet, and keep the back long with forearms on the knees.',
     },
     {
       slug: 'look-over-shoulder',
@@ -70,6 +84,8 @@ export const menPoseBook = {
       mood: 'Show another angle',
       cues: ['Turn away first, then bring the nearest shoulder back towards the lens.', 'Let your eyes reach the camera before your face turns completely.'],
       note: 'Rotate through the upper body rather than twisting only the neck.',
+      mistake: 'Twisting only the neck while the shoulders stay square to the camera.',
+      fix: 'Turn away first and rotate through the upper body to bring the nearest shoulder back.',
     },
     {
       slug: 'arms-crossed',
@@ -77,6 +93,8 @@ export const menPoseBook = {
       mood: 'Confident, not stiff',
       cues: ['Cross the arms low and keep at least one hand visible.', 'Drop the shoulders and shift your weight slightly to one side.'],
       note: 'Leave a little air between your forearms and chest.',
+      mistake: 'Crossing high and tight so the forearms press flat against the chest.',
+      fix: 'Cross low with one hand visible and leave a little air between forearms and chest.',
     },
     {
       slug: 'candid-laugh',
@@ -84,6 +102,8 @@ export const menPoseBook = {
       mood: 'Break the pose',
       cues: ['Look away from the lens and react to someone beside the camera.', 'Keep shooting as the laugh settles into a smaller smile.'],
       note: 'The frame after the biggest laugh often feels the most natural.',
+      mistake: 'Forcing a held laugh directly at the lens from the first frame.',
+      fix: 'Look away, react off-camera, and keep shooting as the laugh softens into a smaller smile.',
     },
     {
       slug: 'side-profile',
@@ -91,6 +111,8 @@ export const menPoseBook = {
       mood: 'Clean and editorial',
       cues: ['Stand side-on and keep the far shoulder slightly visible.', 'Look across the street with your chin parallel to the ground.'],
       note: 'Separate the jaw from the shoulder by lengthening the neck.',
+      mistake: 'Hiding the jaw behind the shoulder and dropping the chin.',
+      fix: 'Stand side-on, keep the far shoulder visible, and lengthen the neck with a level chin.',
     },
     {
       slug: 'environmental-full-body',
@@ -98,6 +120,8 @@ export const menPoseBook = {
       mood: 'Include the setting',
       cues: ['Stand several metres from the background so the location stays recognisable.', 'Use an uneven stance with one foot slightly ahead of the other.'],
       note: 'Keep the horizon level and leave breathing room around the body.',
+      mistake: 'Standing too close to the background so the location disappears.',
+      fix: 'Step several metres back, use an uneven stance, and leave clear space around the body.',
     },
   ],
 };
@@ -125,6 +149,8 @@ export const bestFriendsPoseBook = {
       mood: 'Start with movement',
       cues: ['Walk close together at the same relaxed pace.', 'Look at each other and continue the conversation rather than watching the camera.'],
       note: 'Do not try to match every step; the small differences make it feel real.',
+      mistake: 'Matching every step and staring at the camera instead of each other.',
+      fix: 'Walk at the same pace but look at each other and keep the conversation going.',
     },
     {
       slug: 'linked-arms',
@@ -132,6 +158,8 @@ export const bestFriendsPoseBook = {
       mood: 'Stay connected',
       cues: ['Link the inside arms loosely and leave the outside arms relaxed.', 'Lean in slightly while keeping both faces clear.'],
       note: 'Keep the elbows soft so the pose does not feel formal.',
+      mistake: 'Linking arms stiffly with elbows locked and bodies standing rigidly apart.',
+      fix: 'Link the inside arms loosely and lean in slightly while keeping both faces clear.',
     },
     {
       slug: 'coffee-laugh',
@@ -139,6 +167,8 @@ export const bestFriendsPoseBook = {
       mood: 'Give hands a job',
       cues: ['Hold the cups below chest height and turn towards each other.', 'Share a story and photograph the reaction instead of the setup.'],
       note: 'Remove visible branding and keep the cups away from the faces.',
+      mistake: 'Raising branded cups too high and blocking one or both faces.',
+      fix: 'Hold cups below chest height and photograph the reaction, not the setup.',
     },
     {
       slug: 'sit-side-by-side',
@@ -146,6 +176,8 @@ export const bestFriendsPoseBook = {
       mood: 'Relax into the frame',
       cues: ['Sit at slightly different angles with the outside knees turned away.', 'Let the shoulders meet while keeping the hands visible.'],
       note: 'Avoid mirroring the exact same arm and leg position.',
+      mistake: 'Mirroring the exact same arm and leg placement on both sides.',
+      fix: 'Sit at slightly different angles with outside knees turned away and shoulders meeting lightly.',
     },
     {
       slug: 'shoulder-hug',
@@ -153,6 +185,8 @@ export const bestFriendsPoseBook = {
       mood: 'Close and cheerful',
       cues: ['Place one arm loosely around the nearest shoulder.', 'Bring the heads closer without stacking one face behind the other.'],
       note: 'Keep the embrace light enough for both shoulders to stay relaxed.',
+      mistake: 'Stacking one face behind the other in a tight squeeze.',
+      fix: 'Keep the embrace light with both faces on separate visible lines.',
     },
     {
       slug: 'look-back-together',
@@ -160,6 +194,8 @@ export const bestFriendsPoseBook = {
       mood: 'Show another angle',
       cues: ['Walk away holding hands, then turn the upper bodies back.', 'Bring the inside shoulders slightly closer while looking towards the lens.'],
       note: 'Turn through the torso instead of twisting only the neck.',
+      mistake: 'Twisting only the neck while still walking forward without turning the torso.',
+      fix: 'Walk away holding hands, then turn through the torso to look back together.',
     },
     {
       slug: 'cafe-toast',
@@ -167,6 +203,8 @@ export const bestFriendsPoseBook = {
       mood: 'Make a small moment',
       cues: ['Raise the cups only a little and keep them below the faces.', 'Look at each other during the toast, then laugh towards the camera.'],
       note: 'Keep the table simple so the hands and expressions remain the focus.',
+      mistake: 'Lifting cups to face level and blocking expressions during the toast.',
+      fix: 'Raise cups only a little below the faces and look at each other first.',
     },
     {
       slug: 'playful-twirl',
@@ -174,6 +212,8 @@ export const bestFriendsPoseBook = {
       mood: 'Add energy',
       cues: ['Connect one hand and take a slow half-turn in opposite directions.', 'Keep moving for another beat after the turn finishes.'],
       note: 'Use a wide, clear space and keep both elbows soft.',
+      mistake: 'Taking a fast full spin in a cramped space with stiff elbows.',
+      fix: 'Use a wide clear area, connect one hand, and take a slow half-turn with soft elbows.',
     },
     {
       slug: 'seated-conversation',
@@ -181,6 +221,8 @@ export const bestFriendsPoseBook = {
       mood: 'Quiet and natural',
       cues: ['Turn the knees slightly towards each other.', 'Talk across the small gap and let the hands rest naturally in the lap.'],
       note: 'Photograph the listening expressions as well as the laughter.',
+      mistake: 'Both people staring at the camera with hands hidden in the lap.',
+      fix: 'Turn knees toward each other and photograph the listening expressions as well as the laughter.',
     },
     {
       slug: 'back-to-back',
@@ -188,6 +230,8 @@ export const bestFriendsPoseBook = {
       mood: 'A playful classic',
       cues: ['Stand back to back with only the shoulders making light contact.', 'Look towards the camera from opposite sides and soften the knees.'],
       note: 'Keep both faces on separate lines so neither person is hidden.',
+      mistake: 'Standing too close so one face hides behind the other\'s head.',
+      fix: 'Keep only light shoulder contact and look toward the camera from opposite sides.',
     },
     {
       slug: 'full-body-pair',
@@ -195,6 +239,8 @@ export const bestFriendsPoseBook = {
       mood: 'Show the outfits',
       cues: ['Stand close with one person half a step forward.', 'Use different hand placements and put weight on opposite legs.'],
       note: 'Coordinated shapes work better than perfectly matching poses.',
+      mistake: 'Standing in identical poses with perfectly matched hand placement.',
+      fix: 'Have one person half a step forward with different hand placement and weight on opposite legs.',
     },
     {
       slug: 'big-hug',
@@ -202,6 +248,8 @@ export const bestFriendsPoseBook = {
       mood: 'Finish with joy',
       cues: ['Step into a comfortable full hug and keep both faces visible.', 'Squeeze once, then photograph the laughter as you loosen the embrace.'],
       note: 'The release usually creates a more natural frame than the held pose.',
+      mistake: 'Holding the tight squeeze pose without capturing the release.',
+      fix: 'Step into a comfortable hug with both faces visible, then shoot the laugh as you loosen.',
     },
   ],
 };
@@ -229,6 +277,8 @@ export const travelPoseBook = {
       mood: 'Lead into the view',
       cues: ['Walk slowly towards the strongest part of the background.', 'Let the arms swing naturally and keep the bag resting at your side.'],
       note: 'Place yourself slightly off-centre so the path and view remain visible.',
+      mistake: 'Walking so fast you blur and cut off the best part of the background.',
+      fix: 'Walk slowly toward the strongest view with natural arm swing and stay slightly off-centre.',
     },
     {
       slug: 'look-over-shoulder',
@@ -236,6 +286,8 @@ export const travelPoseBook = {
       mood: 'Connect with the camera',
       cues: ['Keep walking away, then turn one shoulder and your face back.', 'Let the smile arrive after the turn rather than holding it from the start.'],
       note: 'Rotate through the upper body to keep the neck comfortable.',
+      mistake: 'Freezing a big smile before turning, then twisting only the neck.',
+      fix: 'Keep walking, rotate through the upper body, and let the smile arrive after the turn.',
     },
     {
       slug: 'admire-the-view',
@@ -243,6 +295,8 @@ export const travelPoseBook = {
       mood: 'Show the destination',
       cues: ['Stand side-on with both hands resting lightly on a safe wall or rail.', 'Look towards the horizon and leave your profile visible.'],
       note: 'Never climb or lean over barriers for a photograph.',
+      mistake: 'Facing the camera square-on and blocking the destination.',
+      fix: 'Stand side-on with hands on a safe rail and look toward the horizon with profile visible.',
     },
     {
       slug: 'hold-the-hat',
@@ -250,6 +304,8 @@ export const travelPoseBook = {
       mood: 'Use a travel prop',
       cues: ['Hold the hat loosely below the waist with both hands.', 'Angle your shoulders away from the lens and look towards the light.'],
       note: 'Keep the prop away from the face so it supports rather than dominates the photo.',
+      mistake: 'Placing the hat near the face so it dominates the frame.',
+      fix: 'Hold the hat loosely below the waist and angle shoulders away from the lens.',
     },
     {
       slug: 'sit-on-steps',
@@ -257,6 +313,8 @@ export const travelPoseBook = {
       mood: 'Pause naturally',
       cues: ['Sit on a broad, safe step with one knee slightly higher.', 'Rest one hand near the hair and the other loosely on the leg.'],
       note: 'Choose a quiet edge of the steps and never block local foot traffic.',
+      mistake: 'Sitting in the middle of a busy stairway and blocking foot traffic.',
+      fix: 'Choose a quiet edge of broad steps with one knee slightly higher and both hands visible.',
     },
     {
       slug: 'waterfront-walk',
@@ -264,6 +322,8 @@ export const travelPoseBook = {
       mood: 'Add easy motion',
       cues: ['Walk parallel to the water at a relaxed half pace.', 'Look towards the view, then briefly back towards the photographer.'],
       note: 'Use a faster shutter speed and check the walking path first.',
+      mistake: 'Walking at normal speed without checking the path, causing motion blur.',
+      fix: 'Walk at half pace parallel to the water and glance between the view and the photographer.',
     },
     {
       slug: 'candid-laugh',
@@ -271,6 +331,8 @@ export const travelPoseBook = {
       mood: 'Break the travel pose',
       cues: ['Look away from the camera and react to a prompt or memory.', 'Keep shooting as the laugh softens into a natural smile.'],
       note: 'A close frame adds variety after several environmental portraits.',
+      mistake: 'Forcing a travel-smile directly at the camera from a stiff standing pose.',
+      fix: 'Look away, react to a memory or prompt, and shoot as the laugh softens naturally.',
     },
     {
       slug: 'check-the-map',
@@ -278,6 +340,8 @@ export const travelPoseBook = {
       mood: 'Tell a small story',
       cues: ['Hold the map around chest height and angle it slightly towards the light.', 'Look down as if finding the next stop, then glance towards the destination.'],
       note: 'Use an unbranded map without readable personal information.',
+      mistake: 'Holding a branded map with readable personal details at face level.',
+      fix: 'Use an unbranded map around chest height and look down as if planning the next stop.',
     },
     {
       slug: 'sunlit-profile',
@@ -285,6 +349,8 @@ export const travelPoseBook = {
       mood: 'Keep it editorial',
       cues: ['Turn fully side-on and lift the face slightly towards the open sky.', 'Drop the near shoulder and keep the neck long.'],
       note: 'Expose for the skin and avoid harsh midday light when possible.',
+      mistake: 'Shooting harsh midday profile with the jaw tucked into the shoulder.',
+      fix: 'Turn side-on, lift the face toward open sky, and expose for the skin in softer light.',
     },
     {
       slug: 'railing-lean',
@@ -292,6 +358,8 @@ export const travelPoseBook = {
       mood: 'Relax with the setting',
       cues: ['Rest one forearm lightly on a safe railing while keeping the body upright.', 'Turn the hips away and bring the nearest shoulder back towards the camera.'],
       note: 'Use only stable public railings and never sit or climb on them.',
+      mistake: 'Collapsing weight onto an unsafe railing or sitting on it for the shot.',
+      fix: 'Rest one forearm lightly on a stable public railing while keeping the body upright.',
     },
     {
       slug: 'wide-scenic-portrait',
@@ -299,6 +367,8 @@ export const travelPoseBook = {
       mood: 'Make the place the hero',
       cues: ['Step farther into the scene and let the photographer shoot wide.', 'Use a simple standing pose and look across the landscape.'],
       note: 'Leave clear space around the body instead of placing it against a busy edge.',
+      mistake: 'Standing against a busy edge and filling the frame so the scene disappears.',
+      fix: 'Step farther into the scene, use a simple stance, and leave clear space around the body.',
     },
     {
       slug: 'landmark-full-body',
@@ -306,6 +376,8 @@ export const travelPoseBook = {
       mood: 'Finish with context',
       cues: ['Choose a position where architecture frames rather than intersects the body.', 'Stand with one foot forward and keep both hands relaxed.'],
       note: 'Be considerate of local access, signs, and other visitors.',
+      mistake: 'Letting architecture cut through the body or block the landmark.',
+      fix: 'Choose a spot where the structure frames you and stand with one foot forward, hands relaxed.',
     },
   ],
 };
@@ -333,6 +405,8 @@ export const professionalPoseBook = {
       mood: 'Open and direct',
       cues: ['Turn the shoulders slightly away while keeping the face towards the lens.', 'Breathe out and let the smile settle before the frame.'],
       note: 'Leave a little space above the head so the image can be cropped for different profiles.',
+      mistake: 'Standing square with a stiff frozen smile and no headroom for cropping.',
+      fix: 'Turn shoulders slightly away, breathe out, and leave space above the head.',
     },
     {
       slug: 'arms-crossed',
@@ -340,6 +414,8 @@ export const professionalPoseBook = {
       mood: 'Confident, not closed',
       cues: ['Cross the forearms loosely below the chest and keep both hands visible.', 'Drop the shoulders and lean a fraction towards the camera.'],
       note: 'Avoid gripping the upper arms or raising the shoulders.',
+      mistake: 'Gripping the upper arms and raising shoulders into a closed defensive shape.',
+      fix: 'Cross forearms loosely below the chest with both hands visible and shoulders dropped.',
     },
     {
       slug: 'desk-notes',
@@ -347,6 +423,8 @@ export const professionalPoseBook = {
       mood: 'Show your process',
       cues: ['Sit at an angle and write one short line in a plain notebook.', 'Look up from the page for a second frame with a natural smile.'],
       note: 'Keep screens, documents, and client information unreadable.',
+      mistake: 'Leaving readable client documents or screens visible on the desk.',
+      fix: 'Write one line in a plain notebook and look up with a natural smile for the second frame.',
     },
     {
       slug: 'window-stand',
@@ -354,6 +432,8 @@ export const professionalPoseBook = {
       mood: 'Use soft light',
       cues: ['Stand near the window with one hand resting lightly in a pocket.', 'Look towards the light, then turn the eyes back to the camera.'],
       note: 'Keep the body a small distance from the window rather than pressing against it.',
+      mistake: 'Pressing against the glass and squinting into harsh backlight.',
+      fix: 'Stand a small distance from the window with one hand in a pocket and look toward the light.',
     },
     {
       slug: 'hold-a-notebook',
@@ -361,6 +441,8 @@ export const professionalPoseBook = {
       mood: 'Give hands a purpose',
       cues: ['Hold a closed notebook around waist height with relaxed fingers.', 'Keep the elbows away from the body and stand on a slight angle.'],
       note: 'Choose a plain cover without visible branding or confidential notes.',
+      mistake: 'Clutching a branded notebook at chest height with elbows pinned to the ribs.',
+      fix: 'Hold a plain cover at waist height with relaxed fingers and elbows away from the body.',
     },
     {
       slug: 'seated-lean',
@@ -368,6 +450,8 @@ export const professionalPoseBook = {
       mood: 'Relax the formality',
       cues: ['Sit near the front of the chair and lean forward from the hips.', 'Rest one forearm lightly on the thigh while keeping the chest open.'],
       note: 'Lengthen the spine before leaning so the pose stays polished.',
+      mistake: 'Slouching back in the chair and collapsing the chest while leaning forward.',
+      fix: 'Sit near the front, lengthen the spine, and lean forward from the hips with chest open.',
     },
     {
       slug: 'laptop-moment',
@@ -375,6 +459,8 @@ export const professionalPoseBook = {
       mood: 'Candid at work',
       cues: ['Turn the laptop away from the camera and rest one hand near the keyboard.', 'Look at the screen, then glance away with a small smile.'],
       note: 'Use a blank or locked screen and remove visible notifications.',
+      mistake: 'Leaving notifications and client information visible on the screen.',
+      fix: 'Use a blank or locked screen and glance from the keyboard to a small off-screen smile.',
     },
     {
       slug: 'desk-lean',
@@ -382,6 +468,8 @@ export const professionalPoseBook = {
       mood: 'Strong and approachable',
       cues: ['Place both hands wide on the desk and lean forward slightly.', 'Keep the elbows soft and shift more weight into one hand.'],
       note: 'Check that the desk edge does not cut awkwardly across the hands.',
+      mistake: 'Locking elbows and placing weight evenly so the pose feels rigid.',
+      fix: 'Place both hands wide on the desk and shift more weight into one soft elbow.',
     },
     {
       slug: 'window-profile',
@@ -389,6 +477,8 @@ export const professionalPoseBook = {
       mood: 'Thoughtful and editorial',
       cues: ['Stand side-on to the camera and look through the window.', 'Keep the far shoulder visible and the chin parallel to the floor.'],
       note: 'Expose for the face so bright window light does not turn the subject into a silhouette.',
+      mistake: 'Silhouetting the face against bright window light with chin tucked down.',
+      fix: 'Stand side-on, expose for the face, and keep the chin parallel to the floor.',
     },
     {
       slug: 'seated-three-quarter',
@@ -396,6 +486,8 @@ export const professionalPoseBook = {
       mood: 'Classic with ease',
       cues: ['Angle the knees away and bring the upper body gently back towards the lens.', 'Rest one hand over the opposite knee without gripping.'],
       note: 'Keep both shoulders at different heights for a less rigid shape.',
+      mistake: 'Squaring both shoulders at the same height with a tight grip on the knee.',
+      fix: 'Angle knees away, bring the upper body back toward the lens, and rest the hand lightly.',
     },
     {
       slug: 'warm-close-up',
@@ -403,6 +495,8 @@ export const professionalPoseBook = {
       mood: 'Personal and clear',
       cues: ['Lean a little closer to the camera while keeping the neck long.', 'Use a relaxed smile and direct eye contact.'],
       note: 'Focus precisely on the nearest eye and leave room for a square crop.',
+      mistake: 'Crowding the lens and compressing the neck while holding a tense smile.',
+      fix: 'Lean slightly closer while keeping the neck long with relaxed smile and direct eye contact.',
     },
     {
       slug: 'full-body-office',
@@ -410,6 +504,8 @@ export const professionalPoseBook = {
       mood: 'Show the complete look',
       cues: ['Stand a few steps in front of the workspace with one foot slightly forward.', 'Use one pocket lightly and keep the free arm relaxed.'],
       note: 'Keep vertical architecture straight and remove distracting desk clutter.',
+      mistake: 'Standing against cluttered desks with tilted vertical lines in the background.',
+      fix: 'Step in front of the workspace with one foot forward and keep architecture straight.',
     },
   ],
 };
@@ -437,6 +533,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Show the whole outfit',
       cues: ['Hold the phone around shoulder height and step far enough back to include the feet.', 'Shift weight onto one leg and place the free hand lightly in a pocket.'],
       note: 'Keep the phone parallel to the mirror to avoid tilted vertical lines.',
+      mistake: 'Standing too close so the phone cuts off your feet.',
+      fix: 'Step back until head and shoes fit, then shift weight onto one leg.',
     },
     {
       slug: 'floor-sit',
@@ -444,6 +542,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Casual and grounded',
       cues: ['Sit on an angle with both knees bent at different heights.', 'Hold the phone just above eye level and keep the free hand relaxed.'],
       note: 'Move away from the mirror enough to keep the phone from covering the face.',
+      mistake: 'Holding the phone directly in front of your face.',
+      fix: 'Raise the phone just above eye level and sit at an angle to the mirror.',
     },
     {
       slug: 'low-seated-angle',
@@ -451,6 +551,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Bring the viewer closer',
       cues: ['Place the phone slightly above the raised knee and angle it down gently.', 'Lean forward a little while keeping the shoulders open.'],
       note: 'Use the widest composition only when the lens does not distort the hands or face.',
+      mistake: 'Using ultra-wide lens settings that warp hands and face.',
+      fix: 'Switch to standard focal length and angle the phone down gently from above the knee.',
     },
     {
       slug: 'over-the-shoulder',
@@ -458,6 +560,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Show another angle',
       cues: ['Turn the body away from the mirror and look back over the nearest shoulder.', 'Keep the phone beside the face rather than directly in front of it.'],
       note: 'Rotate through the torso instead of twisting only the neck.',
+      mistake: 'Twisting only the neck while holding the phone in front of your face.',
+      fix: 'Rotate through the torso and hold the phone beside your face.',
     },
     {
       slug: 'look-at-the-screen',
@@ -465,6 +569,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Quiet and candid',
       cues: ['Hold the phone with both hands around chest height.', 'Look down at the screen and soften the shoulders.'],
       note: 'Hide notifications and personal information before taking or sharing the photo.',
+      mistake: 'Leaving notifications or personal details visible on the screen.',
+      fix: 'Clear alerts before shooting and look down with relaxed shoulders.',
     },
     {
       slug: 'hand-in-pocket',
@@ -472,6 +578,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Easy everyday pose',
       cues: ['Place the free thumb in a front pocket and angle the hips slightly away.', 'Hold the phone just beyond the cheek so both eyes remain visible.'],
       note: 'Keep the wrist straight and the elbow relaxed.',
+      mistake: 'Bending the wrist and blocking one eye with the phone.',
+      fix: 'Keep the thumb in the pocket and hold the phone just beyond your cheek.',
     },
     {
       slug: 'hand-in-hair',
@@ -479,6 +587,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Add a small action',
       cues: ['Touch the hair lightly near the crown with the free hand.', 'Tilt the phone a little higher and look into the mirror rather than the screen.'],
       note: 'Use the fingertips instead of gripping a section of hair.',
+      mistake: 'Gripping a fistful of hair for the whole shot.',
+      fix: 'Touch lightly near the crown with fingertips and look at the mirror.',
     },
     {
       slug: 'one-leg-forward',
@@ -486,6 +596,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Lengthen the stance',
       cues: ['Place one foot half a step forward and soften both knees.', 'Keep the phone upright and your body slightly off-centre in the mirror.'],
       note: 'Avoid stretching the image digitally; create the line with posture instead.',
+      mistake: 'Using digital stretch filters instead of changing your stance.',
+      fix: 'Step one foot forward, soften both knees, and hold the phone upright.',
     },
     {
       slug: 'back-angle',
@@ -493,6 +605,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Change the silhouette',
       cues: ['Turn the hips away while bringing the nearest shoulder back.', 'Look towards the mirror and keep the phone close to the side of the face.'],
       note: 'Check that the background remains simple behind the outline.',
+      mistake: 'Turning hips away but leaving a cluttered background in frame.',
+      fix: 'Rotate the silhouette and simplify what appears behind you in the mirror.',
     },
     {
       slug: 'close-up-selfie',
@@ -500,6 +614,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Soft and personal',
       cues: ['Hold the phone slightly above eye level and just beyond arm distance.', 'Turn the face a few degrees and keep the nearest shoulder low.'],
       note: 'Use window light and avoid an ultra-wide lens for close portraits.',
+      mistake: 'Shooting too close with an ultra-wide front lens.',
+      fix: 'Pull back slightly above eye level and use window light on the nearest shoulder.',
     },
     {
       slug: 'outfit-check',
@@ -507,6 +623,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Relaxed and useful',
       cues: ['Frame from head to upper thigh and place the free hand at the waistband or pocket.', 'Look down briefly, then take a second frame looking into the mirror.'],
       note: 'Keep the room tidy and remove identifiable documents or screens.',
+      mistake: 'Leaving personal items or screens visible in the reflection.',
+      fix: 'Tidy the room, frame head to upper thigh, and take one look-down and one mirror-gaze frame.',
     },
     {
       slug: 'candid-laugh-selfie',
@@ -514,6 +632,8 @@ export const selfieMirrorPoseBook = {
       mood: 'Finish with movement',
       cues: ['Start recording or use burst mode before making yourself laugh.', 'Turn slightly away as the expression relaxes.'],
       note: 'The last frame of the laugh often looks more natural than the first.',
+      mistake: 'Holding a frozen smile for the first frame.',
+      fix: 'Use burst mode, laugh naturally, and pick the relaxed frame after the peak.',
     },
   ],
 };
@@ -541,6 +661,8 @@ export const familyPoseBook = {
       mood: 'Begin with movement',
       cues: ['Place the children between the adults and walk at their pace.', 'Look across the group instead of asking everyone to watch the camera.'],
       note: 'Choose a wide, level path and keep the group away from traffic or steep edges.',
+      mistake: 'Asking everyone to watch the camera while walking at adult pace.',
+      fix: 'Walk at the children\'s pace in the middle and look across the group instead.',
     },
     {
       slug: 'group-cuddle',
@@ -548,6 +670,8 @@ export const familyPoseBook = {
       mood: 'Bring everyone close',
       cues: ['Let the children stand or sit slightly forward between the adults.', 'Wrap arms loosely and keep every face on a separate line.'],
       note: 'Photograph the squeeze and the release for different expressions.',
+      mistake: 'Stacking faces on the same line so someone hides behind another.',
+      fix: 'Keep children slightly forward with every face on a separate visible line.',
     },
     {
       slug: 'look-at-the-kids',
@@ -555,6 +679,8 @@ export const familyPoseBook = {
       mood: 'Shift the attention',
       cues: ['Ask both adults to look towards the children while the children look at each other.', 'Bring the shoulders inward to close the group shape.'],
       note: 'Not every person needs to look at the camera for the photo to feel connected.',
+      mistake: 'Forcing every family member to stare at the camera for connection.',
+      fix: 'Have adults look at the children while the children look at each other and close the shape.',
     },
     {
       slug: 'picnic-sit',
@@ -562,6 +688,8 @@ export const familyPoseBook = {
       mood: 'Relax on one level',
       cues: ['Sit in a loose semicircle with knees pointing in different directions.', 'Let the children choose a comfortable position between or in front of the adults.'],
       note: 'Use a broad blanket on level ground and keep hands from hiding faces.',
+      mistake: 'Arranging everyone in identical poses with knees and hands hiding faces.',
+      fix: 'Sit in a loose semicircle on level ground with knees pointing in different directions.',
     },
     {
       slug: 'run-to-camera',
@@ -569,6 +697,8 @@ export const familyPoseBook = {
       mood: 'Let the energy out',
       cues: ['Ask the children to start a few steps ahead with the adults behind.', 'Use a playful jog and keep everyone moving towards the same clear point.'],
       note: 'Check the ground first and use continuous focus with a fast shutter speed.',
+      mistake: 'Starting the run on uneven ground without checking for obstacles.',
+      fix: 'Use a clear path, a playful jog, and continuous focus with a fast shutter speed.',
     },
     {
       slug: 'classic-family',
@@ -576,6 +706,8 @@ export const familyPoseBook = {
       mood: 'One clear portrait',
       cues: ['Place the children slightly forward and the adults close behind.', 'Keep hands visible at shoulders or waists and bring all faces towards the lens.'],
       note: 'Take the formal frame quickly before returning to movement.',
+      mistake: 'Spending too long arranging hands and losing children\'s patience.',
+      fix: 'Place children slightly forward with visible hands at shoulders and take the frame quickly.',
     },
     {
       slug: 'candid-family-laugh',
@@ -583,6 +715,8 @@ export const familyPoseBook = {
       mood: 'React to each other',
       cues: ['Ask one person to tell a short family joke or story.', 'Photograph the listeners as well as the person speaking.'],
       note: 'The shared reaction matters more than a perfectly symmetrical group.',
+      mistake: 'Asking everyone to laugh on command for a symmetrical group shot.',
+      fix: 'Tell a short family joke and photograph the listeners as well as the speaker.',
     },
     {
       slug: 'relaxed-standing',
@@ -590,6 +724,8 @@ export const familyPoseBook = {
       mood: 'Simple and balanced',
       cues: ['Stand the adults behind and slightly outside the children.', 'Use light hand placement at the shoulders without pulling anyone into position.'],
       note: 'Keep heads at varied heights and leave small gaps between bodies.',
+      mistake: 'Pulling children into stiff positions with hands gripping shoulders tightly.',
+      fix: 'Stand adults slightly outside with light hand placement and varied head heights.',
     },
     {
       slug: 'walk-away-together',
@@ -597,6 +733,8 @@ export const familyPoseBook = {
       mood: 'Include the landscape',
       cues: ['Hold hands in a line and walk slowly away from the camera.', 'Let the children set the rhythm while the adults stay close.'],
       note: 'Keep the path safe and frame enough environment around the group.',
+      mistake: 'Walking on an unsafe path too close to traffic or steep edges.',
+      fix: 'Hold hands on a wide level path and let the children set the walking rhythm.',
     },
     {
       slug: 'piggyback-pair',
@@ -604,6 +742,8 @@ export const familyPoseBook = {
       mood: 'Playful and high energy',
       cues: ['Pair each child with an adult only if everyone is comfortable.', 'Stand close together and photograph a brief bounce or laugh.'],
       note: 'Use stable footing, avoid long holds, and skip this pose if it is not safe for the family.',
+      mistake: 'Holding a long piggyback on unstable footing when someone is uncomfortable.',
+      fix: 'Use only on stable ground for a brief bounce or laugh, and skip if anyone is unsure.',
     },
     {
       slug: 'family-conversation',
@@ -611,6 +751,8 @@ export const familyPoseBook = {
       mood: 'Quiet connection',
       cues: ['Sit together and ask one child a question everyone can answer.', 'Turn knees and shoulders towards the centre of the group.'],
       note: 'Keep shooting while each person listens and responds.',
+      mistake: 'Stopping after one posed frame instead of capturing listening reactions.',
+      fix: 'Ask one question everyone can answer and keep shooting while they listen and respond.',
     },
     {
       slug: 'parents-behind-kids',
@@ -618,6 +760,8 @@ export const familyPoseBook = {
       mood: 'A clean final portrait',
       cues: ['Place the children one small step forward with adults close behind.', 'Rest hands lightly at the outside shoulders and keep all faces visible.'],
       note: 'Use a longer focal length to keep proportions natural across the group.',
+      mistake: 'Shooting too wide on a phone so adults look distorted in the back row.',
+      fix: 'Place children one step forward with adults behind and use a longer focal length.',
     },
   ],
 };
@@ -645,6 +789,8 @@ export const sittingCafePoseBook = {
       mood: 'Start with a prop',
       cues: ['Hold the cup below the face and turn the shoulders slightly away.', 'Look across the room instead of directly into the lens.'],
       note: 'Use an unbranded cup and check that the drink is cool enough to handle safely.',
+      mistake: 'Raising a branded cup near the face and staring straight into the lens.',
+      fix: 'Hold the cup below the face, turn shoulders away, and look across the room.',
     },
     {
       slug: 'window-look',
@@ -652,6 +798,8 @@ export const sittingCafePoseBook = {
       mood: 'Use natural light',
       cues: ['Sit side-on with the elbow lightly resting near the table edge.', 'Bring one hand near the chin and look through the window.'],
       note: 'Keep the wrist relaxed and avoid pressing the cheek into the hand.',
+      mistake: 'Pressing the cheek into a tense fist while blocking the window light.',
+      fix: 'Sit side-on with the elbow near the table and bring one relaxed hand near the chin.',
     },
     {
       slug: 'chin-on-hand',
@@ -659,6 +807,8 @@ export const sittingCafePoseBook = {
       mood: 'Soft and direct',
       cues: ['Rest the jaw lightly on the knuckles rather than the palm.', 'Lean forward a little and keep the opposite shoulder lower.'],
       note: 'Use light contact so the hand does not change the shape of the face.',
+      mistake: 'Resting the full palm against the face and squashing the jawline.',
+      fix: 'Use light contact on the knuckles, lean forward slightly, and keep the opposite shoulder lower.',
     },
     {
       slug: 'candid-laugh',
@@ -666,6 +816,8 @@ export const sittingCafePoseBook = {
       mood: 'Break the seated pose',
       cues: ['Turn slightly away and react to someone beside the camera.', 'Keep one hand near the cup while the other arm stays relaxed.'],
       note: 'Photograph the smaller smile immediately after the laugh as well.',
+      mistake: 'Holding a frozen smile facing the camera with both arms stiff at the sides.',
+      fix: 'Turn slightly away, react off-camera, and shoot the smaller smile after the laugh.',
     },
     {
       slug: 'read-the-menu',
@@ -673,6 +825,8 @@ export const sittingCafePoseBook = {
       mood: 'Give hands a job',
       cues: ['Hold the menu low enough to keep the face visible.', 'Look down briefly, then glance towards the server or window.'],
       note: 'Avoid readable prices, business details, or prominent branding.',
+      mistake: 'Holding the menu at face height with readable prices and branding.',
+      fix: 'Keep the menu low enough to show the face and glance toward the window or server.',
     },
     {
       slug: 'look-away-with-cup',
@@ -680,6 +834,8 @@ export const sittingCafePoseBook = {
       mood: 'Quiet and observational',
       cues: ['Hold the cup with both hands near the table surface.', 'Turn the face towards the open side of the frame.'],
       note: 'Leave visual space in the direction of the eye line.',
+      mistake: 'Raising the cup to chest height and leaving no space in the look direction.',
+      fix: 'Hold the cup near the table with both hands and turn the face toward the open side.',
     },
     {
       slug: 'seated-side-profile',
@@ -687,6 +843,8 @@ export const sittingCafePoseBook = {
       mood: 'Clean and editorial',
       cues: ['Turn the chair or body side-on while keeping the far shoulder visible.', 'Rest both forearms lightly near the table and look forward.'],
       note: 'Keep the back long and the chin parallel to the floor.',
+      mistake: 'Slouching forward with the near shoulder hidden and chin dropped.',
+      fix: 'Turn side-on with the far shoulder visible, back long, and chin parallel to the floor.',
     },
     {
       slug: 'table-lean',
@@ -694,6 +852,8 @@ export const sittingCafePoseBook = {
       mood: 'Come closer to camera',
       cues: ['Lean forward from the hips and place one forearm on the table.', 'Turn the face towards the lens with a small, relaxed smile.'],
       note: 'Keep elbows away from plates, drinks, and the table edge.',
+      mistake: 'Leaning across plates and drinks with elbows crowding the table edge.',
+      fix: 'Lean forward from the hips with one forearm clear of dishes and a small relaxed smile.',
     },
     {
       slug: 'hands-on-table',
@@ -701,6 +861,8 @@ export const sittingCafePoseBook = {
       mood: 'Simple and open',
       cues: ['Rest one hand over the other near the centre of the table.', 'Angle the knees away while bringing the upper body back towards the camera.'],
       note: 'Relax the fingers and leave space between the arms and torso.',
+      mistake: 'Clenching fists and pinning elbows tight against the torso.',
+      fix: 'Rest one hand over the other at the centre with relaxed fingers and open chest.',
     },
     {
       slug: 'crossed-legs',
@@ -708,6 +870,8 @@ export const sittingCafePoseBook = {
       mood: 'Show the full seated shape',
       cues: ['Sit at an angle and cross at the ankle or knee only if comfortable.', 'Bring one hand near the hair and let the other rest on the chair.'],
       note: 'Keep the feet within the frame and avoid blocking café walkways.',
+      mistake: 'Blocking the café aisle with feet extended into the walkway.',
+      fix: 'Sit at an angle with comfortable ankle or knee cross and keep feet within the frame.',
     },
     {
       slug: 'write-in-notebook',
@@ -715,6 +879,8 @@ export const sittingCafePoseBook = {
       mood: 'Create a small story',
       cues: ['Angle a plain notebook towards the window and write a short line.', 'Look down for one frame, then pause with the pen resting lightly.'],
       note: 'Keep private notes and identifying information out of view.',
+      mistake: 'Angling private notes toward the camera with identifying details visible.',
+      fix: 'Use a plain notebook angled toward the window and pause with the pen resting lightly.',
     },
     {
       slug: 'full-body-chair',
@@ -722,6 +888,8 @@ export const sittingCafePoseBook = {
       mood: 'Finish wide',
       cues: ['Sit diagonally with one arm resting along the chair back.', 'Cross the ankles and turn the face towards the light.'],
       note: 'Ask permission before photographing and keep aisles clear for staff and customers.',
+      mistake: 'Photographing without permission and blocking staff or customer walkways.',
+      fix: 'Ask permission, sit diagonally with one arm on the chair back, and keep aisles clear.',
     },
   ],
 };

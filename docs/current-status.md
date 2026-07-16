@@ -1,6 +1,6 @@
 # WePhoto Current Status
 
-Last updated: 2026-07-15
+Last updated: 2026-07-16
 
 ## Current Direction
 
@@ -35,14 +35,17 @@ Last updated: 2026-07-15
 - `/pose-book/selfie-mirror` contains 12 self-shot phone and mirror ideas with framing and body-angle cues.
 - `/pose-book/family` contains 12 outdoor family prompts based on movement, play, and connection.
 - `/pose-book/sitting-cafe` contains 12 seated lifestyle prompts using a cafe setting, window light, and simple props.
-- `/guides` covers four practical pillars: photo tips, Reels and video, editing, and social growth.
-- `/blog` preserves eight useful self-portrait, couple, and family photography articles from the former site.
+- `/guides` covers four practical pillars: photo tips, Reels and video, editing, and social growth, plus six indexable deep-dive articles.
+- Deep-dive guides: Instagram posing, mirror selfie angles, outdoor couples, LinkedIn headshots, followers vs reach engagement, and Instagram image sizes.
+- `/blog` lists the six new guides first, then preserves eight useful archive articles from the former site.
 - `/about` explains the transition from physical studio to open visual guide library.
 - `/faq` discloses that the new pose-book visuals are original generated references and confirms that the physical studio has closed.
 - `/privacy-policy` now reflects a public content website rather than a booking business.
 - `/tools` is the free creator-tool hub, with browser-based utilities and a roadmap for additional planning tools.
 - `/tools/engagement-rate-calculator` calculates engagement by followers or reach using likes, comments, saves, and shares.
 - `/tools/image-size-calculator` calculates proportional resize dimensions and crop amounts for six common social formats without uploading an image.
+- `/tools/reels-safe-zone-checker` previews approximate Instagram Reels and TikTok UI cover bands on a 9:16 frame without uploading media.
+- `/tools/caption-character-counter` counts caption characters, preview cutoffs, hashtags, and mentions for Instagram, TikTok, LinkedIn, and X.
 
 ## Content Production
 
@@ -50,6 +53,13 @@ Last updated: 2026-07-15
 - The first planned image set is complete: Women, Couples, Men, Best Friends, Travel, Professional and LinkedIn, Selfie and Mirror, Family, and Sitting and Cafe.
 - New sheets should use one original 3-by-4 image, exactly 12 panels, consistent adult subjects and wardrobe, blank gutters, and no embedded text, numbers, labels, logos, or watermarks.
 - Pose names and instructions belong in accessible HTML outside the image.
+
+## Promotion Plan
+
+- The detailed organic promotion strategy is saved in `docs/wephoto-promotion-plan.md`.
+- The plan positions WePhoto around 108 pose prompts, free creator tools, no signup, and private browser-based calculations.
+- The first 90-day acquisition mix prioritises Google Search, Pinterest, Instagram/TikTok short-form content, creator communities, and relevant backlinks.
+- Ready-to-use English brand descriptions, profile copy, launch posts, tool posts, outreach email, UTM rules, KPIs, and a 30-day checklist are included.
 
 ## Search And Indexing
 
@@ -78,9 +88,21 @@ Last updated: 2026-07-15
 - Desktop and 390px mobile browser checks confirm both calculators work without page-level horizontal overflow or console warnings.
 - Test values produce `6%` for 600 interactions across 10,000 followers, `7.5%` across 8,000 reached accounts, and a proportional `1800 × 1350` resize with a `720px` side crop for a 4032 × 3024 image targeting 1080 × 1350.
 
+## Differentiation Implementation (2026-07-16)
+
+Shipped the differentiation pass from `docs/wephoto-differentiation-implementation-spec.md`, plus the first new high-repeat tool.
+
+- **Pose ↔ Tool flow:** shared `NextStep` component on all pose-book pages and tool detail pages (plus tools hub → pose library).
+- **Privacy messaging:** shared `PrivacyBadge` on tools hub and tool heroes (`Private. No signup. Runs in your browser.`).
+- **Pose sheet focus:** `:target` highlight + `scroll-margin-top` on pose guide cards.
+- **Actionable direction:** `mistake` / `fix` fields now live on all nine pose books (108 poses).
+- **New tools:** `/tools/reels-safe-zone-checker` and `/tools/caption-character-counter` are live with no signup and no upload.
+- Browser checks via `scripts/check-differentiation.mjs` pass for NextStep links, legend `:target` highlight, PrivacyBadge, Reels toggle, caption over-limit state, and mobile overflow.
+- `npm run lint` and `npm run build` pass (35 indexable routes + `404.html`).
+
 ## Next Work
 
-1. Prioritise a Reels safe-zone checker and caption character counter as the next lightweight, high-repeat tools.
-2. Add a follower-growth calculator and content-capacity planner when the analytics section expands.
-3. Expand the strongest guide topics into dedicated indexable articles now that the visual library is established.
-4. Monitor Google Search Console after the sitemap and route additions are recrawled.
+1. Promote the six deep-dive guides via Search Console indexing and Pinterest/social links to matching pose books and tools.
+2. Add a follower-growth calculator and content-capacity planner only after traffic validates the current tool set.
+3. Monitor Google Search Console after the sitemap and route additions are recrawled.
+4. Validate pose ↔ tool click-through with GA4 events once analytics events are wired.

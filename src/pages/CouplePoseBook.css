@@ -212,6 +212,7 @@
   flex-direction: column;
   min-width: 0;
   padding: clamp(22px, 3vw, 30px);
+  scroll-margin-top: 90px;
 }
 
 .pose-guide-card > header {
@@ -409,8 +410,41 @@
   }
 }
 
+.pose-guide-card:target {
+  outline: 2px solid #FF3F74;
+  outline-offset: 4px;
+  animation: pose-target-flash 1.2s ease-out 1;
+}
+
+@keyframes pose-target-flash {
+  0% { background: rgba(255, 63, 116, 0.12); }
+  100% { background: transparent; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .pose-sheet-legend a {
     transition: none;
   }
+
+  .pose-guide-card:target {
+    animation: none;
+  }
 }
+
+.pose-fix {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 0.75rem;
+}
+.pose-fix p { margin: 0; font-size: 0.9rem; line-height: 1.45; }
+.pose-fix span {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.pose-fix-mistake span { color: #FF8A3D; }
+.pose-fix-solution span { color: #2F4BE8; }

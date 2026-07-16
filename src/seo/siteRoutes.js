@@ -1,5 +1,6 @@
 import legacyPages from '../data/legacyPages.json';
 import { getLegacySeo } from '../data/legacySeo';
+import { guideArticles } from '../data/guideArticles';
 
 const defaultImage = '/pose-assets/social/12-social-media-poses.webp';
 
@@ -76,6 +77,12 @@ const coreRoutes = [
     description: 'Learn practical social media photography, Reels, editing, and content-planning techniques for clearer, more confident posts.',
     image: defaultImage,
   },
+  ...guideArticles.map((article) => ({
+    path: article.path,
+    title: article.title,
+    description: article.description,
+    image: article.image || defaultImage,
+  })),
   {
     path: '/blog',
     title: 'Photography Guides for Better Social Content | WePhoto',
@@ -116,6 +123,18 @@ const coreRoutes = [
     path: '/tools/image-size-calculator',
     title: 'Social Media Image Size & Ratio Calculator | WePhoto',
     description: 'Calculate image aspect ratios, resize dimensions, and crop amounts for Instagram, Pinterest, YouTube, and LinkedIn without stretching photos.',
+    image: defaultImage,
+  },
+  {
+    path: '/tools/reels-safe-zone-checker',
+    title: 'Reels Safe Zone Checker | Free Creator Tool | WePhoto',
+    description: 'Preview Instagram Reels and TikTok safe zones for text and faces. See which edges platform controls may cover — free, private, no signup.',
+    image: defaultImage,
+  },
+  {
+    path: '/tools/caption-character-counter',
+    title: 'Caption Character Counter | Free Creator Tool | WePhoto',
+    description: 'Count caption characters for Instagram, TikTok, LinkedIn, and X. See limits, preview cutoffs, hashtags, and mentions — free, private, no signup.',
     image: defaultImage,
   },
 ];

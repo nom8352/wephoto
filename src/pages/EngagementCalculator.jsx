@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { BarChart3, Calculator, RotateCcw, ShieldCheck } from 'lucide-react';
+import { BarChart3, Calculator, Camera, RotateCcw, ShieldCheck, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import NextStep from '../components/NextStep';
+import PrivacyBadge from '../components/PrivacyBadge';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './Tools.css';
 
@@ -59,13 +61,14 @@ const EngagementCalculator = () => {
         <span className="tools-kicker">Instagram analytics</span>
         <h1>Engagement Rate<br /><em>Calculator</em></h1>
         <p>Measure how actively people respond to your content. Compare by followers for a public benchmark or by reach for post performance.</p>
+        <PrivacyBadge />
       </section>
 
       <section className="calculator-shell site-shell">
         <div className="calculator-panel" data-reveal>
           <div className="calculator-mode" aria-label="Calculation method">
-            <button type="button" className={mode === 'followers' ? 'active' : ''} onClick={() => setMode('followers')}>By followers</button>
-            <button type="button" className={mode === 'reach' ? 'active' : ''} onClick={() => setMode('reach')}>By reach</button>
+            <button type="button" className={mode === 'followers' ? 'active' : ''} aria-pressed={mode === 'followers'} onClick={() => setMode('followers')}>By followers</button>
+            <button type="button" className={mode === 'reach' ? 'active' : ''} aria-pressed={mode === 'reach'} onClick={() => setMode('reach')}>By reach</button>
           </div>
 
           <div className="calculator-form-grid">
@@ -141,6 +144,26 @@ const EngagementCalculator = () => {
           </details>
         </div>
       </section>
+
+      <NextStep
+        heading="Need better photos to post in the first place?"
+        items={[
+          {
+            to: '/pose-book',
+            eyebrow: 'Pose library',
+            title: 'Browse 108 pose ideas',
+            text: 'Nine visual pose sheets with step-by-step direction for every shot.',
+            icon: Camera,
+          },
+          {
+            to: '/pose-book/selfie-mirror',
+            eyebrow: 'Most popular',
+            title: 'Selfie & mirror poses',
+            text: 'Flattering phone angles and mirror-photo prompts you can try today.',
+            icon: Users,
+          },
+        ]}
+      />
     </div>
   );
 };

@@ -1,5 +1,7 @@
 import { createElement } from 'react';
-import { Camera, ChartNoAxesColumnIncreasing, Clapperboard, Crop, Lightbulb, ScanLine, Sparkles, Timer } from 'lucide-react';
+import { ArrowRight, Camera, ChartNoAxesColumnIncreasing, Clapperboard, Crop, Lightbulb, ScanLine, Sparkles, Timer } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { guideArticles } from '../data/guideArticles';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './Guides.css';
 
@@ -71,7 +73,34 @@ const Guides = () => {
           <p className="lead">Short, practical lessons for creating social content that looks clear, feels natural, and is easier to repeat.</p>
           <nav aria-label="Guide sections">
             {guideSections.map((section) => <a key={section.id} href={`#${section.id}`}>{section.eyebrow}</a>)}
+            <a href="#deep-dives">Deep dives</a>
           </nav>
+        </div>
+      </section>
+
+      <section id="deep-dives" className="guide-section site-shell">
+        <header className="guide-section-heading" data-reveal>
+          <span>05</span>
+          <div>
+            <p className="eyebrow">Deep dives</p>
+            <h2>Longer guides for search and real shoots.</h2>
+            <p>Each article links into a pose book or free creator tool so you can apply the advice immediately.</p>
+          </div>
+        </header>
+        <div className="guide-tip-grid">
+          {guideArticles.map((article, index) => (
+            <Link
+              key={article.path}
+              to={article.path}
+              className="guide-tip card"
+              data-reveal
+              style={{ '--delay': `${0.06 + index * 0.04}s` }}
+            >
+              <span><ArrowRight size={20} strokeWidth={2} aria-hidden="true" /></span>
+              <h3>{article.headline}</h3>
+              <p>{article.description}</p>
+            </Link>
+          ))}
         </div>
       </section>
 

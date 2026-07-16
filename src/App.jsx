@@ -8,13 +8,17 @@ import CouplePoseBook from './pages/CouplePoseBook';
 import SocialMediaPoseBook from './pages/SocialMediaPoseBook';
 import VisualPoseBook from './pages/VisualPoseBook';
 import Guides from './pages/Guides';
+import GuideArticle from './pages/GuideArticle';
 import Blog from './pages/Blog';
+import { guideArticles } from './data/guideArticles';
 import About from './pages/About';
 import Faq from './pages/Faq';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Tools from './pages/Tools';
 import EngagementCalculator from './pages/EngagementCalculator';
 import ImageSizeCalculator from './pages/ImageSizeCalculator';
+import ReelsSafeZone from './pages/ReelsSafeZone';
+import CaptionCounter from './pages/CaptionCounter';
 import LegacyContentPage from './pages/LegacyContentPage';
 import NotFound from './pages/NotFound';
 import legacyPages from './data/legacyPages.json';
@@ -50,6 +54,13 @@ function App() {
           <Route path="/pose-book/family" element={<VisualPoseBook book={familyPoseBook} />} />
           <Route path="/pose-book/sitting-cafe" element={<VisualPoseBook book={sittingCafePoseBook} />} />
           <Route path="/guides" element={<Guides />} />
+          {guideArticles.map((article) => (
+            <Route
+              key={article.path}
+              path={article.path}
+              element={<GuideArticle article={article} />}
+            />
+          ))}
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Faq />} />
@@ -57,6 +68,8 @@ function App() {
           <Route path="/tools" element={<Tools />} />
           <Route path="/tools/engagement-rate-calculator" element={<EngagementCalculator />} />
           <Route path="/tools/image-size-calculator" element={<ImageSizeCalculator />} />
+          <Route path="/tools/reels-safe-zone-checker" element={<ReelsSafeZone />} />
+          <Route path="/tools/caption-character-counter" element={<CaptionCounter />} />
 
           {activeLegacyPages.map((page) => (
             <Route key={page.path} path={page.path} element={<LegacyContentPage page={page} />} />

@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 backup/
 .wrangler/
+
+# Local Codex and browser automation helpers
+.agents/
+link_codex_skills.bat
+link_codex_skills.ps1
+playwright_run.cjs
