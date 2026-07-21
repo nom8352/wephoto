@@ -67,6 +67,22 @@ const GuideArticleContent = ({ article }) => {
         ))}
       </div>
 
+      {article.sources?.length > 0 && (
+        <section className="guide-article-sources site-shell" data-reveal>
+          <span className="eyebrow">Sources and further reading</span>
+          <ul>
+            {article.sources.map((source) => (
+              <li key={source.href}>
+                <a href={source.href} target="_blank" rel="noopener noreferrer">
+                  {source.label}
+                </a>
+                <span>{source.publisher}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <section className="guide-article-related site-shell" data-reveal>
         <div className="guide-article-related-card card">
           <span className="eyebrow">Keep going</span>

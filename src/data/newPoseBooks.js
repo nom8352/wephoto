@@ -654,6 +654,21 @@ export const familyPoseBook = {
   guideEyebrow: 'Create connection first',
   guideHeading: 'Twelve prompts for a relaxed family session.',
   guideText: 'Give children something simple to do, keep everyone safe, and photograph the reactions between planned frames.',
+  externalResource: {
+    eyebrow: 'Brisbane studio reference',
+    heading: 'Planning portraits with a new baby?',
+    text: 'If you would rather work with a specialist, Sweetlife Photography offers dedicated newborn sessions from its North Lakes studio for families across Brisbane\'s northern suburbs.',
+    links: [
+      {
+        label: 'Visit Sweetlife Photography',
+        href: 'https://sweetlifephotography.com.au/',
+      },
+      {
+        label: 'View newborn session details',
+        href: 'https://sweetlifephotography.com.au/newborn-photography-brisbane-north-lakes/',
+      },
+    ],
+  },
   poses: [
     {
       slug: 'walk-hand-in-hand',

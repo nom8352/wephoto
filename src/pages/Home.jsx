@@ -283,6 +283,40 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="home-studio-reference site-shell" data-reveal>
+        <div className="home-studio-reference-intro">
+          <span className="home-kicker">When to call a specialist</span>
+          <h2>Some newborn sessions need more than a pose guide.</h2>
+          <p>
+            WePhoto&apos;s prompts are useful for relaxed family photos at home or outdoors. For a
+            newborn session that involves supported posing, controlled warmth, and time for
+            feeding and settling, a dedicated studio can be the better fit.
+          </p>
+        </div>
+
+        <div className="home-studio-reference-grid">
+          <article className="home-studio-reference-card card">
+            <span className="eyebrow">See the finished style</span>
+            <h3>
+              <a href="https://sweetlifephotography.com.au/">
+                Brisbane newborn photographer
+              </a>
+            </h3>
+            <p>Browse Sweetlife Photography&apos;s newborn gallery to compare posing, lighting, and family portrait styles.</p>
+          </article>
+
+          <article className="home-studio-reference-card card">
+            <span className="eyebrow">Explore the local studio</span>
+            <h3>
+              <a href="https://sweetlifephotography.com.au/">
+                Newborn photography North Lakes
+              </a>
+            </h3>
+            <p>Learn about the North Lakes studio, the areas it serves, and the experience available to Brisbane northside families.</p>
+          </article>
+        </div>
+      </section>
+
       <section className="home-tools-promo site-shell" data-reveal>
         <span className="home-tools-icon"><Calculator size={30} strokeWidth={1.8} /></span>
         <div>

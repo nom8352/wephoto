@@ -120,6 +120,21 @@ const VisualPoseBook = ({ book }) => {
         </div>
       </section>
 
+      {book.externalResource && (
+        <aside className="pose-external-resource site-shell" data-reveal>
+          <span className="eyebrow">{book.externalResource.eyebrow}</span>
+          <div>
+            <h2>{book.externalResource.heading}</h2>
+            <p>{book.externalResource.text}</p>
+            <div className="pose-external-resource-links">
+              {(book.externalResource.links || [book.externalResource]).map((resource) => (
+                <a key={resource.href} href={resource.href}>{resource.label}</a>
+              ))}
+            </div>
+          </div>
+        </aside>
+      )}
+
       <NextStep
         heading="You have the pose. Now prepare the post."
         items={[

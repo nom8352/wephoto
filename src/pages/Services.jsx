@@ -64,7 +64,7 @@ const Services = () => {
         <div className="seo-block glass">
           <p>
             Our professional studio space and camera equipment will make sure that every photo is taken with precision and clarity. 
-            We provide a calm, safe environment that will work best for your shot of <a href="https://sweetlifephotography.com.au/">newborn photographer brisbane</a>.
+            We provide a calm, safe environment designed for relaxed newborn portraits in Brisbane.
           </p>
         </div>
       </section>

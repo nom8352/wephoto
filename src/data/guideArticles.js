@@ -13,6 +13,18 @@ export const guideArticles = [
       { to: '/tools/image-size-calculator', label: 'Size the photo for Instagram' },
       { to: '/tools/caption-character-counter', label: 'Check your caption length' },
     ],
+    sources: [
+      {
+        label: 'Photo and video sharing safety',
+        publisher: 'eSafety Commissioner',
+        href: 'https://www.esafety.gov.au/key-topics/online-tools-and-features/photo-and-video-sharing',
+      },
+      {
+        label: 'Permission and copyright',
+        publisher: 'Copyright Agency',
+        href: 'https://www.copyright.com.au/about-copyright/permission/',
+      },
+    ],
     intro:
       'Most stiff Instagram photos are not a “bad face” problem. They are a planning problem: no clear job for the hands, no weight shift, and too much time staring at the lens. This guide gives you a simple sequence you can repeat before every shoot.',
     sections: [
@@ -65,6 +77,18 @@ export const guideArticles = [
       { to: '/tools/image-size-calculator', label: 'Check Instagram crop sizes' },
       { to: '/tools/reels-safe-zone-checker', label: 'Preview Reels safe zones' },
     ],
+    sources: [
+      {
+        label: 'Consent when sharing photos and videos',
+        publisher: 'eSafety Commissioner',
+        href: 'https://www.esafety.gov.au/young-people/consent-sharing-photos-videos',
+      },
+      {
+        label: 'Copyright ownership',
+        publisher: 'Copyright Agency',
+        href: 'https://www.copyright.com.au/about-copyright/ownership/',
+      },
+    ],
     intro:
       'A good mirror selfie is mostly geometry: phone height, body distance, and what the reflection includes. Once those are right, expression becomes easy.',
     sections: [
@@ -113,6 +137,18 @@ export const guideArticles = [
       { to: '/pose-book/couples', label: 'Open the outdoor couple pose book' },
       { to: '/tools/image-size-calculator', label: 'Prepare the post size' },
       { to: '/tools/caption-character-counter', label: 'Write a shorter caption' },
+    ],
+    sources: [
+      {
+        label: 'Sun protection guidance',
+        publisher: 'Cancer Council Australia',
+        href: 'https://www.cancer.org.au/about-us/policy-and-advocacy/prevention/uv-radiation/related-resources/sun-protection',
+      },
+      {
+        label: 'Australian photography resources',
+        publisher: 'Australian Photographic Society',
+        href: 'https://www.a-p-s.org.au/',
+      },
     ],
     intro:
       'Couple photos look forced when both people freeze and stare at the camera. The fix is almost always movement plus a shared focus: walk, talk, toast, or look at each other before you look at the lens.',
@@ -163,6 +199,18 @@ export const guideArticles = [
       { to: '/tools/image-size-calculator', label: 'Crop for profile formats' },
       { to: '/tools/engagement-rate-calculator', label: 'Measure post engagement later' },
     ],
+    sources: [
+      {
+        label: 'Add or change your profile photo',
+        publisher: 'LinkedIn Help',
+        href: 'https://www.linkedin.com/help/linkedin/answer/a541850/adding-or-changing-your-linkedin-profile-photo?lang=en',
+      },
+      {
+        label: 'Headshot photography tips',
+        publisher: 'Adobe',
+        href: 'https://www.adobe.com/uk/creativecloud/photography/discover/headshot-photography.html',
+      },
+    ],
     intro:
       'A strong LinkedIn photo is confident without looking corporate-stiff. Open posture, soft shoulders, and a settled smile matter more than a dramatic angle.',
     sections: [
@@ -212,6 +260,13 @@ export const guideArticles = [
       { to: '/tools/caption-character-counter', label: 'Tighten the caption next' },
       { to: '/pose-book', label: 'Browse pose ideas for stronger posts' },
     ],
+    sources: [
+      {
+        label: 'About Instagram Insights',
+        publisher: 'Instagram Help Centre',
+        href: 'https://www.facebook.com/help/instagram/788388387972460',
+      },
+    ],
     intro:
       'Engagement rate is only useful when the denominator matches the question you are asking. Followers and reach answer different questions, and mixing them makes comparisons meaningless.',
     sections: [
@@ -259,6 +314,13 @@ export const guideArticles = [
       { to: '/tools/image-size-calculator', label: 'Open the image size calculator' },
       { to: '/tools/reels-safe-zone-checker', label: 'Check Reels safe zones' },
       { to: '/pose-book/social-media', label: 'Find a pose for the post' },
+    ],
+    sources: [
+      {
+        label: 'Instagram photo resolution guidance',
+        publisher: 'Instagram Help Centre',
+        href: 'https://www.facebook.com/help/instagram/1631821640426723',
+      },
     ],
     intro:
       'Most stretched Instagram photos come from forcing one image into the wrong ratio. Decide the destination first, then resize proportionally and crop the overflow.',

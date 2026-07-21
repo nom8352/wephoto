@@ -292,6 +292,45 @@
   font-size: 0.8rem;
 }
 
+.pose-external-resource {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 72px);
+  padding-top: clamp(28px, 4vw, 44px);
+  padding-bottom: clamp(28px, 4vw, 44px);
+  border-top: 1px solid var(--surface-border);
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.pose-external-resource h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  font-weight: 650;
+  line-height: 1.05;
+}
+
+.pose-external-resource p {
+  max-width: 64ch;
+  margin: 12px 0 10px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.pose-external-resource a {
+  color: var(--brand-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 75, 232, 0.35);
+  text-underline-offset: 3px;
+}
+
+.pose-external-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
 .pose-book-cta-card {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
@@ -401,6 +440,10 @@
   }
 
   .pose-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pose-external-resource {
     grid-template-columns: 1fr;
   }
 
