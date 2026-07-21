@@ -1,5 +1,212 @@
 export const guideArticles = [
   {
+    path: '/guides/90-minute-content-photo-session',
+    title: 'Plan 30 Days of Social Content in 90 Minutes | WePhoto',
+    headline: 'How to plan 30 days of social content in one 90-minute photo session',
+    description:
+      'A practical 90-minute content shoot plan with a shot matrix, run sheet, selection method, and 30-post publishing map for creators and small teams.',
+    eyebrow: 'Content batching guide',
+    datePublished: '2026-07-21',
+    image: '/guide-assets/content-batching/content-batching-hero.webp',
+    heroVisual: {
+      src: '/guide-assets/content-batching/content-batching-hero.webp',
+      alt: 'A content creator preparing a phone, camera, wardrobe layers, and shot list in a bright home studio',
+      caption: 'A productive batch shoot begins with a small kit, a fixed shot list, and a clock.',
+      width: 1536,
+      height: 1024,
+    },
+    related: [
+      { to: '/pose-book/social-media', label: 'Build the shoot from 12 pose prompts' },
+      { to: '/tools/image-size-calculator', label: 'Prepare each image for its platform' },
+      { to: '/tools/caption-character-counter', label: 'Finish the captions before publishing' },
+    ],
+    sources: [
+      {
+        label: 'Image resolution of photos shared on Instagram',
+        publisher: 'Instagram Help Centre',
+        href: 'https://www.facebook.com/help/1631821640426723/',
+      },
+      {
+        label: 'Share photos on LinkedIn',
+        publisher: 'LinkedIn Help',
+        href: 'https://www.linkedin.com/help/linkedin/answer/a527229',
+      },
+      {
+        label: 'Creative tips for vertical social video',
+        publisher: 'TikTok for Business',
+        href: 'https://ads.tiktok.com/business/creativecenter/quicktok/online/creative-tips-for-home-and-lifestyle/pc/en',
+      },
+    ],
+    intro:
+      'A month of useful social content can come from one focused photo session. The work depends on deliberate variation: clear content jobs, a compact visual kit, and a run sheet that keeps the camera moving. This system turns ninety minutes into a library of portraits, working shots, details, backgrounds, and short clips without making every post look as if it came from the same afternoon.',
+    sections: [
+      {
+        heading: 'Decide what the month must do',
+        paragraphs: [
+          'Start with the work each post must perform. A long list of attractive shots still leaves a weak content calendar when every image says the same thing. Give the month four jobs before you choose an outfit or unfold a tripod.',
+          'The jobs should match the way people learn to trust an account. Some posts teach. Some show evidence. Some make the person behind the work familiar. Others invite a reply, a save, or a visit to a useful resource. The camera can support all four when the plan names them in advance.',
+        ],
+        bullets: [
+          'Teach: a tip, process, checklist, or short explanation.',
+          'Show proof: a result, example, before-and-after sequence, or finished detail.',
+          'Build familiarity: a portrait, working moment, opinion, or behind-the-scenes frame.',
+          'Invite action: a question, prompt, download, event, article, or next step.',
+        ],
+      },
+      {
+        heading: 'Build a nine-frame shot matrix',
+        paragraphs: [
+          'A shot matrix prevents the common batch-shoot mistake of taking fifty versions of one portrait. Draw a three-by-three grid. Use three content jobs down the side and three camera distances across the top: wide, medium, and detail. Each cell becomes a distinct photograph to capture.',
+          'A teaching post might use a wide frame of the full setup, a medium frame of you demonstrating the process, and a detail of the tool in your hands. A proof post might show the finished result, a close inspection, and the workspace that produced it. A familiarity post can move from a direct portrait to a candid working frame and a small personal detail.',
+          'Nine planned frames create genuine variety because the subject, distance, and purpose all change. They also expose gaps before the session begins. If every square contains a face looking at the lens, the matrix needs more action.',
+        ],
+        bullets: [
+          'Wide frames establish place and leave room for headlines or quotes.',
+          'Medium frames show the person, action, and main prop together.',
+          'Detail frames isolate hands, materials, screens, textures, or finished work.',
+        ],
+        image: {
+          src: '/guide-assets/content-batching/shot-matrix-planning.webp',
+          alt: 'An overhead content shoot planning board with a blank nine-cell grid, wardrobe layers, camera, phone, timer, and colour swatches',
+          caption: 'A blank nine-cell matrix gives every planned frame a different purpose and distance.',
+          width: 1536,
+          height: 1024,
+        },
+      },
+      {
+        heading: 'Pack a visual kit small enough to move quickly',
+        paragraphs: [
+          'Too many outfits consume the session. Use one clean base outfit and add two layers that change the outline: a jacket, overshirt, knit, scarf, or work apron. The base keeps skin tone and exposure consistent. The layers make adjacent posts feel as if they came from different moments.',
+          'Choose two props with a real connection to the work. A notebook, laptop, camera, sample, sketch, tool, book, or cup can give the hands a job. Decorative clutter slows the shoot and weakens the story. Every object in the frame should explain the person or the process.',
+        ],
+        bullets: [
+          'One base outfit in a solid, camera-friendly colour.',
+          'Two layers with different shapes or textures.',
+          'Two useful props and one optional personal object.',
+          'A cloth for the lens, a charged battery, and enough storage space.',
+        ],
+      },
+      {
+        heading: 'Prepare the room before the clock starts',
+        paragraphs: [
+          'Ninety minutes covers photography, not cleaning. Clear the background, charge devices, test the remote, mark the tripod position, and place each prop within reach before the session starts. Take one test frame and inspect the edges. Power cords, bright packaging, laundry, and half-visible furniture become harder to ignore once the images sit together.',
+          'Pick one main light direction. A large window is often enough. Stand at roughly forty-five degrees to it and turn the face until both eyes hold light. If the far side of the face falls too dark, move closer to a pale wall or place a white board outside the frame. Stable light makes the whole library easier to edit.',
+        ],
+      },
+      {
+        heading: 'Follow a 90-minute run sheet',
+        paragraphs: [
+          'The schedule protects variety. Work from the most controlled frames toward movement, then finish with missing shots. Do not spend the first half hour chasing one perfect headshot. A strong batch contains several good families of images rather than a single flawless frame.',
+        ],
+        bullets: [
+          'Minutes 0–10: test exposure, framing, focus, and remote timing.',
+          'Minutes 10–25: capture direct portraits in wide, medium, and close crops.',
+          'Minutes 25–45: photograph the core work process with both props.',
+          'Minutes 45–60: collect hands, materials, screens, and finished details.',
+          'Minutes 60–75: add standing, walking, turning, and seated transitions.',
+          'Minutes 75–85: record short vertical clips and clean cover frames.',
+          'Minutes 85–90: check the matrix and fill only the missing cells.',
+        ],
+      },
+      {
+        heading: 'Photograph each idea at three distances',
+        paragraphs: [
+          'Keep the action and change the frame. Begin wide enough to show the environment. Move to a medium view that holds the person and the action. Finish with a detail. This takes less time than inventing three new scenes and gives an editor the pieces needed for carousels, articles, thumbnails, and short video covers.',
+          'Change eye line as well. Capture one frame looking at the lens, one looking at the work, and one looking beyond the frame. The shift is small, yet it changes the implied conversation. Direct eye contact introduces. A downward gaze explains. An off-camera gaze leaves room for reflective copy.',
+          'Hold each pose loosely. Breathe out, move the hands, and shoot through the transition. The frame immediately before or after the formal pose often carries more life than the held position.',
+        ],
+        image: {
+          src: '/guide-assets/content-batching/nine-frame-contact-sheet.webp',
+          alt: 'A nine-panel contact sheet showing one creator in portraits, working scenes, detail shots, full-body frames, and environmental photographs',
+          caption: 'One room can produce a varied library when crop, action, eye line, and distance keep changing.',
+          width: 1536,
+          height: 1024,
+        },
+      },
+      {
+        heading: 'Add motion while each setup is live',
+        paragraphs: [
+          'Record short vertical clips before dismantling a setup. Five useful seconds are enough. Hold still for one second, perform one clear action, then hold again. Clean handles give you room to trim without cutting into the movement.',
+          'Use the same action you photographed: open the notebook, adjust the tripod, place the finished item, turn toward the window, or walk into the workspace. The motion belongs to the visual story, so it will cut naturally beside the still photographs.',
+          'Keep faces, captions, and important objects away from interface-heavy edges. Platform layouts change, but the centre remains the safest place for information that must survive a crop.',
+        ],
+        bullets: [
+          'One vertical establishing clip.',
+          'Two medium action clips.',
+          'Two close details with visible movement.',
+          'One clean portrait frame for a cover image.',
+        ],
+      },
+      {
+        heading: 'Turn the session into 30 distinct posts',
+        paragraphs: [
+          'Thirty posts do not require thirty unrelated scenes. They require thirty clear editorial uses. The count below gives every asset a job while leaving enough visual distance between similar frames.',
+          'Write the topic beside each selected image before editing. A photograph without a planned message tends to sit unused. A message with a named photograph moves directly into the calendar.',
+        ],
+        bullets: [
+          '6 anchor portraits for introductions, opinions, announcements, and profile-led posts.',
+          '4 carousel stories built from wide, medium, and detail sequences.',
+          '5 process or detail posts that explain tools, steps, or materials.',
+          '6 spacious frames reserved for quotes, tips, or simple text overlays.',
+          '3 about-page, profile, or recurring biography images.',
+          '3 short clips or cover frames for vertical video.',
+          '3 behind-the-scenes posts about preparation, mistakes, or decisions.',
+        ],
+      },
+      {
+        heading: 'Select like an editor',
+        paragraphs: [
+          'Make the first selection quickly. Remove missed focus, closed eyes, awkward hand shapes, repeated expressions, and frames that need heavy rescue. Then compare the survivors in groups. Keep the strongest image from each small run instead of storing six near-identical choices.',
+          'The second selection should judge the library as a whole. Check the mix of wide, medium, and detail frames. Check how often the subject looks at the lens. Check whether one outfit or background dominates. Replace repetition with the next-best frame from an underused group.',
+          'A useful final library can be smaller than the original target. Twenty-four distinct frames will serve a calendar better than thirty images that repeat the same crop and expression.',
+        ],
+      },
+      {
+        heading: 'Edit for continuity, then crop by destination',
+        paragraphs: [
+          'Edit one reference image first. Set exposure, skin tone, white balance, and contrast, then apply that starting point across the session. Adjust individual frames only where the light or background changed. Consistent colour lets images from different parts of the session sit together without looking mechanical.',
+          'Keep a full-resolution master before making platform crops. A portrait feed image, a square thumbnail, and a wide article header may all come from the same frame. Starting from a tight export throws away those choices.',
+          'Inspect every crop at its final size. Hands, shoes, tools, and text space often disappear when a wide original enters a portrait frame. Move the crop rather than stretching the photograph.',
+        ],
+      },
+      {
+        heading: 'Arrange the calendar around contrast',
+        paragraphs: [
+          'Do not publish the images in the order they were taken. Separate similar portraits and alternate visual weight. A close face can follow a wide workspace. A quiet detail can follow a busy process carousel. The feed gains rhythm even though the source session stays consistent.',
+          'Alternate the four content jobs as well. Several teaching posts in a row can feel like a manual. Several portraits can feel empty. A useful sequence moves between instruction, evidence, familiarity, and invitation.',
+        ],
+        bullets: [
+          'Avoid using the same outfit in consecutive posts.',
+          'Leave at least two posts between near-identical backgrounds.',
+          'Follow a direct portrait with a process, detail, or environmental frame.',
+          'Reserve the strongest negative-space images for headlines that need room.',
+        ],
+      },
+      {
+        heading: 'Keep a gap list and stop on time',
+        paragraphs: [
+          'The last five minutes belong to gaps, not improvisation. Read the matrix. If a needed detail or wide frame is missing, capture it. If the grid is complete, stop. Fatigue produces slower decisions, weaker posture, and more files to sort.',
+          'Keep the gap list after the session. It becomes the first page of the next shoot plan. Over time, the list reveals which assets your calendar consumes fastest: clean backgrounds, process details, direct portraits, or short clips. The next session can then solve a proven shortage.',
+        ],
+      },
+      {
+        heading: 'Copy this pre-shoot checklist',
+        bullets: [
+          'Name the four content jobs for the month.',
+          'Complete a three-by-three shot matrix.',
+          'Choose one base outfit, two layers, and two working props.',
+          'Clear the background and test one fixed light direction.',
+          'Charge the phone, camera, remote, and spare battery.',
+          'Capture every main idea in wide, medium, and detail views.',
+          'Record one short vertical action while each setup is live.',
+          'Check the matrix during the final five minutes.',
+          'Select for variety before editing for polish.',
+          'Assign a topic to every chosen image before scheduling it.',
+        ],
+      },
+    ],
+  },
+  {
     path: '/guides/how-to-pose-naturally-for-instagram',
     title: 'How to Pose Naturally for Instagram Photos | WePhoto',
     headline: 'How to pose naturally for Instagram photos',

@@ -42,6 +42,34 @@
   text-transform: uppercase;
 }
 
+.guide-article-figure {
+  margin: 24px 0 0;
+}
+
+.guide-article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  background: #f4f0eb;
+}
+
+.guide-article-figure figcaption {
+  margin-top: 9px;
+  color: var(--text-faint);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.guide-article-hero-visual {
+  margin-top: clamp(24px, 4vw, 38px);
+}
+
+.guide-article-hero-visual img {
+  border-radius: clamp(20px, 3vw, 30px);
+  box-shadow: var(--shadow-soft);
+}
+
 .guide-article-body {
   display: grid;
   gap: 18px;
@@ -159,6 +187,10 @@
 
   .guide-article-hero h1 {
     max-width: none;
+  }
+
+  .guide-article-figure img {
+    border-radius: 14px;
   }
 
   .guide-article-sources {

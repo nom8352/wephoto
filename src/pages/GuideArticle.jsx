@@ -3,6 +3,20 @@ import { Link, Navigate } from 'react-router-dom';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './GuideArticle.css';
 
+const ArticleFigure = ({ image, hero = false }) => (
+  <figure className={hero ? 'guide-article-figure guide-article-hero-visual' : 'guide-article-figure'}>
+    <img
+      src={image.src}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      loading={hero ? 'eager' : 'lazy'}
+      fetchPriority={hero ? 'high' : 'auto'}
+    />
+    {image.caption && <figcaption>{image.caption}</figcaption>}
+  </figure>
+);
+
 const GuideArticleContent = ({ article }) => {
   usePageMeta({
     title: article.title,
@@ -47,6 +61,7 @@ const GuideArticleContent = ({ article }) => {
         <h1>{article.headline}</h1>
         <p className="lead">{article.intro}</p>
         <p className="guide-article-date">Updated {article.datePublished}</p>
+        {article.heroVisual && <ArticleFigure image={article.heroVisual} hero />}
       </header>
 
       <div className="guide-article-body site-shell">
@@ -63,6 +78,7 @@ const GuideArticleContent = ({ article }) => {
                 ))}
               </ul>
             )}
+            {section.image && <ArticleFigure image={section.image} />}
           </section>
         ))}
       </div>

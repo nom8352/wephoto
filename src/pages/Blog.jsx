@@ -21,7 +21,7 @@ const Blog = () => {
   usePageMeta({
     title: 'Photography Guides for Better Social Content | WePhoto',
     description:
-      'Practical WePhoto articles covering Instagram poses, selfies, couples, LinkedIn headshots, engagement rate, and image sizes.',
+      'Practical WePhoto articles covering content batching, Instagram poses, selfies, couples, LinkedIn headshots, engagement rate, and image sizes.',
     canonicalPath: '/blog',
   });
 
@@ -55,7 +55,7 @@ const Blog = () => {
           <span className="eyebrow">Photography guides</span>
           <h1>Better photos start before you press the shutter.</h1>
           <p className="lead">
-            Practical reading on poses, selfies, couples, LinkedIn portraits, engagement maths, and
+            Practical reading on content planning, poses, selfies, portraits, engagement maths, and
             image sizes — with free pose books and creator tools linked throughout.
           </p>
         </section>

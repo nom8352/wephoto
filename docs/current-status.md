@@ -1,6 +1,6 @@
 # WePhoto Current Status
 
-Last updated: 2026-07-16
+Last updated: 2026-07-21
 
 ## Current Direction
 
@@ -35,9 +35,9 @@ Last updated: 2026-07-16
 - `/pose-book/selfie-mirror` contains 12 self-shot phone and mirror ideas with framing and body-angle cues.
 - `/pose-book/family` contains 12 outdoor family prompts based on movement, play, and connection.
 - `/pose-book/sitting-cafe` contains 12 seated lifestyle prompts using a cafe setting, window light, and simple props.
-- `/guides` covers four practical pillars: photo tips, Reels and video, editing, and social growth, plus six indexable deep-dive articles.
-- Deep-dive guides: Instagram posing, mirror selfie angles, outdoor couples, LinkedIn headshots, followers vs reach engagement, and Instagram image sizes.
-- `/blog` lists the six new guides first, then preserves eight useful archive articles from the former site.
+- `/guides` covers four practical pillars: photo tips, Reels and video, editing, and social growth, plus seven indexable deep-dive articles.
+- Deep-dive guides: a 90-minute content-batching system, Instagram posing, mirror selfie angles, outdoor couples, LinkedIn headshots, followers vs reach engagement, and Instagram image sizes.
+- `/blog` lists the seven new guides first, then preserves eight useful archive articles from the former site.
 - `/about` explains the transition from physical studio to open visual guide library.
 - `/faq` discloses that the new pose-book visuals are original generated references and confirms that the physical studio has closed.
 - `/privacy-policy` now reflects a public content website rather than a booking business.
@@ -53,6 +53,7 @@ Last updated: 2026-07-16
 - The first planned image set is complete: Women, Couples, Men, Best Friends, Travel, Professional and LinkedIn, Selfie and Mirror, Family, and Sitting and Cafe.
 - New sheets should use one original 3-by-4 image, exactly 12 panels, consistent adult subjects and wardrobe, blank gutters, and no embedded text, numbers, labels, logos, or watermarks.
 - Pose names and instructions belong in accessible HTML outside the image.
+- The content-batching guide uses three original 3:2 editorial WebP images: a shoot-planning hero, a shot-matrix flat lay, and a nine-frame result sheet.
 
 ## Promotion Plan
 
@@ -63,14 +64,14 @@ Last updated: 2026-07-16
 
 ## Search And Indexing
 
-- The production build pre-renders 27 indexable routes plus a dedicated `404.html`.
+- The production build pre-renders 36 indexable routes plus a dedicated `404.html`.
 - `sitemap.xml` includes the active platform pages and the eight retained photography articles.
 - Booking, shop, product, portfolio, gallery, services, studio guide, and Sydney service landing pages are excluded from the sitemap.
 - Retired commercial and local-studio URLs use HTTP 301 redirects to `/pose-book`, `/pose-book/social-media`, `/guides`, or `/privacy-policy` as appropriate.
 - Each active route has server-rendered content, a unique title, description, canonical URL, robots directive, and route-specific Open Graph image.
 - Site-wide structured data now uses `Organization` and `WebSite`; the obsolete `LocalBusiness` studio schema has been removed.
 - Pose guides use `CollectionPage`, `ImageObject`, and `ItemList`; FAQ uses `FAQPage`; retained articles use `Article` and include a visible archive notice.
-- The creator-tool hub uses `CollectionPage`, and both live calculators use `WebApplication` structured data with visible explanatory content and FAQs.
+- The creator-tool hub uses `CollectionPage`, and all four live tools use `WebApplication` structured data with visible explanatory content and FAQs.
 - `robots.txt` allows search crawling and declares `https://wephoto.com.au/sitemap_index.xml`.
 - The origin robots file explicitly allows `OAI-SearchBot`, `ChatGPT-User`, `PerplexityBot`, and `Bingbot`; Cloudflare currently prepends managed rules that allow search/reference use while blocking selected training crawlers.
 - `sitemap.xml` adds image sitemap entries for route-specific pose sheets and generates fresh `lastmod` dates at build time.
@@ -78,8 +79,8 @@ Last updated: 2026-07-16
 ## Verification
 
 - `npm run lint` passes.
-- `npm run build` passes and generates 27 indexable route documents plus `404.html`.
-- Automated checks confirm one H1, unique metadata, canonical URLs, and valid JSON-LD on all three tool routes, with 27 sitemap URLs in total.
+- `npm run build` passes and generates 36 indexable route documents plus `404.html`.
+- Automated checks confirm one H1, unique metadata, canonical URLs, and valid JSON-LD on the active tool and guide routes, with 36 sitemap URLs in total.
 - Desktop and 390px mobile browser checks cover the homepage, pose-book library, and representative pose-guide pages.
 - All nine contact-sheet assets are optimised WebP files and load without embedded labels over the photos.
 - The redesigned homepage hero uses the 2:3 selfie-and-mirror sheet with explicit dimensions and high fetch priority instead of the visually overlong 1:2 launch sheet.
@@ -100,9 +101,16 @@ Shipped the differentiation pass from `docs/wephoto-differentiation-implementati
 - Browser checks via `scripts/check-differentiation.mjs` pass for NextStep links, legend `:target` highlight, PrivacyBadge, Reels toggle, caption over-limit state, and mobile overflow.
 - `npm run lint` and `npm run build` pass (35 indexable routes + `404.html`).
 
+## Quuu-Ready Editorial Content (2026-07-21)
+
+- Added `/guides/90-minute-content-photo-session`, an evergreen, non-sales article designed as a standalone useful submission for Quuu Promote.
+- The guide provides a four-job content framework, nine-frame shot matrix, complete 90-minute run sheet, 30-post allocation, editing workflow, calendar method, and copyable pre-shoot checklist.
+- Three original article images are stored under `public/guide-assets/content-batching/` with descriptive alternative text, captions, explicit dimensions, and optimised WebP delivery.
+- `npm run lint` and `npm run build` pass with 36 indexable routes plus `404.html`; desktop and 390px checks confirm all three images load at 1536 × 1024 with no console warnings or horizontal overflow.
+
 ## Next Work
 
-1. Promote the six deep-dive guides via Search Console indexing and Pinterest/social links to matching pose books and tools.
+1. Promote the seven deep-dive guides via Search Console indexing and Pinterest/social links to matching pose books and tools.
 2. Add a follower-growth calculator and content-capacity planner only after traffic validates the current tool set.
 3. Monitor Google Search Console after the sitemap and route additions are recrawled.
 4. Validate pose ↔ tool click-through with GA4 events once analytics events are wired.
