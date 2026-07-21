@@ -111,6 +111,42 @@
   gap: 8px;
 }
 
+.guide-article-next-step {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 18px 20px;
+  border: 1px solid rgba(47, 75, 232, 0.16);
+  border-radius: 14px;
+  background: rgba(47, 75, 232, 0.045);
+}
+
+.guide-article-next-step span {
+  color: var(--brand-blue);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guide-article-next-step p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.guide-article-next-step a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  color: var(--brand-blue);
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 75, 232, 0.3);
+  text-underline-offset: 3px;
+}
+
 .guide-article-sources {
   display: grid;
   grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);

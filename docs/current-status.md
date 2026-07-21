@@ -105,6 +105,7 @@ Shipped the differentiation pass from `docs/wephoto-differentiation-implementati
 
 - Added `/guides/90-minute-content-photo-session`, an evergreen, non-sales article designed as a standalone useful submission for Quuu Promote.
 - The guide provides a four-job content framework, nine-frame shot matrix, complete 90-minute run sheet, 30-post allocation, editing workflow, calendar method, and copyable pre-shoot checklist.
+- Four contextual in-article next steps connect the relevant workflow stages to the social media pose book, Reels safe-zone checker, caption counter, and image-size calculator without turning the article into a sales page.
 - Three original article images are stored under `public/guide-assets/content-batching/` with descriptive alternative text, captions, explicit dimensions, and optimised WebP delivery.
 - `npm run lint` and `npm run build` pass with 36 indexable routes plus `404.html`; desktop and 390px checks confirm all three images load at 1536 × 1024 with no console warnings or horizontal overflow.
 

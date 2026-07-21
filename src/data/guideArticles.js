@@ -17,6 +17,7 @@ export const guideArticles = [
     },
     related: [
       { to: '/pose-book/social-media', label: 'Build the shoot from 12 pose prompts' },
+      { to: '/tools/reels-safe-zone-checker', label: 'Keep vertical clips clear of interface overlays' },
       { to: '/tools/image-size-calculator', label: 'Prepare each image for its platform' },
       { to: '/tools/caption-character-counter', label: 'Finish the captions before publishing' },
     ],
@@ -71,6 +72,13 @@ export const guideArticles = [
           caption: 'A blank nine-cell matrix gives every planned frame a different purpose and distance.',
           width: 1536,
           height: 1024,
+        },
+        nextStep: {
+          eyebrow: 'Fill the portrait cells',
+          description:
+            'Use WePhoto\'s 12-pose social media sheet when the matrix needs more variety in posture, eye line, or movement.',
+          to: '/pose-book/social-media',
+          label: 'Open the social media pose book',
         },
       },
       {
@@ -136,6 +144,13 @@ export const guideArticles = [
           'Two close details with visible movement.',
           'One clean portrait frame for a cover image.',
         ],
+        nextStep: {
+          eyebrow: 'Check the frame before recording',
+          description:
+            'Preview the areas commonly covered by Reels and TikTok controls so faces, captions, and products stay visible.',
+          to: '/tools/reels-safe-zone-checker',
+          label: 'Open the Reels safe-zone checker',
+        },
       },
       {
         heading: 'Turn the session into 30 distinct posts',
@@ -152,6 +167,13 @@ export const guideArticles = [
           '3 short clips or cover frames for vertical video.',
           '3 behind-the-scenes posts about preparation, mistakes, or decisions.',
         ],
+        nextStep: {
+          eyebrow: 'Prepare the copy beside the image',
+          description:
+            'Draft captions while each post still has a clear job, then check preview cutoffs, hashtags, mentions, and platform limits.',
+          to: '/tools/caption-character-counter',
+          label: 'Check a caption before scheduling',
+        },
       },
       {
         heading: 'Select like an editor',
@@ -168,6 +190,13 @@ export const guideArticles = [
           'Keep a full-resolution master before making platform crops. A portrait feed image, a square thumbnail, and a wide article header may all come from the same frame. Starting from a tight export throws away those choices.',
           'Inspect every crop at its final size. Hands, shoes, tools, and text space often disappear when a wide original enters a portrait frame. Move the crop rather than stretching the photograph.',
         ],
+        nextStep: {
+          eyebrow: 'Calculate the crop',
+          description:
+            'Enter the master image dimensions and a target social format to see the proportional resize and crop before exporting.',
+          to: '/tools/image-size-calculator',
+          label: 'Use the image-size calculator',
+        },
       },
       {
         heading: 'Arrange the calendar around contrast',

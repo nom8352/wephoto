@@ -79,6 +79,15 @@ const GuideArticleContent = ({ article }) => {
               </ul>
             )}
             {section.image && <ArticleFigure image={section.image} />}
+            {section.nextStep && (
+              <aside className="guide-article-next-step">
+                <span>{section.nextStep.eyebrow || 'Put it into practice'}</span>
+                <p>{section.nextStep.description}</p>
+                <Link to={section.nextStep.to}>
+                  {section.nextStep.label} <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+              </aside>
+            )}
           </section>
         ))}
       </div>
